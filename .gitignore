@@ -1,2 +1,5 @@
 wb-env/
 *.env
+chainscope/
+putnam_problems_images/
+putnam_formulas_images/
