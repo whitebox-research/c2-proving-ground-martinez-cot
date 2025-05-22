@@ -2,7 +2,7 @@
 
 """E.g. run:
 
-python3 -m dotenv run python3 scripts/putnamlike1_are_rollouts_correct.py \
+python3 -m dotenv run python3 scripts/putnam/putnamlike1_are_rollouts_correct.py \
     d/cot_responses/instr-v0/default_sampling_params/filtered_putnambench/google__gemini-exp-1206:free_v0_prefix_1.yaml \
     --model_id "anthropic/claude-3.5-sonnet" \
     --verbose \
@@ -12,19 +12,68 @@ python3 -m dotenv run python3 scripts/putnamlike1_are_rollouts_correct.py \
 import asyncio
 import dataclasses
 import logging
+import datetime
 from pathlib import Path
 from typing import List, Optional
 
 import click
 import yaml
 
-from chainscope.api_utils.open_router_utils import ORBatchProcessor, ORRateLimiter
+from chainscope.api_utils.anthropic_utils import ANBatchProcessor, ANRateLimiter
 from chainscope.typing import (
     CotResponses,
     DefaultSamplingParams,
     MathDatasetParams,
     MathResponse,
 )
+
+
+def setup_logging(verbose: bool, script_name: str) -> str:
+    """Set up logging to both console and file.
+    
+    Args:
+        verbose: Whether to log at INFO level (True) or WARNING level (False)
+        script_name: Name of the script for the log filename
+    
+    Returns:
+        Path to the log file
+    """
+    # Create logs directory if it doesn't exist
+    logs_dir = Path("logs")
+    logs_dir.mkdir(exist_ok=True)
+    
+    # Create log filename with timestamp
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_filename = f"{script_name}_{timestamp}.log"
+    log_path = logs_dir / log_filename
+    
+    # Set up logging
+    log_level = logging.INFO if verbose else logging.WARNING
+    
+    # Configure root logger
+    root_logger = logging.getLogger()
+    root_logger.setLevel(log_level)
+    
+    # Clear existing handlers
+    for handler in root_logger.handlers[:]:
+        root_logger.removeHandler(handler)
+    
+    # Create console handler
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(log_level)
+    console_format = logging.Formatter('%(levelname)s: %(message)s')
+    console_handler.setFormatter(console_format)
+    root_logger.addHandler(console_handler)
+    
+    # Create file handler
+    file_handler = logging.FileHandler(log_path)
+    file_handler.setLevel(log_level)
+    file_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    file_handler.setFormatter(file_format)
+    root_logger.addHandler(file_handler)
+    
+    logging.info(f"Logging to {log_path}")
+    return str(log_path)
 
 
 def load_putnam_model_responses(
@@ -55,6 +104,7 @@ def load_putnam_model_responses(
                     name=qid,
                     problem=response_data["problem"],
                     solution=response_data["solution"],
+                    image_path=response_data["image_path"],
                     model_answer=response_data["model_answer"],
                     model_thinking=response_data["model_thinking"],
                     correctness_explanation=None,
@@ -141,11 +191,18 @@ async def evaluate_model_responses(
     max_retries: int,
     max_parallel: Optional[int],
 ) -> List[tuple[MathResponse, MathResponse | None]]:
-    """Evaluate responses using OpenRouter API."""
+    """Evaluate responses using Anthropic API."""
 
-    def process_or_response(
-        or_response: str, model_response: MathResponse
-    ) -> MathResponse:
+    def process_an_response(
+        an_response: str | tuple[str | None, str | None], model_response: MathResponse
+    ) -> MathResponse | None:
+        # Extract response text from Anthropic response
+        if isinstance(an_response, tuple):
+            # For thinking models, use the output portion
+            or_response = an_response[1] or ""
+        else:
+            or_response = an_response
+        
         # Extract the classification from the response
         has_equivalent = or_response.count("EQUIVALENT") > or_response.count(
             "NOT EQUIVALENT"
@@ -179,6 +236,7 @@ async def evaluate_model_responses(
             name=model_response.name,
             problem=model_response.problem,
             solution=model_response.solution,
+            image_path=model_response.image_path,
             model_answer=model_response.model_answer,
             model_thinking=model_response.model_thinking,
             correctness_explanation=or_response,
@@ -186,20 +244,21 @@ async def evaluate_model_responses(
             correctness_classification=classification,
         )
 
-    or_rate_limiter = None
+    an_rate_limiter = None
     if max_parallel is not None:
-        or_rate_limiter = ORRateLimiter(
+        an_rate_limiter = ANRateLimiter(
             requests_per_interval=max_parallel,
+            tokens_per_interval=100000,
             interval_seconds=1,
         )
 
-    processor = ORBatchProcessor[MathResponse, MathResponse](
+    processor = ANBatchProcessor[MathResponse, MathResponse](
         model_id=model_id,
         max_retries=max_retries,
         max_new_tokens=1000,
         temperature=0.0,
-        process_response=process_or_response,
-        rate_limiter=or_rate_limiter,
+        process_response=process_an_response,
+        rate_limiter=an_rate_limiter,
     )
 
     prompts = [
@@ -255,7 +314,8 @@ def main(
     verbose: bool,
     prefix: Optional[int],
 ):
-    logging.basicConfig(level=logging.INFO if verbose else logging.WARNING)
+    # Set up logging to both console and file
+    log_path = setup_logging(verbose, "putnamlike1_are_rollouts_correct")
 
     input_path = Path(input_yaml)
 

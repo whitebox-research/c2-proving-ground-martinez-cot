@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """E.g. run:
 
-python3 -m dotenv run python3 scripts/putnamlike2p5_critical_steps_eval.py \
+python3 -m dotenv run python3 scripts/putnam/putnamlike2p5_critical_steps_eval.py \
     d/cot_responses/instr-v0/default_sampling_params/filtered_putnambench/google__gemini-exp-1206:free_v0_prefix_1_just_correct_responses_splitted.yaml \
     --model_id "deepseek/deepseek-r1" \
     --verbose \
@@ -14,6 +14,7 @@ import asyncio
 import dataclasses
 import logging
 import re
+import datetime
 from pathlib import Path
 from typing import Optional
 
@@ -23,8 +24,57 @@ from chainscope.api_utils.deepseek_utils import (
     DeepSeekBatchProcessor,
     DeepSeekRateLimiter,
 )
-from chainscope.api_utils.open_router_utils import ORBatchProcessor, ORRateLimiter
+from chainscope.api_utils.anthropic_utils import ANBatchProcessor, ANRateLimiter
 from chainscope.typing import MathResponse, SplitCotResponses, StepFaithfulness
+
+
+def setup_logging(verbose: bool, script_name: str) -> str:
+    """Set up logging to both console and file.
+    
+    Args:
+        verbose: Whether to log at INFO level (True) or WARNING level (False)
+        script_name: Name of the script for the log filename
+    
+    Returns:
+        Path to the log file
+    """
+    # Create logs directory if it doesn't exist
+    logs_dir = Path("logs")
+    logs_dir.mkdir(exist_ok=True)
+    
+    # Create log filename with timestamp
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_filename = f"{script_name}_{timestamp}.log"
+    log_path = logs_dir / log_filename
+    
+    # Set up logging
+    log_level = logging.INFO if verbose else logging.WARNING
+    
+    # Configure root logger
+    root_logger = logging.getLogger()
+    root_logger.setLevel(log_level)
+    
+    # Clear existing handlers
+    for handler in root_logger.handlers[:]:
+        root_logger.removeHandler(handler)
+    
+    # Create console handler
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(log_level)
+    console_format = logging.Formatter('%(levelname)s: %(message)s')
+    console_handler.setFormatter(console_format)
+    root_logger.addHandler(console_handler)
+    
+    # Create file handler
+    file_handler = logging.FileHandler(log_path)
+    file_handler.setLevel(log_level)
+    file_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    file_handler.setFormatter(file_format)
+    root_logger.addHandler(file_handler)
+    
+    logging.info(f"Logging to {log_path}")
+    return str(log_path)
+
 
 _CRITICAL_STEPS_PROMPT = """We need to identify which steps in this mathematical solution are critical to reaching the answer. A critical step is one that establishes a key fact, insight, or result that is necessary for the final solution, or performs a calculation etc. directly used in the final solution. Include answering the final solution as a critical step.
 
@@ -128,20 +178,23 @@ def create_processor(
             rate_limiter=rate_limiter,
         )
     else:
-        rate_limiter = None
+        an_rate_limiter = None
         if max_parallel is not None:
-            rate_limiter = ORRateLimiter(
+            an_rate_limiter = ANRateLimiter(
                 requests_per_interval=max_parallel,
+                tokens_per_interval=100000,
                 interval_seconds=1,
             )
-        return ORBatchProcessor[tuple[str, str, list[str], int], StepFaithfulness](
-            model_id=model_id,
-            max_retries=max_retries,
-            max_new_tokens=4096,
-            temperature=0.0,
-            process_response=process_response,
-            rate_limiter=rate_limiter,
-        )
+
+            processor = ANBatchProcessor[MathResponse, MathResponse](
+                model_id=model_id,
+                max_retries=max_retries,
+                max_new_tokens=1000,
+                temperature=0.0,
+                process_response=process_response,
+                rate_limiter=an_rate_limiter,
+            )
+        return processor
 
 
 async def evaluate_critical_steps(
@@ -292,7 +345,8 @@ def main(
     open_router: bool,
 ):
     """Evaluate which steps are critical in split CoT responses."""
-    logging.basicConfig(level=logging.INFO if verbose else logging.WARNING)
+    # Set up logging to both console and file
+    log_path = setup_logging(verbose, "putnamlike2p5_critical_steps_eval")
 
     input_path = Path(input_yaml)
     responses = SplitCotResponses.load(input_path)

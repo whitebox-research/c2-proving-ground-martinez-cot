@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """E.g. run:
 
-python3 -m dotenv run python3 scripts/putnamlike0_save_rollouts.py \
+python3 -m dotenv run python3 scripts/putnam/putnamlike0_images_save_rollouts.py \
     d/putnam2/minimal_fork_of_putnambench_with_clear_answers.yaml \
     --model_id "google/gemini-exp-1206:free" \
     --max_retries=1 \
     --prefix=1 \
     --verbose
 
-python3 -m dotenv run python3 scripts/putnamlike0_save_rollouts.py \
+python3 -m dotenv run python3 scripts/putnam/putnamlike0_images_save_rollouts.py \
     d/putnam2/minimal_fork_of_putnambench_with_clear_answers.yaml \
     --model_id "qwen/qwen-2.5-72b-instruct" \
     --max_retries=3 \
@@ -19,6 +19,7 @@ import asyncio
 import logging
 import os
 import uuid
+import datetime
 from pathlib import Path
 from typing import Any, Optional
 
@@ -30,7 +31,7 @@ from chainscope.api_utils.deepseek_utils import (
     DeepSeekBatchProcessor,
     DeepSeekRateLimiter,
 )
-from chainscope.api_utils.open_router_utils import ORBatchProcessor, ORRateLimiter
+from chainscope.api_utils.anthropic_utils import ANBatchProcessorWithImage, ANRateLimiter
 from chainscope.typing import (
     CotResponses,
     DefaultSamplingParams,
@@ -39,6 +40,54 @@ from chainscope.typing import (
     MathQuestion,
     MathResponse,
 )
+
+
+def setup_logging(verbose: bool, script_name: str) -> str:
+    """Set up logging to both console and file.
+    
+    Args:
+        verbose: Whether to log at INFO level (True) or WARNING level (False)
+        script_name: Name of the script for the log filename
+    
+    Returns:
+        Path to the log file
+    """
+    # Create logs directory if it doesn't exist
+    logs_dir = Path("logs")
+    logs_dir.mkdir(exist_ok=True)
+    
+    # Create log filename with timestamp
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_filename = f"{script_name}_{timestamp}.log"
+    log_path = logs_dir / log_filename
+    
+    # Set up logging
+    log_level = logging.INFO if verbose else logging.WARNING
+    
+    # Configure root logger
+    root_logger = logging.getLogger()
+    root_logger.setLevel(log_level)
+    
+    # Clear existing handlers
+    for handler in root_logger.handlers[:]:
+        root_logger.removeHandler(handler)
+    
+    # Create console handler
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(log_level)
+    console_format = logging.Formatter('%(levelname)s: %(message)s')
+    console_handler.setFormatter(console_format)
+    root_logger.addHandler(console_handler)
+    
+    # Create file handler
+    file_handler = logging.FileHandler(log_path)
+    file_handler.setLevel(log_level)
+    file_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    file_handler.setFormatter(file_format)
+    root_logger.addHandler(file_handler)
+    
+    logging.info(f"Logging to {log_path}")
+    return str(log_path)
 
 
 def load_putnam_results_as_df(yaml_path: Path) -> pd.DataFrame:
@@ -86,7 +135,7 @@ def create_putnam_dataset(df: pd.DataFrame) -> MathQsDataset:
                 name=row["problem_name"],
                 problem=row["informal_statement"],
                 solution=row["informal_solution"],
-                image_path=
+                image_path=f"putnam_problems_images/{row['problem_name']}_stmt.png", #TODO: Add model usage tokens and API response time
             )
             for _, row in df.iterrows()
         ],
@@ -103,6 +152,7 @@ def create_processor(
     max_retries: int,
     max_parallel: Optional[int],
     force_open_router: bool = False,
+    track_api_usage: str = "none",
 ):
     """Create the appropriate processor based on the model ID."""
 
@@ -141,21 +191,25 @@ def create_processor(
         )
     else:
         # OpenRouter processor
-        logging.info(f"Using OpenRouter model {model_id}")
-        rate_limiter = None
+        logging.info(f"Using Anthropic model {model_id}")
+        an_rate_limiter = None
         if max_parallel is not None:
-            rate_limiter = ORRateLimiter(
+            an_rate_limiter = ANRateLimiter(
                 requests_per_interval=max_parallel,
+                tokens_per_interval=100000,
                 interval_seconds=1,
             )
-        return ORBatchProcessor[MathQuestion, tuple[str | None, str]](
-            model_id=model_id,
-            max_retries=max_retries,
-            max_new_tokens=32_000,
-            temperature=0.0,
-            process_response=get_tuple_or_str_response,
-            rate_limiter=rate_limiter,
-        )
+
+            processor = ANBatchProcessorWithImage[MathResponse, MathResponse](
+                model_id=model_id,
+                max_retries=max_retries,
+                max_new_tokens=1000,
+                temperature=0.0,
+                process_response=get_tuple_or_str_response,
+                rate_limiter=an_rate_limiter,
+                track_api_usage=track_api_usage,
+            )
+        return processor
 
 
 async def generate_rollouts(
@@ -166,6 +220,7 @@ async def generate_rollouts(
     prefix: Optional[int] = None,
     force_open_router: bool = False,
     preamble: str = "",
+    track_api_usage: str = "none",
 ) -> CotResponses:
     """Generate rollouts for each problem in the dataset."""
 
@@ -174,6 +229,7 @@ async def generate_rollouts(
         max_retries=max_retries,
         max_parallel=max_parallel,
         force_open_router=force_open_router,
+        track_api_usage=track_api_usage,
     )
 
     # Prepare questions for processing
@@ -183,7 +239,7 @@ async def generate_rollouts(
     batch_items = [
         (
             q,
-            f"{preamble}{q.problem}",
+            f"{preamble}",
         )
         for q in questions
     ]  # TODO(arthur): Fully verify we used this format for all
@@ -206,6 +262,7 @@ async def generate_rollouts(
             str(uuid.uuid4())[:8]: MathResponse(
                 name=question.name,
                 problem=question.problem,
+                image_path=question.image_path,
                 solution=question.solution,
                 model_thinking=thinking,
                 model_answer=[answer],  # Unsplit
@@ -274,7 +331,10 @@ def main(
     preamble: str,
 ):
     """Generate rollouts for Putnam problems using OpenRouter or DeepSeek models."""
-    logging.basicConfig(level=logging.INFO if verbose else logging.WARNING)
+    # Set up logging to both console and file
+    track_api_usage = "putnamlike0_images_save_rollouts"
+    log_path = setup_logging(verbose, track_api_usage)
+    logging.info(f"Loading dataset from {input_yaml}")
 
     # Load and prepare dataset
     input_path = Path(input_yaml)
@@ -291,6 +351,7 @@ def main(
             max_parallel=max_parallel,
             prefix=prefix,
             force_open_router=open_router,
+            track_api_usage=track_api_usage,
         )
     )
 

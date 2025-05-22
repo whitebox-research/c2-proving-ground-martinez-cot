@@ -5,7 +5,7 @@ From **/chainscope/** run:
 
 ```
 python3 -m dotenv run python3 \
-  scripts/putnamlike2_split_cots.py \
+  scripts/putnam/putnamlike2_split_cots.py \
   d/cot_responses/instr-v0/default_sampling_params/filtered_putnambench/google__gemini-exp-1206:free_v0_prefix_1_just_correct_responses.yaml \
   --model_id "openai/gpt-4o" \
   --max_retries=3 \
@@ -17,11 +17,60 @@ python3 -m dotenv run python3 \
 """
 
 import logging
-
+import datetime
+from pathlib import Path
 import click
 
 from chainscope.cot_splitting import split_cot_responses
 from chainscope.typing import *
+
+
+def setup_logging(verbose: bool, script_name: str) -> str:
+    """Set up logging to both console and file.
+    
+    Args:
+        verbose: Whether to log at INFO level (True) or WARNING level (False)
+        script_name: Name of the script for the log filename
+    
+    Returns:
+        Path to the log file
+    """
+    # Create logs directory if it doesn't exist
+    logs_dir = Path("logs")
+    logs_dir.mkdir(exist_ok=True)
+    
+    # Create log filename with timestamp
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_filename = f"{script_name}_{timestamp}.log"
+    log_path = logs_dir / log_filename
+    
+    # Set up logging
+    log_level = logging.INFO if verbose else logging.WARNING
+    
+    # Configure root logger
+    root_logger = logging.getLogger()
+    root_logger.setLevel(log_level)
+    
+    # Clear existing handlers
+    for handler in root_logger.handlers[:]:
+        root_logger.removeHandler(handler)
+    
+    # Create console handler
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(log_level)
+    console_format = logging.Formatter('%(levelname)s: %(message)s')
+    console_handler.setFormatter(console_format)
+    root_logger.addHandler(console_handler)
+    
+    # Create file handler
+    file_handler = logging.FileHandler(log_path)
+    file_handler.setLevel(log_level)
+    file_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    file_handler.setFormatter(file_format)
+    root_logger.addHandler(file_handler)
+    
+    logging.info(f"Logging to {log_path}")
+    return str(log_path)
 
 
 @click.command()
@@ -30,9 +79,9 @@ from chainscope.typing import *
     "--model_id",
     "-s",
     type=str,
-    default="anthropic/claude-3.5-haiku,openai/gpt-4o",
-    help="Comma-separated list of models used to split CoT responses (needs to be available on OpenRouter). "
-    "The first model will be used first, and if it fails, the next model will be used, and so on.",
+    default="anthropic/claude-3.5-sonnet",
+    help="Model ID to use for splitting CoT responses using Anthropic API. "
+    "For Claude models, use format like 'anthropic/claude-3.5-sonnet'.",
 )
 @click.option(
     "--max_retries",
@@ -46,7 +95,7 @@ from chainscope.typing import *
     "-p",
     type=int,
     default=None,
-    help="Maximum number of parallel requests. If not set, it will use the OpenRouter limits.",
+    help="Maximum number of parallel requests. If not set, it will use the Anthropic API limits.",
 )
 @click.option(
     "--max_new_tokens_override",
@@ -76,7 +125,9 @@ def main(
     max_new_tokens_override: int | None,
     prefix: int | None,
 ):
-    logging.basicConfig(level=logging.INFO if verbose else logging.WARNING)
+    # Set up logging to both console and file
+    log_path = setup_logging(verbose, "putnamlike2_split_cots")
+    
     logging.warning("WARNING! This is somewhat unreliable, particularly for really long rollouts, as it does only very basic checks of the correct format by checking that the length of the steps added together is within 10% of the original response length")
     cot_responses = CotResponses.load(Path(responses_path))
     results = split_cot_responses(

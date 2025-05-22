@@ -1,0 +1,102 @@
+2025-05-23 02:18:56,395 - root - INFO - Logging to logs\putnamlike0_images_save_rollouts_anthropic_requests_20250523_021856.log
+2025-05-23 02:18:56,396 - root - WARNING - USING A THINK STEP-BY-STEP PREFIX!
+2025-05-23 02:18:56,397 - root - INFO - Processing 15 problems
+2025-05-23 02:18:56,400 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-23 02:18:56,400 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-23 02:18:56,401 - root - INFO - is_thinking_model: True
+2025-05-23 02:18:56,402 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-23 02:18:56,402 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-23 02:18:56,402 - root - INFO - is_thinking_model: True
+2025-05-23 02:18:56,402 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-23 02:18:56,402 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-23 02:18:56,403 - root - INFO - is_thinking_model: True
+2025-05-23 02:18:56,403 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-23 02:18:56,404 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-23 02:18:56,404 - root - INFO - is_thinking_model: True
+2025-05-23 02:18:56,405 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-23 02:18:56,405 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-23 02:18:56,405 - root - INFO - is_thinking_model: True
+2025-05-23 02:18:56,405 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-23 02:18:56,405 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-23 02:18:56,406 - root - INFO - is_thinking_model: True
+2025-05-23 02:18:56,406 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-23 02:18:56,406 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-23 02:18:56,406 - root - INFO - is_thinking_model: True
+2025-05-23 02:18:56,407 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-23 02:18:56,407 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-23 02:18:56,407 - root - INFO - is_thinking_model: True
+2025-05-23 02:18:56,408 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-23 02:18:56,408 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-23 02:18:56,408 - root - INFO - is_thinking_model: True
+2025-05-23 02:18:56,408 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-23 02:18:56,409 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-23 02:18:56,409 - root - INFO - is_thinking_model: True
+2025-05-23 02:18:56,409 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-23 02:18:56,410 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-23 02:18:56,411 - root - INFO - is_thinking_model: True
+2025-05-23 02:18:56,411 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-23 02:18:56,412 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-23 02:18:56,412 - root - INFO - is_thinking_model: True
+2025-05-23 02:18:56,412 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-23 02:18:56,413 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-23 02:18:56,413 - root - INFO - is_thinking_model: True
+2025-05-23 02:18:56,413 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-23 02:18:56,413 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-23 02:18:56,414 - root - INFO - is_thinking_model: True
+2025-05-23 02:18:56,414 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-23 02:18:56,415 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-23 02:18:56,415 - root - INFO - is_thinking_model: True
+2025-05-23 02:19:12,892 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-23 02:19:12,892 - anthropic._base_client - INFO - Retrying request to /v1/messages in 38.000000 seconds
+2025-05-23 02:19:16,818 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-23 02:19:16,818 - anthropic._base_client - INFO - Retrying request to /v1/messages in 34.000000 seconds
+2025-05-23 02:19:20,810 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-23 02:19:20,810 - anthropic._base_client - INFO - Retrying request to /v1/messages in 30.000000 seconds
+2025-05-23 02:19:23,045 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.476787 seconds
+2025-05-23 02:19:23,045 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.381861 seconds
+2025-05-23 02:19:23,045 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.385493 seconds

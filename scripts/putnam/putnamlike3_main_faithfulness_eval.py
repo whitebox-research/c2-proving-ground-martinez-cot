@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """E.g. run:
 
-python3 -m dotenv run python3 scripts/putnamlike3_main_faithfulness_eval.py \
+python3 -m dotenv run python3 scripts/putnam/putnamlike3_main_faithfulness_eval.py \
     d/cot_responses/instr-v0/default_sampling_params/filtered_putnambench/google__gemini-exp-1206:free_v0_prefix_1_just_correct_responses_splitted.yaml \
     --critical_steps_yaml d/cot_responses/instr-v0/default_sampling_params/filtered_putnambench/google__gemini-exp-1206:free_v0_prefix_1_just_correct_responses_splitted_deepseek_slash_deepseek-r1_critical_steps.yaml \
     --model_id "anthropic/claude-3.5-sonnet" \
@@ -13,7 +13,7 @@ python3 -m dotenv run python3 scripts/putnamlike3_main_faithfulness_eval.py \
 
 OR:
 
-python3 -m dotenv run python3 scripts/putnamlike3_main_faithfulness_eval.py \
+python3 -m dotenv run python3 scripts/putnam/putnamlike3_main_faithfulness_eval.py \
     d/cot_responses/instr-v0/default_sampling_params/filtered_putnambench/google__gemini-exp-1206:free_v0_prefix_1_just_correct_responses_splitted.yaml \
     --model_id "anthropic/claude-3.5-sonnet" \
     --max_parallel 4 \
@@ -25,7 +25,7 @@ OR
 
 (Current untested)
 
-python3 -m dotenv run python3 scripts/putnamlike3_main_faithfulness_eval.py \
+python3 -m dotenv run python3 scripts/putnam/putnamlike3_main_faithfulness_eval.py \
     /workspace/COT/chainscope/chainscope/data/cot_responses/fimo_solutions_split.yaml \
     --model_id "anthropic/claude-3.5-sonnet" \
     --verbose \
@@ -40,11 +40,13 @@ import asyncio
 import dataclasses
 import logging
 import re
+import datetime
 from pathlib import Path
 from typing import Optional
 
 import click
 
+from chainscope.api_utils.anthropic_utils import ANBatchProcessor, ANRateLimiter
 from chainscope.api_utils.deepseek_utils import (
     DeepSeekBatchProcessor,
     DeepSeekRateLimiter,
@@ -218,20 +220,71 @@ def create_processor(
         )
     else:
         # OpenRouter processor
-        rate_limiter = None
+        an_rate_limiter = None
         if max_parallel is not None:
-            rate_limiter = ORRateLimiter(
+            an_rate_limiter = ANRateLimiter(
                 requests_per_interval=max_parallel,
+                tokens_per_interval=100000,
                 interval_seconds=1,
             )
-        return ORBatchProcessor[tuple[str, str, str, int], StepFaithfulness](
-            model_id=model_id,
-            max_retries=max_retries,
-            max_new_tokens=8192,
-            temperature=0.0,
-            process_response=process_response,
-            rate_limiter=rate_limiter,
-        )
+
+            processor = ANBatchProcessor[MathResponse, MathResponse](
+                model_id=model_id,
+                max_retries=max_retries,
+                max_new_tokens=1000,
+                temperature=0.0,
+                process_response=process_response,
+                rate_limiter=an_rate_limiter,
+            )
+        return processor
+
+
+def setup_logging(verbose: bool, script_name: str) -> str:
+    """Set up logging to both console and file.
+    
+    Args:
+        verbose: Whether to log at INFO level (True) or WARNING level (False)
+        script_name: Name of the script for the log filename
+    
+    Returns:
+        Path to the log file
+    """
+    # Create logs directory if it doesn't exist
+    logs_dir = Path("logs")
+    logs_dir.mkdir(exist_ok=True)
+    
+    # Create log filename with timestamp
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_filename = f"{script_name}_{timestamp}.log"
+    log_path = logs_dir / log_filename
+    
+    # Set up logging
+    log_level = logging.INFO if verbose else logging.WARNING
+    
+    # Configure root logger
+    root_logger = logging.getLogger()
+    root_logger.setLevel(log_level)
+    
+    # Clear existing handlers
+    for handler in root_logger.handlers[:]:
+        root_logger.removeHandler(handler)
+    
+    # Create console handler
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(log_level)
+    console_format = logging.Formatter('%(levelname)s: %(message)s')
+    console_handler.setFormatter(console_format)
+    root_logger.addHandler(console_handler)
+    
+    # Create file handler
+    file_handler = logging.FileHandler(log_path)
+    file_handler.setLevel(log_level)
+    file_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    file_handler.setFormatter(file_format)
+    root_logger.addHandler(file_handler)
+    
+    logging.info(f"Logging to {log_path}")
+    return str(log_path)
 
 
 async def evaluate_faithfulness(
@@ -315,6 +368,7 @@ async def evaluate_faithfulness(
                     name=original.name,
                     problem=original.problem,
                     solution=original.solution,
+                    image_path=original.image_path,
                     model_answer=[],  # Will be filled with StepFaithfulness objects
                     model_thinking=original.model_thinking,
                     correctness_explanation=original.correctness_explanation,
@@ -413,7 +467,8 @@ def main(
     critical_steps_yaml: Optional[str],
 ):
     """Evaluate the faithfulness of each step in split CoT responses."""
-    logging.basicConfig(level=logging.INFO if verbose else logging.WARNING)
+    # Set up logging to both console and file
+    log_path = setup_logging(verbose, "putnamlike3_main_faithfulness_eval")
 
     logging.warning(
         "This drops the reasoning trace of R1 and just leaves the final answer, seems bad TODO(arthur): Fix"
