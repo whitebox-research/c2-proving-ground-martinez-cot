@@ -243,8 +243,17 @@ async def split_cot_responses_async(
         response: str | tuple[str | None, str | None], item: tuple[str, str]
     ) -> list[str] | None:
         qid, uuid = item
+
+        # print("RESPONSE[0]")
+        # print(response[0])
+        # print("RESPONSE[1]")
+        # print(response[1])
+
+        # For some reason, the original code specifies response[0], which is the thinking result but this does not contain the response with the split <section> tags, that's why we're not getting any split responses. 
+
+        # After changing this to response[1], we get the response with the split <section> tags, which should be the input for parse_model_split_response.
         if isinstance(response, tuple):
-            anthropic_response = response[0] or ""
+            anthropic_response = response[1] or ""
         else:
             anthropic_response = response
         logging.info(f"Anthropic response:\n{anthropic_response}")
@@ -339,45 +348,46 @@ async def split_cot_responses_async(
     logging.error(f"Success: {success_count}, Failure: {failure_count}")
 
     # Create a new SplitCotResponses with the appropriate type
-    if isinstance(responses.ds_params, ctyping.MathDatasetParams):
-        split_responses: Mapping[str, Mapping[str, ctyping.MathResponse]] = {
-            qid: {
-                uuid: resp
-                for uuid, resp in responses.items()
-                if isinstance(resp, ctyping.MathResponse)
-            }
-            for qid, responses in split_responses_by_qid.items()
+    # if isinstance(responses.ds_params, ctyping.MathDatasetParams):
+    split_responses: Mapping[str, Mapping[str, ctyping.MathResponse]] = {
+        qid: {
+            uuid: resp
+            for uuid, resp in responses.items()
+            if isinstance(resp, ctyping.MathResponse)
         }
-        return ctyping.SplitCotResponses(
-            split_responses_by_qid=split_responses,
-            model_id=responses.model_id,
-            successfully_split_count=success_count,
-            failed_to_split_count=failure_count,
-            instr_id=responses.instr_id,
-            ds_params=responses.ds_params,
-            sampling_params=responses.sampling_params,
-        )
-    else:
-        # Create a new type for AtCoder split responses
-        split_responses: Mapping[str, Mapping[str, ctyping.AtCoderResponse]] = {
-            qid: {
-                uuid: resp
-                for uuid, resp in responses.items()
-                if isinstance(resp, ctyping.AtCoderResponse)
-            }
-            for qid, responses in split_responses_by_qid.items()
-        }
-        assert isinstance(responses.ds_params, ctyping.AtCoderDatasetParams)
-        ds_params = responses.ds_params
-        return ctyping.SplitCotResponses(
-            split_responses_by_qid=split_responses,
-            model_id=responses.model_id,
-            successfully_split_count=success_count,
-            failed_to_split_count=failure_count,
-            instr_id=responses.instr_id,
-            ds_params=ds_params,
-            sampling_params=responses.sampling_params,
-        )
+        for qid, responses in split_responses_by_qid.items()
+    }
+    return ctyping.SplitCotResponses(
+        split_responses_by_qid=split_responses,
+        model_id=responses.model_id,
+        successfully_split_count=success_count,
+        failed_to_split_count=failure_count,
+        instr_id=responses.instr_id,
+        ds_params=responses.ds_params,
+        sampling_params=responses.sampling_params,
+    )
+    # else:
+    #     # Create a new type for AtCoder split responses
+    #     print("CREATING SPLIT RESPONST COT FROM ATCODER RESPONSES")
+    #     split_responses: Mapping[str, Mapping[str, ctyping.AtCoderResponse]] = {
+    #         qid: {
+    #             uuid: resp
+    #             for uuid, resp in responses.items()
+    #             if isinstance(resp, ctyping.AtCoderResponse)
+    #         }
+    #         for qid, responses in split_responses_by_qid.items()
+    #     }
+    #     assert isinstance(responses.ds_params, ctyping.AtCoderDatasetParams)
+    #     ds_params = responses.ds_params
+    #     return ctyping.SplitCotResponses(
+    #         split_responses_by_qid=split_responses,
+    #         model_id=responses.model_id,
+    #         successfully_split_count=success_count,
+    #         failed_to_split_count=failure_count,
+    #         instr_id=responses.instr_id,
+    #         ds_params=ds_params,
+    #         sampling_params=responses.sampling_params,
+    #     )
 
 
 def split_cot_responses(

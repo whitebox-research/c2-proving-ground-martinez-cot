@@ -9,6 +9,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from typing import Any, Callable, Generic, TypeVar
 
+import anthropic
 from anthropic import Anthropic, AsyncAnthropic
 from anthropic.types.message_create_params import \
     MessageCreateParamsNonStreaming
@@ -40,9 +41,9 @@ ANTHROPIC_MODEL_ALIASES = {
 }
 
 
-MAX_THINKING_TIMEOUT = 5 * 60  # 5 minutes
+MAX_THINKING_TIMEOUT = 7 * 60  # 5 minutes
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
-
+assert ANTHROPIC_API_KEY, "ANTHROPIC_API_KEY is not set"
 @dataclass
 class AnthropicLimits:
     requests_limit: int
@@ -284,10 +285,12 @@ async def generate_an_response_async(
     Returns:
         Processed result or None if all attempts failed
     """
-    logging.info(f"Running prompt:\n{prompt}")
+    logging.info(f"generate_an_response_async called with initial model_id: {model_id}")
+    logging.info(f"Prompt length: {len(prompt)}")
 
     is_thinking_model = is_anthropic_thinking_model(model_id)
     thinking_budget_tokens = get_budget_tokens(model_id) if is_thinking_model else None
+    logging.info(f"Is thinking model: {is_thinking_model}, Budget tokens: {thinking_budget_tokens}")
 
     model_id = model_id.split("/")[-1].split("_")[0]
     model_id = ANTHROPIC_MODEL_ALIASES[model_id]
@@ -942,8 +945,9 @@ class AnthropicBatchProcessor(Generic[T, U]):
         self.max_new_tokens = max_new_tokens
         self.rate_limiter = rate_limiter
         self.max_retries = max_retries
-        self.process_response = process_response
-        
+        # Ensure process_response is set, even if to a default passthrough
+        self.process_response = process_response if process_response else lambda resp, item: resp
+
         # Initialize Anthropic client
         self.client = AsyncAnthropic(api_key=ANTHROPIC_API_KEY)
         
@@ -967,7 +971,10 @@ class AnthropicBatchProcessor(Generic[T, U]):
             )
 
         async def process_single(item: T, prompt: str) -> tuple[T, U | None]:
-            result = await generate_an_response_async(
+            # The original code was returning result, metrics_data but generate_an_response_async only returns result
+            # Assuming metrics_data is not used downstream or was an error in previous version.
+            # If metrics_data is needed, generate_an_response_async needs to be updated.
+            raw_result = await generate_an_response_async(
                 prompt=prompt,
                 model_id=self.model_id,
                 client=self.client,
@@ -977,7 +984,9 @@ class AnthropicBatchProcessor(Generic[T, U]):
                 get_result_from_response=lambda response: self.process_response(response, item),
                 rate_limiter=self.rate_limiter,
             )
-            return (item, result)
+            # The get_result_from_response callback in generate_an_response_async is what ultimately uses self.process_response.
+            # So, raw_result here is the output of self.process_response.
+            return (item, raw_result)
 
         try:
             tasks = [process_single(item, prompt) for item, prompt in items]
