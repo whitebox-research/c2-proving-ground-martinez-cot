@@ -137,7 +137,7 @@ def create_putnam_dataset(df: pd.DataFrame) -> MathQsDataset:
                 solution=row["informal_solution"],
                 image_path=f"putnam_problems_images/{row['problem_name']}_stmt.png", #TODO: Add model usage tokens and API response time
             )
-            for _, row in df.iterrows()
+            for _, row in df.iterrows() if os.path.exists(f"putnam_problems_images/{row['problem_name']}_stmt.png")
         ],
         params=MathDatasetParams(
             description="Putnam Competition Problems",

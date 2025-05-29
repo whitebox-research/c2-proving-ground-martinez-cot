@@ -1,0 +1,1502 @@
+2025-05-24 14:23:17,917 - root - INFO - Logging to logs\putnamlike0_images_save_rollouts_anthropic_requests_20250524_142317.log
+2025-05-24 14:23:17,932 - root - WARNING - USING A THINK STEP-BY-STEP PREFIX!
+2025-05-24 14:23:17,934 - root - INFO - Processing 181 problems
+2025-05-24 14:23:17,944 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:17,946 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:17,946 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:17,949 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:17,949 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:17,951 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:17,951 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:17,951 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:17,953 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:17,953 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:17,955 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:17,955 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:17,957 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:17,958 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:17,958 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:17,958 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:17,960 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:17,960 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:17,960 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:17,962 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:17,962 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:17,964 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:17,964 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:17,966 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:17,969 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:17,971 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:17,971 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:17,973 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:17,973 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:17,973 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:17,975 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:17,975 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:17,975 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:17,977 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:17,977 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:17,979 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:17,979 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:17,979 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:17,981 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:17,983 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:17,983 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:17,983 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:17,985 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:17,985 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:17,985 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:17,985 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:17,987 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:17,987 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:17,989 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:17,989 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:17,993 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:17,995 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:17,997 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,001 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,003 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,005 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,007 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,007 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,009 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,009 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,011 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,022 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,024 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,024 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,024 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,026 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,027 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,029 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,029 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,031 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,033 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,035 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,037 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,041 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,043 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,045 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,045 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,045 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,047 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,049 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,049 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,051 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,052 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,052 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,052 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,052 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,055 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,057 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,059 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,059 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,059 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,059 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,059 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,059 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,059 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,059 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,067 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,068 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,068 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,069 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,069 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,069 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,070 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,070 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,070 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,071 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,071 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,072 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,072 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,073 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,073 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,074 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,074 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,075 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,076 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,076 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,077 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,077 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,078 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,078 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,078 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,079 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,079 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,080 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,081 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,081 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,082 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,082 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,083 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,083 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,084 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,084 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,085 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,085 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,086 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,086 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,087 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,087 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,088 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,088 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,088 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,089 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,090 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,090 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,091 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,091 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,091 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,092 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,092 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,092 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,093 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,093 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,093 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,094 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,095 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,095 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,096 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,096 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,096 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,097 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,097 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,097 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,098 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,098 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,098 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,099 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,099 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,100 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,100 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,101 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,101 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,102 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,103 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,103 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,104 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,104 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,104 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,105 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,106 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,106 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,106 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,106 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,107 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,107 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,107 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,108 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,108 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,108 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,109 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,109 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,109 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,110 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,110 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,110 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,110 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,111 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,111 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,111 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,111 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,111 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,114 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,114 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,114 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,114 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,114 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,114 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,114 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,117 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,117 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,117 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,117 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,117 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,117 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,119 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,119 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,119 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,119 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,119 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,119 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,119 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,119 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,119 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,119 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,124 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,124 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,124 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,124 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,124 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,124 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,124 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,124 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,124 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,124 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,124 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,124 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,124 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,130 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,131 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,131 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,133 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,133 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,133 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,135 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,135 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,137 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,137 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,139 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,139 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,140 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,140 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,142 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,142 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,142 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,142 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,144 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,144 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,144 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,144 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,147 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,147 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,147 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,147 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,147 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,147 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,149 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,149 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,151 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,151 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,151 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,153 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,154 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,154 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,155 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,155 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,156 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,157 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,158 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,158 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,159 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,159 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,160 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,160 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,161 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,162 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,162 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,163 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,163 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,164 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,164 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,165 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,165 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,165 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,166 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,167 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,167 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,168 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,168 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,169 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,170 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,170 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,171 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,172 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,172 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,173 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,173 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,173 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,174 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,175 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,175 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,176 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,176 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,177 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,177 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,178 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,178 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,178 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,179 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,179 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,179 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,180 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,181 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,181 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,181 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,182 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,182 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,183 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,183 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,183 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,184 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,185 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,185 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,186 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,186 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,187 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,187 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,187 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,187 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,187 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,190 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,190 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,191 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,191 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,191 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,192 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,192 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,192 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,192 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,193 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,193 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,194 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,194 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,194 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,194 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,194 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,194 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,195 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,195 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,195 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,196 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,196 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,196 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,196 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,196 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,197 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,197 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,197 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,197 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,197 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,197 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,198 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,199 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,199 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,200 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,200 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,200 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,201 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,201 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,202 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,202 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,202 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,202 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,203 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,203 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,203 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,204 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,204 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,205 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,205 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,205 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,206 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,206 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,206 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,206 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,207 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,207 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,207 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,207 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,207 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,208 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,208 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,209 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,209 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,209 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,209 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,210 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,210 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,210 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,211 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,211 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,212 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,212 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,212 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,213 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,213 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,213 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,214 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,214 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,214 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,214 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,214 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,216 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,216 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,217 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,217 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,218 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,218 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,218 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,219 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,219 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,220 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,220 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,221 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,221 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,222 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,222 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,223 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,223 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,223 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,223 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,224 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,224 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,224 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,224 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,225 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,225 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,225 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,226 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,226 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,226 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,227 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,227 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,228 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,228 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,228 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,229 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,229 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,229 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,230 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,230 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,230 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,231 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,231 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,231 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,231 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,232 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,232 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,232 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,232 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,233 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,233 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,233 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,234 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,235 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,235 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,235 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,236 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,236 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,236 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,237 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,237 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,238 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,238 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,239 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,239 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,239 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,239 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,239 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,239 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,239 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,239 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,242 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,242 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,242 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,242 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,242 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,242 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,242 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,242 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,244 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,244 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,244 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,244 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,244 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,244 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,244 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,244 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,244 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,244 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,244 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,244 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,244 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,244 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,244 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,244 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,244 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,244 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,244 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,244 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,244 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,244 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,244 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,244 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,255 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,255 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,255 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,255 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,255 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,255 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,255 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,255 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,255 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,255 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,255 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,255 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,255 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,255 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,255 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,255 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,260 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,261 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:18,261 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 14:23:18,261 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 14:23:18,261 - root - INFO - is_thinking_model: True
+2025-05-24 14:23:35,279 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:23:35,282 - anthropic._base_client - INFO - Retrying request to /v1/messages in 37.000000 seconds
+2025-05-24 14:23:38,498 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:23:38,498 - anthropic._base_client - INFO - Retrying request to /v1/messages in 34.000000 seconds
+2025-05-24 14:23:42,434 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:23:42,435 - anthropic._base_client - INFO - Retrying request to /v1/messages in 30.000000 seconds
+2025-05-24 14:23:50,528 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:23:50,528 - anthropic._base_client - INFO - Retrying request to /v1/messages in 49.000000 seconds
+2025-05-24 14:23:54,522 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:23:54,522 - anthropic._base_client - INFO - Retrying request to /v1/messages in 45.000000 seconds
+2025-05-24 14:23:58,589 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:23:58,589 - anthropic._base_client - INFO - Retrying request to /v1/messages in 41.000000 seconds
+2025-05-24 14:24:02,601 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:02,602 - anthropic._base_client - INFO - Retrying request to /v1/messages in 37.000000 seconds
+2025-05-24 14:24:06,600 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:06,602 - anthropic._base_client - INFO - Retrying request to /v1/messages in 33.000000 seconds
+2025-05-24 14:24:10,659 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:10,660 - anthropic._base_client - INFO - Retrying request to /v1/messages in 29.000000 seconds
+2025-05-24 14:24:12,841 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:12,841 - anthropic._base_client - INFO - Retrying request to /v1/messages in 54.000000 seconds
+2025-05-24 14:24:12,901 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:12,914 - anthropic._base_client - INFO - Retrying request to /v1/messages in 54.000000 seconds
+2025-05-24 14:24:14,645 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:14,648 - anthropic._base_client - INFO - Retrying request to /v1/messages in 52.000000 seconds
+2025-05-24 14:24:16,171 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-24 14:24:16,219 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=899, output_tokens=3883, server_tool_use=None, service_tier='standard')
+2025-05-24 14:24:16,599 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages/count_tokens "HTTP/1.1 200 OK"
+2025-05-24 14:24:16,940 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages/count_tokens "HTTP/1.1 200 OK"
+2025-05-24 14:24:16,940 - root - INFO - Token usage breakdown for claude-3-7-sonnet-20250219 for problem putnam_1968_a5:
+  Thinking tokens: 3239
+  Output tokens: 646
+  Total tokens: 3883
+  Thinking percentage: 83.4%  Time taken: 50.22 seconds
+2025-05-24 14:24:16,959 - root - INFO - Found valid result!
+2025-05-24 14:24:18,898 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:18,898 - anthropic._base_client - INFO - Retrying request to /v1/messages in 36.000000 seconds
+2025-05-24 14:24:22,885 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:22,885 - anthropic._base_client - INFO - Retrying request to /v1/messages in 32.000000 seconds
+2025-05-24 14:24:30,809 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:30,818 - anthropic._base_client - INFO - Retrying request to /v1/messages in 51.000000 seconds
+2025-05-24 14:24:35,046 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:35,060 - anthropic._base_client - INFO - Retrying request to /v1/messages in 47.000000 seconds
+2025-05-24 14:24:38,920 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:38,922 - anthropic._base_client - INFO - Retrying request to /v1/messages in 43.000000 seconds
+2025-05-24 14:24:39,872 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:39,872 - anthropic._base_client - INFO - Retrying request to /v1/messages in 42.000000 seconds
+2025-05-24 14:24:39,898 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:39,901 - anthropic._base_client - INFO - Retrying request to /v1/messages in 42.000000 seconds
+2025-05-24 14:24:39,992 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:39,994 - anthropic._base_client - INFO - Retrying request to /v1/messages in 42.000000 seconds
+2025-05-24 14:24:40,066 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:40,083 - anthropic._base_client - INFO - Retrying request to /v1/messages in 42.000000 seconds
+2025-05-24 14:24:40,226 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:40,226 - anthropic._base_client - INFO - Retrying request to /v1/messages in 41.000000 seconds
+2025-05-24 14:24:40,940 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:40,940 - anthropic._base_client - INFO - Retrying request to /v1/messages in 41.000000 seconds
+2025-05-24 14:24:42,831 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:42,833 - anthropic._base_client - INFO - Retrying request to /v1/messages in 39.000000 seconds
+2025-05-24 14:24:46,903 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:46,903 - anthropic._base_client - INFO - Retrying request to /v1/messages in 35.000000 seconds
+2025-05-24 14:24:50,988 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:50,991 - anthropic._base_client - INFO - Retrying request to /v1/messages in 31.000000 seconds
+2025-05-24 14:24:55,253 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:55,263 - anthropic._base_client - INFO - Retrying request to /v1/messages in 54.000000 seconds
+2025-05-24 14:24:55,288 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:55,291 - anthropic._base_client - INFO - Retrying request to /v1/messages in 54.000000 seconds
+2025-05-24 14:24:58,938 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:24:58,938 - anthropic._base_client - INFO - Retrying request to /v1/messages in 50.000000 seconds
+2025-05-24 14:25:02,980 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:02,992 - anthropic._base_client - INFO - Retrying request to /v1/messages in 46.000000 seconds
+2025-05-24 14:25:07,051 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:07,051 - anthropic._base_client - INFO - Retrying request to /v1/messages in 42.000000 seconds
+2025-05-24 14:25:07,306 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:07,309 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 14:25:07,310 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:25:07,344 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:07,355 - anthropic._base_client - INFO - Retrying request to /v1/messages in 42.000000 seconds
+2025-05-24 14:25:08,199 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:08,205 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 14:25:08,205 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:25:11,049 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:11,049 - anthropic._base_client - INFO - Retrying request to /v1/messages in 38.000000 seconds
+2025-05-24 14:25:16,298 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:16,301 - anthropic._base_client - INFO - Retrying request to /v1/messages in 33.000000 seconds
+2025-05-24 14:25:19,143 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:19,145 - anthropic._base_client - INFO - Retrying request to /v1/messages in 30.000000 seconds
+2025-05-24 14:25:22,302 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:22,302 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 14:25:22,302 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:25:22,320 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:22,323 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 14:25:22,324 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:25:22,346 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:22,351 - anthropic._base_client - INFO - Retrying request to /v1/messages in 54.000000 seconds
+2025-05-24 14:25:22,766 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:22,766 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 14:25:22,766 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:25:23,096 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:23,096 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 14:25:23,096 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:25:23,196 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:23,196 - anthropic._base_client - INFO - Retrying request to /v1/messages in 53.000000 seconds
+2025-05-24 14:25:23,265 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:23,277 - anthropic._base_client - INFO - Retrying request to /v1/messages in 53.000000 seconds
+2025-05-24 14:25:23,295 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:23,297 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 14:25:23,297 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:25:23,364 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:23,364 - anthropic._base_client - INFO - Retrying request to /v1/messages in 53.000000 seconds
+2025-05-24 14:25:23,419 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:23,429 - anthropic._base_client - INFO - Retrying request to /v1/messages in 53.000000 seconds
+2025-05-24 14:25:23,488 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:23,488 - anthropic._base_client - INFO - Retrying request to /v1/messages in 53.000000 seconds
+2025-05-24 14:25:23,602 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:23,602 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 14:25:23,602 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:25:27,205 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:27,205 - anthropic._base_client - INFO - Retrying request to /v1/messages in 49.000000 seconds
+2025-05-24 14:25:31,288 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:31,290 - anthropic._base_client - INFO - Retrying request to /v1/messages in 45.000000 seconds
+2025-05-24 14:25:35,273 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:35,273 - anthropic._base_client - INFO - Retrying request to /v1/messages in 41.000000 seconds
+2025-05-24 14:25:39,388 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:39,388 - anthropic._base_client - INFO - Retrying request to /v1/messages in 37.000000 seconds
+2025-05-24 14:25:44,310 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:44,310 - anthropic._base_client - INFO - Retrying request to /v1/messages in 32.000000 seconds
+2025-05-24 14:25:47,530 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:47,532 - anthropic._base_client - INFO - Retrying request to /v1/messages in 29.000000 seconds
+2025-05-24 14:25:49,429 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:49,429 - anthropic._base_client - INFO - Retrying request to /v1/messages in 54.000000 seconds
+2025-05-24 14:25:49,464 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:49,465 - anthropic._base_client - INFO - Retrying request to /v1/messages in 54.000000 seconds
+2025-05-24 14:25:49,578 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:49,586 - anthropic._base_client - INFO - Retrying request to /v1/messages in 54.000000 seconds
+2025-05-24 14:25:49,617 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:49,620 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 14:25:49,620 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:25:49,692 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:49,696 - anthropic._base_client - INFO - Retrying request to /v1/messages in 54.000000 seconds
+2025-05-24 14:25:49,776 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:49,779 - anthropic._base_client - INFO - Retrying request to /v1/messages in 53.000000 seconds
+2025-05-24 14:25:50,643 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:50,643 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 14:25:50,643 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:25:51,229 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:51,229 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 14:25:51,229 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:25:52,296 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:52,299 - anthropic._base_client - INFO - Retrying request to /v1/messages in 51.000000 seconds
+2025-05-24 14:25:55,752 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:55,752 - anthropic._base_client - INFO - Retrying request to /v1/messages in 48.000000 seconds
+2025-05-24 14:25:59,454 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:25:59,454 - anthropic._base_client - INFO - Retrying request to /v1/messages in 44.000000 seconds
+2025-05-24 14:26:03,952 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 14:26:03,952 - anthropic._base_client - INFO - Retrying request to /v1/messages in 39.000000 seconds
+2025-05-24 14:41:04,924 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.388273 seconds
+2025-05-24 14:41:04,926 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.418913 seconds
+2025-05-24 14:41:04,928 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.377149 seconds
+2025-05-24 14:41:04,928 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.953047 seconds
+2025-05-24 14:41:04,931 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.401243 seconds
+2025-05-24 14:41:04,931 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.467843 seconds
+2025-05-24 14:41:04,933 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.961740 seconds
+2025-05-24 14:41:04,938 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.840577 seconds
+2025-05-24 14:41:04,940 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.446692 seconds
+2025-05-24 14:41:04,942 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.772748 seconds
+2025-05-24 14:41:04,944 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:04,944 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:04,946 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.920969 seconds
+2025-05-24 14:41:04,948 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:04,948 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:04,950 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.862915 seconds
+2025-05-24 14:41:04,950 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.900874 seconds
+2025-05-24 14:41:04,952 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:04,952 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:04,954 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.818630 seconds
+2025-05-24 14:41:04,956 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:04,956 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:04,959 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:04,959 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:04,961 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.853138 seconds
+2025-05-24 14:41:04,961 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:04,963 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:04,963 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.766242 seconds
+2025-05-24 14:41:04,965 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.892960 seconds
+2025-05-24 14:41:04,966 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.861195 seconds
+2025-05-24 14:41:04,968 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:04,969 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:04,969 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.907681 seconds
+2025-05-24 14:41:05,001 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:05,007 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:05,011 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:05,011 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:05,016 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:05,018 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:05,022 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.965390 seconds
+2025-05-24 14:41:05,332 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.913312 seconds
+2025-05-24 14:41:05,334 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.860547 seconds
+2025-05-24 14:41:05,336 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.787844 seconds
+2025-05-24 14:41:05,338 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.752130 seconds
+2025-05-24 14:41:05,414 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.887431 seconds
+2025-05-24 14:41:05,414 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.924377 seconds
+2025-05-24 14:41:05,745 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:05,745 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:05,747 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:05,747 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:05,778 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:05,780 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:05,782 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:05,782 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:05,837 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:05,837 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:05,837 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:05,837 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:05,837 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:05,844 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:05,844 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:05,844 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:05,876 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:05,876 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:05,876 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:05,876 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:05,918 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:05,918 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:05,918 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:05,918 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:05,918 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:05,918 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:06,005 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:06,005 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:06,091 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:06,092 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:06,136 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:06,137 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:06,218 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:06,219 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:06,273 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:06,273 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:06,312 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:06,312 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:06,370 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:06,371 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 14:41:08,999 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.496020 seconds
+2025-05-24 14:41:09,503 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.977266 seconds
+2025-05-24 14:41:10,494 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 14:41:10,494 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:03:00,794 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.498904 seconds
+2025-05-24 18:03:00,795 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.438480 seconds
+2025-05-24 18:03:00,797 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.464210 seconds
+2025-05-24 18:03:01,244 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.799894 seconds
+2025-05-24 18:03:01,246 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.831972 seconds
+2025-05-24 18:03:01,302 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.917850 seconds
+2025-05-24 18:03:02,043 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:03:02,045 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:03:02,093 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:03:02,094 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:03:02,239 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:03:02,241 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:03:04,819 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.486282 seconds
+2025-05-24 18:03:05,316 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.830210 seconds
+2025-05-24 18:03:06,172 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:03:06,176 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:03:08,830 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.401019 seconds
+2025-05-24 18:03:09,246 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.968630 seconds
+2025-05-24 18:03:10,219 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:03:10,219 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:03:12,842 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.375820 seconds
+2025-05-24 18:03:13,226 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.926704 seconds
+2025-05-24 18:03:14,159 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:03:14,159 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:03:16,863 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.393293 seconds
+2025-05-24 18:03:17,261 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.940338 seconds
+2025-05-24 18:03:18,203 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:03:18,203 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:03:20,886 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.421500 seconds
+2025-05-24 18:03:21,317 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.797878 seconds
+2025-05-24 18:03:22,118 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:03:22,119 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:03:24,903 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.393701 seconds
+2025-05-24 18:03:25,311 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.838125 seconds
+2025-05-24 18:03:26,153 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:03:26,153 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:03:28,920 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.398950 seconds
+2025-05-24 18:03:29,320 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.991250 seconds
+2025-05-24 18:03:30,322 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:03:30,322 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:03:32,942 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.377346 seconds
+2025-05-24 18:03:33,331 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.789771 seconds
+2025-05-24 18:03:34,135 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:03:34,135 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:03:36,963 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.430353 seconds
+2025-05-24 18:03:37,405 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.896294 seconds
+2025-05-24 18:03:38,307 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:03:38,307 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:03:40,994 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.442374 seconds
+2025-05-24 18:03:41,444 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.853227 seconds
+2025-05-24 18:03:42,305 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:03:42,305 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:03:45,036 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.404236 seconds
+2025-05-24 18:03:45,447 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.944816 seconds
+2025-05-24 18:03:46,401 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:03:46,401 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:03:49,060 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.499787 seconds
+2025-05-24 18:03:49,564 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.778737 seconds
+2025-05-24 18:03:50,345 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:03:50,345 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:03:53,082 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.497247 seconds
+2025-05-24 18:03:53,583 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.992230 seconds
+2025-05-24 18:03:54,578 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:03:54,578 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:03:57,103 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.434957 seconds
+2025-05-24 18:03:57,542 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.984926 seconds
+2025-05-24 18:03:58,542 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:03:58,542 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:04:01,180 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.488700 seconds
+2025-05-24 18:04:01,680 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.784388 seconds
+2025-05-24 18:04:02,475 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:04:02,475 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:04:05,199 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.441780 seconds
+2025-05-24 18:04:05,658 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.767948 seconds
+2025-05-24 18:04:06,439 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:04:06,439 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:04:09,227 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.379100 seconds
+2025-05-24 18:04:09,620 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.803802 seconds
+2025-05-24 18:04:10,430 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:04:10,430 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:04:13,224 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.489396 seconds
+2025-05-24 18:04:13,718 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.985224 seconds
+2025-05-24 18:04:14,708 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:04:14,708 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:04:17,247 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.474527 seconds
+2025-05-24 18:04:17,731 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.963531 seconds
+2025-05-24 18:04:18,699 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:04:18,699 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:04:21,276 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.448045 seconds
+2025-05-24 18:04:21,729 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.864009 seconds
+2025-05-24 18:04:22,597 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:04:22,597 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:04:25,309 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.483123 seconds
+2025-05-24 18:04:25,798 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.787434 seconds
+2025-05-24 18:04:26,592 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:04:26,592 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:04:29,330 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.419540 seconds
+2025-05-24 18:04:29,753 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.874241 seconds
+2025-05-24 18:04:30,637 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:04:30,637 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:04:33,345 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.488882 seconds
+2025-05-24 18:04:33,841 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.765699 seconds
+2025-05-24 18:04:34,615 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:04:34,615 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:04:37,365 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.451515 seconds
+2025-05-24 18:04:37,828 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.902245 seconds
+2025-05-24 18:04:38,740 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:04:38,740 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:04:41,382 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.447801 seconds
+2025-05-24 18:04:41,841 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.949510 seconds
+2025-05-24 18:04:42,804 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:04:42,804 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:04:45,416 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.478157 seconds
+2025-05-24 18:04:45,909 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.817195 seconds
+2025-05-24 18:04:46,744 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:04:46,746 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:04:49,449 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.431070 seconds
+2025-05-24 18:04:49,905 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.966008 seconds
+2025-05-24 18:04:50,886 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:04:50,891 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:04:53,483 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.445536 seconds
+2025-05-24 18:04:53,945 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.953032 seconds
+2025-05-24 18:04:54,918 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:04:54,918 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:04:57,517 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.434790 seconds
+2025-05-24 18:04:57,966 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.788399 seconds
+2025-05-24 18:04:58,772 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:04:58,773 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:05:01,542 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.401073 seconds
+2025-05-24 18:05:01,957 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.826105 seconds
+2025-05-24 18:05:02,796 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:05:02,796 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:05:05,546 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.397299 seconds
+2025-05-24 18:05:05,951 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.936743 seconds
+2025-05-24 18:05:06,906 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:05:06,906 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:05:09,583 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.393668 seconds
+2025-05-24 18:05:09,983 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.882113 seconds
+2025-05-24 18:05:10,879 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:05:10,879 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:05:13,593 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.456208 seconds
+2025-05-24 18:05:14,065 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.842550 seconds
+2025-05-24 18:05:14,919 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:05:14,919 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:05:17,622 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.493306 seconds
+2025-05-24 18:05:18,122 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.971637 seconds
+2025-05-24 18:05:19,107 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:05:19,107 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:05:21,630 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.414429 seconds
+2025-05-24 18:05:22,059 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.990083 seconds
+2025-05-24 18:05:23,066 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:05:23,066 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:05:25,663 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.453463 seconds
+2025-05-24 18:05:26,122 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.828465 seconds
+2025-05-24 18:05:26,959 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:05:26,961 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:05:29,695 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.468263 seconds
+2025-05-24 18:05:30,182 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.857752 seconds
+2025-05-24 18:05:31,057 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:05:31,057 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:05:33,718 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.497966 seconds
+2025-05-24 18:05:34,226 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.960412 seconds
+2025-05-24 18:05:35,201 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:05:35,202 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 18:05:37,754 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.407985 seconds
+2025-05-24 18:05:38,163 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.832437 seconds
+2025-05-24 18:05:39,003 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 18:05:39,003 - root - INFO - Retry attempt 1 of 3 for generating a response

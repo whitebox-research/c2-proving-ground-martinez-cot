@@ -1,0 +1,214 @@
+2025-05-24 13:20:29,834 - root - INFO - Logging to logs\putnamlike0_images_save_rollouts_anthropic_requests_20250524_132029.log
+2025-05-24 13:20:29,841 - root - WARNING - USING A THINK STEP-BY-STEP PREFIX!
+2025-05-24 13:20:29,841 - root - INFO - Processing 15 problems
+2025-05-24 13:20:29,847 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 13:20:29,847 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 13:20:29,853 - root - INFO - is_thinking_model: True
+2025-05-24 13:20:29,854 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 13:20:29,854 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 13:20:29,854 - root - INFO - is_thinking_model: True
+2025-05-24 13:20:29,854 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 13:20:29,854 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 13:20:29,854 - root - INFO - is_thinking_model: True
+2025-05-24 13:20:29,858 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 13:20:29,858 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 13:20:29,858 - root - INFO - is_thinking_model: True
+2025-05-24 13:20:29,858 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 13:20:29,858 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 13:20:29,858 - root - INFO - is_thinking_model: True
+2025-05-24 13:20:29,858 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 13:20:29,858 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 13:20:29,858 - root - INFO - is_thinking_model: True
+2025-05-24 13:20:29,862 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 13:20:29,862 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 13:20:29,862 - root - INFO - is_thinking_model: True
+2025-05-24 13:20:29,862 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 13:20:29,862 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 13:20:29,866 - root - INFO - is_thinking_model: True
+2025-05-24 13:20:29,866 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 13:20:29,866 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 13:20:29,866 - root - INFO - is_thinking_model: True
+2025-05-24 13:20:29,868 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 13:20:29,868 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 13:20:29,868 - root - INFO - is_thinking_model: True
+2025-05-24 13:20:29,868 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 13:20:29,871 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 13:20:29,871 - root - INFO - is_thinking_model: True
+2025-05-24 13:20:29,871 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 13:20:29,871 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 13:20:29,874 - root - INFO - is_thinking_model: True
+2025-05-24 13:20:29,874 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 13:20:29,874 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 13:20:29,874 - root - INFO - is_thinking_model: True
+2025-05-24 13:20:29,874 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 13:20:29,874 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 13:20:29,874 - root - INFO - is_thinking_model: True
+2025-05-24 13:20:29,879 - root - INFO - Running prompt:
+Solve this math problem step-by-step, reasoning first and then producing an answer.
+
+
+2025-05-24 13:20:29,880 - root - INFO - Model ID: claude-3-7-sonnet-20250219
+2025-05-24 13:20:29,880 - root - INFO - is_thinking_model: True
+2025-05-24 13:20:46,264 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:20:46,264 - anthropic._base_client - INFO - Retrying request to /v1/messages in 37.000000 seconds
+2025-05-24 13:20:50,250 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:20:50,250 - anthropic._base_client - INFO - Retrying request to /v1/messages in 33.000000 seconds
+2025-05-24 13:20:54,501 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:20:54,501 - anthropic._base_client - INFO - Retrying request to /v1/messages in 29.000000 seconds
+2025-05-24 13:21:02,354 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:21:02,354 - anthropic._base_client - INFO - Retrying request to /v1/messages in 49.000000 seconds
+2025-05-24 13:21:06,311 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:21:06,311 - anthropic._base_client - INFO - Retrying request to /v1/messages in 45.000000 seconds
+2025-05-24 13:21:10,382 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:21:10,390 - anthropic._base_client - INFO - Retrying request to /v1/messages in 41.000000 seconds
+2025-05-24 13:21:14,507 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:21:14,507 - anthropic._base_client - INFO - Retrying request to /v1/messages in 36.000000 seconds
+2025-05-24 13:21:18,376 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:21:18,378 - anthropic._base_client - INFO - Retrying request to /v1/messages in 33.000000 seconds
+2025-05-24 13:21:22,394 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:21:22,394 - anthropic._base_client - INFO - Retrying request to /v1/messages in 28.000000 seconds
+2025-05-24 13:21:23,603 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:21:23,603 - anthropic._base_client - INFO - Retrying request to /v1/messages in 54.000000 seconds
+2025-05-24 13:21:23,829 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:21:23,838 - anthropic._base_client - INFO - Retrying request to /v1/messages in 54.000000 seconds
+2025-05-24 13:21:26,410 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:21:26,412 - anthropic._base_client - INFO - Retrying request to /v1/messages in 52.000000 seconds
+2025-05-24 13:21:30,408 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:21:30,408 - anthropic._base_client - INFO - Retrying request to /v1/messages in 48.000000 seconds
+2025-05-24 13:21:51,239 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:21:51,247 - anthropic._base_client - INFO - Retrying request to /v1/messages in 54.000000 seconds
+2025-05-24 13:21:51,681 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:21:51,681 - anthropic._base_client - INFO - Retrying request to /v1/messages in 54.000000 seconds
+2025-05-24 13:21:51,747 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:21:51,747 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:21:51,747 - anthropic._base_client - INFO - Retrying request to /v1/messages in 54.000000 seconds
+2025-05-24 13:21:51,747 - anthropic._base_client - INFO - Retrying request to /v1/messages in 54.000000 seconds
+2025-05-24 13:21:52,737 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:21:52,737 - anthropic._base_client - INFO - Retrying request to /v1/messages in 53.000000 seconds
+2025-05-24 13:22:18,829 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:22:18,829 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 13:22:18,831 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 13:22:19,210 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:22:19,211 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 13:22:19,212 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 13:22:19,777 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:22:19,777 - anthropic._base_client - INFO - Retrying request to /v1/messages in 53.000000 seconds
+2025-05-24 13:22:22,445 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-24 13:22:22,562 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=899, output_tokens=7098, server_tool_use=None, service_tier='standard')
+2025-05-24 13:22:23,179 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages/count_tokens "HTTP/1.1 200 OK"
+2025-05-24 13:22:23,213 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:22:23,237 - anthropic._base_client - INFO - Retrying request to /v1/messages in 49.000000 seconds
+2025-05-24 13:22:23,493 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages/count_tokens "HTTP/1.1 200 OK"
+2025-05-24 13:22:23,493 - root - INFO - Token usage breakdown for claude-3-7-sonnet-20250219 for problem putnam_1968_a5:
+  Thinking tokens: 6343
+  Output tokens: 757
+  Total tokens: 7098
+  Thinking percentage: 89.4%  Time taken: 84.59 seconds
+2025-05-24 13:22:23,517 - root - INFO - Found valid result!
+2025-05-24 13:22:27,203 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:22:27,203 - anthropic._base_client - INFO - Retrying request to /v1/messages in 45.000000 seconds
+2025-05-24 13:22:46,138 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:22:46,138 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 13:22:46,138 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 13:22:46,156 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:22:46,158 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 13:22:46,160 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 13:22:46,326 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:22:46,326 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 13:22:46,342 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 13:22:47,110 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:22:47,110 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 13:22:47,110 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 13:22:50,586 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:22:50,586 - anthropic._base_client - INFO - Retrying request to /v1/messages in 49.000000 seconds
+2025-05-24 13:22:55,377 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:22:55,388 - anthropic._base_client - INFO - Retrying request to /v1/messages in 44.000000 seconds
+2025-05-24 13:22:59,533 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:22:59,537 - anthropic._base_client - INFO - Retrying request to /v1/messages in 40.000000 seconds
+2025-05-24 13:23:02,549 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:23:02,549 - anthropic._base_client - INFO - Retrying request to /v1/messages in 37.000000 seconds
+2025-05-24 13:23:33,678 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.785210 seconds
+2025-05-24 13:23:33,680 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.393532 seconds
+2025-05-24 13:23:33,682 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.380244 seconds
+2025-05-24 13:23:33,684 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 13:23:33,686 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 13:23:33,688 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.476589 seconds
+2025-05-24 13:23:33,690 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.998842 seconds
+2025-05-24 13:23:33,696 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.962722 seconds
+2025-05-24 13:23:34,449 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:23:34,449 - anthropic._base_client - INFO - Retrying request to /v1/messages in 49.000000 seconds
+2025-05-24 13:23:34,496 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:23:34,496 - anthropic._base_client - INFO - Retrying request to /v1/messages in 49.000000 seconds
+2025-05-24 13:23:34,758 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:23:34,760 - anthropic._base_client - INFO - Retrying request to /v1/messages in 49.000000 seconds
+2025-05-24 13:23:34,938 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:23:34,940 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 13:23:34,940 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 13:23:34,987 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:23:34,989 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 13:23:34,989 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 13:23:35,295 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:23:35,298 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Error code: 429 - {'type': 'error', 'error': {'type': 'rate_limit_error', 'message': 'This request would exceed the rate limit for your organization (fe7e7ec6-9d55-4174-8b08-410021c2f487) of 16,000 output tokens per minute. For details, refer to: https://docs.anthropic.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://www.anthropic.com/contact-sales to discuss your options for a rate limit increase.'}}, retrying...
+2025-05-24 13:23:35,300 - root - INFO - Retry attempt 1 of 3 for generating a response
+2025-05-24 13:23:38,198 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:23:38,201 - anthropic._base_client - INFO - Retrying request to /v1/messages in 45.000000 seconds
+2025-05-24 13:23:39,768 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:23:39,777 - anthropic._base_client - INFO - Retrying request to /v1/messages in 44.000000 seconds
+2025-05-24 13:23:39,877 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:23:39,877 - anthropic._base_client - INFO - Retrying request to /v1/messages in 44.000000 seconds
+2025-05-24 13:23:39,904 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:23:39,910 - anthropic._base_client - INFO - Retrying request to /v1/messages in 44.000000 seconds
+2025-05-24 13:23:40,017 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:23:40,017 - anthropic._base_client - INFO - Retrying request to /v1/messages in 43.000000 seconds
+2025-05-24 13:23:42,017 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:23:42,021 - anthropic._base_client - INFO - Retrying request to /v1/messages in 41.000000 seconds
+2025-05-24 13:23:46,032 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:23:46,032 - anthropic._base_client - INFO - Retrying request to /v1/messages in 37.000000 seconds
+2025-05-24 13:23:50,240 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 429 Too Many Requests"
+2025-05-24 13:23:50,240 - anthropic._base_client - INFO - Retrying request to /v1/messages in 33.000000 seconds
+2025-05-24 13:23:53,442 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.753961 seconds
+2025-05-24 13:23:53,442 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.765720 seconds
+2025-05-24 13:23:53,451 - root - WARNING - Error on attempt 1 for model claude-3-7-sonnet-20250219: Connection error., retrying...
+2025-05-24 13:23:53,451 - root - INFO - Retry attempt 1 of 3 for generating a response

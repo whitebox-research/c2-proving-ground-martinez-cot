@@ -405,6 +405,7 @@ def convert_image_to_base64(image_path):
 
 async def generate_an_response_async_with_image(
     prompt: str,
+    problem_name: str,
     image_path: str,
     model_id: str,
     client: AsyncAnthropic,
@@ -517,13 +518,13 @@ async def generate_an_response_async_with_image(
                 and isinstance(an_response.content[0], ThinkingBlock)
                 and isinstance(an_response.content[1], TextBlock)
             ):
-                logging.info(f"Received response 2: {an_response.content[1].text}")
+                logging.info(f"Received response thinking model: {an_response.content[1].text}")
                 # Log token usage for thinking vs output
                 thinking_tokens = await client.messages.count_tokens(model=model_id, messages=[{"role": "user", "content": an_response.content[0].thinking}])
                 output_tokens = await client.messages.count_tokens(model=model_id, messages=[{"role": "user", "content": an_response.content[1].text}])
                 total_tokens = an_response.usage.output_tokens
                 logging.info(
-                    f"Token usage breakdown for {model_id}:\n"
+                    f"Token usage breakdown for {model_id} for problem {problem_name}:\n"
                     f"  Thinking tokens: {thinking_tokens.input_tokens}\n"
                     f"  Output tokens: {output_tokens.input_tokens}\n"
                     f"  Total tokens: {total_tokens}\n"
@@ -717,6 +718,7 @@ class ANBatchProcessorWithImage(BatchProcessor[BatchItem, BatchResult]):
             result = await generate_an_response_async_with_image(
                 prompt=prompt,
                 image_path=item.image_path,
+                problem_name=item.name,
                 model_id=self.model_id,
                 client=self.client,
                 temperature=self.temperature,
@@ -965,7 +967,7 @@ class AnthropicBatchProcessor(Generic[T, U]):
             )
 
         async def process_single(item: T, prompt: str) -> tuple[T, U | None]:
-            result, metrics_data = await generate_an_response_async(
+            result = await generate_an_response_async(
                 prompt=prompt,
                 model_id=self.model_id,
                 client=self.client,
@@ -975,7 +977,7 @@ class AnthropicBatchProcessor(Generic[T, U]):
                 get_result_from_response=lambda response: self.process_response(response, item),
                 rate_limiter=self.rate_limiter,
             )
-            return (item, result, metrics_data)
+            return (item, result)
 
         try:
             tasks = [process_single(item, prompt) for item, prompt in items]

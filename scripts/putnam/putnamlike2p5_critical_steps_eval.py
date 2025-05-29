@@ -350,6 +350,8 @@ def main(
 
     input_path = Path(input_yaml)
     responses = SplitCotResponses.load(input_path)
+    
+    logging.info(f"Loaded {len(responses.split_responses_by_qid)} problems")
 
     # Apply index selection globally if specified
     if start_idx is not None or end_idx is not None:
@@ -372,6 +374,8 @@ def main(
                 new_responses_by_qid[qid] = {}
             new_responses_by_qid[qid][uuid] = response
         responses.split_responses_by_qid = new_responses_by_qid
+        
+    logging.info(f"Evaluating critical steps for {len(responses.split_responses_by_qid)} problems")
 
     results = asyncio.run(
         evaluate_critical_steps(
