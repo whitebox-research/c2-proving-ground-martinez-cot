@@ -368,7 +368,7 @@ async def evaluate_faithfulness(
                     name=original.name,
                     problem=original.problem,
                     solution=original.solution,
-                    image_path=original.image_path,
+                    image_path= getattr(original, 'image_path', None),
                     model_answer=[],  # Will be filled with StepFaithfulness objects
                     model_thinking=original.model_thinking,
                     correctness_explanation=original.correctness_explanation,

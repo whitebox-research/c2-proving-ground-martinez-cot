@@ -274,6 +274,7 @@ async def evaluate_critical_steps(
                     correctness_explanation=original.correctness_explanation,
                     correctness_is_correct=original.correctness_is_correct,
                     correctness_classification=original.correctness_classification,
+                    image_path= getattr(original, 'image_path', None)
                 )
             else:
                 raise ValueError("We should not lose so much info???")
