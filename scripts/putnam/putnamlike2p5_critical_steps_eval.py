@@ -183,7 +183,7 @@ def create_processor(
             an_rate_limiter = ANRateLimiter(
                 requests_per_interval=max_parallel,
                 tokens_per_interval=100000,
-                interval_seconds=1,
+                interval_seconds=60,
             )
 
             processor = ANBatchProcessor[MathResponse, MathResponse](
@@ -267,6 +267,7 @@ async def evaluate_critical_steps(
                     name=original.name,
                     problem=original.problem,
                     solution=original.solution,
+                    image_path=original.image_path,
                     model_answer=[
                         step_faithfulness
                     ],  # List of StepFaithfulness objects

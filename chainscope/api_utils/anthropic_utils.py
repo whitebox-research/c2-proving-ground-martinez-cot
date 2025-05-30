@@ -209,6 +209,7 @@ class ANRateLimiter:
 
     async def acquire_with_backoff(self, prompt: str, model: str, max_retries: int = 3):
         """Acquire rate limit with exponential backoff retry logic"""
+        ## UPDATE: made it multiplicative instead of exponential
         import random  # Add at top of file if not already present
 
         for attempt in range(max_retries):
@@ -218,7 +219,7 @@ class ANRateLimiter:
             except Exception as e:
                 if attempt == max_retries - 1:
                     raise
-                wait_time = (2**attempt) + random.uniform(0, 1)
+                wait_time = (60*attempt) + random.uniform(0, 1)
                 logging.warning(
                     f"Rate limit acquisition failed, retrying in {wait_time:.2f}s: {str(e)}"
                 )
@@ -718,6 +719,7 @@ class ANBatchProcessorWithImage(BatchProcessor[BatchItem, BatchResult]):
         async def process_single(
             item: BatchItem, prompt: str
         ) -> tuple[BatchItem, BatchResult | None]:
+            
             result = await generate_an_response_async_with_image(
                 prompt=prompt,
                 image_path=item.image_path,
@@ -967,7 +969,7 @@ class AnthropicBatchProcessor(Generic[T, U]):
             limits = get_anthropic_limits()
             self.rate_limiter = AnthropicRateLimiter(
                 requests_per_interval=limits.requests_limit,
-                interval_seconds=60,
+                interval_seconds=120,
             )
 
         async def process_single(item: T, prompt: str) -> tuple[T, U | None]:

@@ -1,4 +1,0 @@
-2025-05-29 17:26:04,674 - root - INFO - Logging to logs\putnamlike2p5_critical_steps_eval_20250529_172604.log
-2025-05-29 17:26:04,693 - root - INFO - Evaluating critical steps for 1 problems
-2025-05-29 17:26:05,017 - root - INFO - ANRateLimiter initialized with 1 requests, 100000 tokens per 1 seconds, and org TPM limit of 80000
-2025-05-29 17:26:05,273 - root - WARNING - Saved critical steps results to chainscope\data\cot_responses\instr-v0\default_sampling_params\filtered_putnambench\anthropic__claude-3.7-sonnet_20k_v1_just_correct_responses_splitted_anthropic_slash_claude-3_dot_7-sonnet_critical_steps.yaml
