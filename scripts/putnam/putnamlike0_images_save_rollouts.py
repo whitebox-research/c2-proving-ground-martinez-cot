@@ -32,6 +32,7 @@ from chainscope.api_utils.deepseek_utils import (
     DeepSeekRateLimiter,
 )
 from chainscope.api_utils.anthropic_utils import ANBatchProcessorWithImage, ANRateLimiter
+from chainscope.api_utils.google_utils import GOBatchProcessorWithImage, GORateLimiter
 from chainscope.typing import (
     CotResponses,
     DefaultSamplingParams,
@@ -189,6 +190,28 @@ def create_processor(
             format_thinking=lambda thinking,
             answer: f"**WORKING**: {thinking.lstrip()}\n\n**ANSWER**: {answer.lstrip()}",
         )
+    elif "google" in model_id:
+        # Google processor
+        logging.info(f"Using Google model {model_id}")
+        go_rate_limiter = None
+        if max_parallel is not None:
+            go_rate_limiter = GORateLimiter(
+                requests_per_interval=max_parallel,
+                tokens_per_interval=100000,
+                interval_seconds=1,
+            )
+
+            processor = GOBatchProcessorWithImage[MathResponse, MathResponse](
+                model_id=model_id,
+                max_retries=max_retries,
+                max_new_tokens=1000,
+                temperature=0.0,
+                process_response=get_tuple_or_str_response,
+                rate_limiter=go_rate_limiter,
+                track_api_usage=track_api_usage,
+            )
+
+            return processor
     else:
         # OpenRouter processor
         logging.info(f"Using Anthropic model {model_id}")
