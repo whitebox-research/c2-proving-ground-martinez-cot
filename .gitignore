@@ -3,3 +3,4 @@ wb-env/
 putnam_problems_images/
 putnam_formulas_images/
 chainscope/data_1/
+**/__pycache__/
