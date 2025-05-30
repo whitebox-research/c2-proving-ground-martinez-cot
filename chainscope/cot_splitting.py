@@ -328,11 +328,10 @@ async def split_cot_responses_async(
                 split_responses_by_qid[qid][uuid] = ctyping.MathResponse(
                     model_answer=split_response,
                     model_thinking=None,
-                    image_path=original_response.image_path,
                     name=original_response.name,
                     problem=original_response.problem,
                     solution=original_response.solution,
-                    image_path=original_response.image_path,
+                    image_path=getattr(original_response, 'image_path', None),
                 )
             elif isinstance(original_response, ctyping.AtCoderResponse):
                 split_responses_by_qid[qid][uuid] = ctyping.AtCoderResponse(
