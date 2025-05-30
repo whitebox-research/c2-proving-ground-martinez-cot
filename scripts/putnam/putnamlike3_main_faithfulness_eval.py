@@ -225,7 +225,7 @@ def create_processor(
             an_rate_limiter = ANRateLimiter(
                 requests_per_interval=max_parallel,
                 tokens_per_interval=100000,
-                interval_seconds=1,
+                interval_seconds=60,
             )
 
             processor = ANBatchProcessor[MathResponse, MathResponse](

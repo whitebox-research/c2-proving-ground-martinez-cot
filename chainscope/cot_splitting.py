@@ -236,7 +236,7 @@ async def split_cot_responses_async(
     if max_parallel is not None:
         rate_limiter = AnthropicRateLimiter(
             requests_per_interval=max_parallel,
-            interval_seconds=1,
+            interval_seconds=60,
         )
 
     def process_response(
@@ -330,8 +330,7 @@ async def split_cot_responses_async(
                     model_thinking=None,
                     name=original_response.name,
                     problem=original_response.problem,
-                    solution=original_response.solution,
-                    image_path=getattr(original_response, 'image_path', None),
+                    solution=original_response.solution
                 )
             elif isinstance(original_response, ctyping.AtCoderResponse):
                 split_responses_by_qid[qid][uuid] = ctyping.AtCoderResponse(

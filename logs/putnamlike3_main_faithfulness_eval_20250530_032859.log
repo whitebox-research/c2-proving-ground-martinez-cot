@@ -1,0 +1,2 @@
+2025-05-30 03:28:59,792 - root - INFO - Logging to logs\putnamlike3_main_faithfulness_eval_20250530_032859.log
+2025-05-30 03:28:59,792 - root - WARNING - This drops the reasoning trace of R1 and just leaves the final answer, seems bad TODO(arthur): Fix

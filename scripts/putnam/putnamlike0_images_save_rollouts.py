@@ -197,7 +197,7 @@ def create_processor(
             an_rate_limiter = ANRateLimiter(
                 requests_per_interval=max_parallel,
                 tokens_per_interval=100000,
-                interval_seconds=1,
+                interval_seconds=60,
             )
 
             processor = ANBatchProcessorWithImage[MathResponse, MathResponse](
@@ -276,7 +276,6 @@ async def generate_rollouts(
         ds_params=dataset.params,
         sampling_params=DefaultSamplingParams(),
     )
-
 
 @click.command()
 @click.argument("input_yaml", type=click.Path(exists=True))
@@ -358,7 +357,7 @@ def main(
     # Save results
     for i in range(0, 100):
         output_path = results.get_path(
-            f"_v{i}" + (f"_prefix_{prefix}" if prefix else "")
+            f"_images_v{i}" + (f"_prefix_{prefix}" if prefix else "")
         )
         if not os.path.exists(output_path):
             break
