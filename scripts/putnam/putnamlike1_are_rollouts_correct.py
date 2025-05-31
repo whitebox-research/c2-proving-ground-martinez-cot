@@ -112,6 +112,7 @@ def load_putnam_model_responses(
                     correctness_classification=None,
                 )
             )
+            logging.info(f"Added question {qid}")
             break  # DO NOT SUBMIT: Why is this here?
 
     if prefix is not None:

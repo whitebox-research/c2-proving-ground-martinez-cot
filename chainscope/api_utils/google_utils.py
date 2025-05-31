@@ -247,7 +247,7 @@ async def generate_an_response_async_with_image(
                 "Solve this math problem step-by-step, reasoning first and then producing an answer.\n\n",
             ]
 
-            # Use acreate instead of create for async operation
+            # async operation
             start_time = time.perf_counter()
             go_response = await client.aio.models.generate_content(**create_params) # client.messages.create(**create_params)
             end_time = time.perf_counter()
