@@ -261,6 +261,7 @@ def get_budget_tokens(model_id: str) -> int:
 
 async def generate_an_response_async(
     prompt: str,
+    problem_name: str,
     model_id: str,
     client: AsyncAnthropic,
     temperature: float,
@@ -636,6 +637,7 @@ class ANBatchProcessor(BatchProcessor[BatchItem, BatchResult]):
         ) -> tuple[BatchItem, BatchResult | None]:
             result = await generate_an_response_async(
                 prompt=prompt,
+                problem_name=item.name,
                 model_id=self.model_id,
                 client=self.client,
                 temperature=self.temperature,

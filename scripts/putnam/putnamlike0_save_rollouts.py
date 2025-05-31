@@ -198,7 +198,7 @@ def create_processor(
             an_rate_limiter = ANRateLimiter(
                 requests_per_interval=max_parallel,
                 tokens_per_interval=10000,
-                interval_seconds=300,
+                interval_seconds=480,
             )
 
             processor = ANBatchProcessor[MathResponse, MathResponse](
@@ -264,6 +264,7 @@ async def generate_rollouts(
                 name=question.name,
                 problem=question.problem,
                 solution=question.solution,
+                image_path=question.image_path,
                 model_thinking=thinking,
                 model_answer=[answer],  # Unsplit
             )
@@ -332,7 +333,7 @@ def main(
 ):
     """Generate rollouts for Putnam problems using OpenRouter or DeepSeek models."""
     # Set up logging to both console and file
-    log_path = setup_logging(verbose, "putnamlike0_save_rollouts")
+    log_path = setup_logging(verbose, "putnamlike0_texts_save_rollouts")
     logging.info(f"Loading dataset from {input_yaml}")
 
     # Load and prepare dataset
