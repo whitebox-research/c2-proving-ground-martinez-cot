@@ -31,7 +31,7 @@ from chainscope.api_utils.deepseek_utils import (
     DeepSeekBatchProcessor,
     DeepSeekRateLimiter,
 )
-from chainscope.api_utils.anthropic_utils import ANBatchProcessor, ANRateLimiter
+from chainscope.api_utils.anthropic_utils import ANBatchProcessorWithText, ANRateLimiter
 from chainscope.api_utils.open_router_utils import ORBatchProcessor, ORRateLimiter
 from chainscope.typing import (
     CotResponses,
@@ -201,7 +201,7 @@ def create_processor(
                 interval_seconds=480,
             )
 
-            processor = ANBatchProcessor[MathResponse, MathResponse](
+            processor = ANBatchProcessorWithText[MathResponse, MathResponse](
                 model_id=model_id,
                 max_retries=max_retries,
                 max_new_tokens=1000,

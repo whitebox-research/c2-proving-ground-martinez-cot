@@ -258,8 +258,145 @@ def get_budget_tokens(model_id: str) -> int:
                 f"Expected an integer, with optional `k` suffix, got `{budget_part}`"
             )
 
-
 async def generate_an_response_async(
+    prompt: str,
+    model_id: str,
+    client: AsyncAnthropic,
+    temperature: float,
+    max_new_tokens: int,
+    max_retries: int,
+    get_result_from_response: Callable[
+        [str | tuple[str | None, str | None]], Any | None
+    ],
+    rate_limiter: ANRateLimiter | None = None,
+) -> Any | None:
+    """Generate a response from an Anthropic model.
+
+    Args:
+        prompt: The prompt to run on the model
+        model_id: The model ID to call
+        client: The Anthropic client
+        temperature: Temperature parameter for generation
+        max_new_tokens: Maximum number of new tokens to generate
+        max_retries: Maximum number of retry attempts for each model
+        get_result_from_response: Callback that processes the model response and returns
+            either a valid result or None if the response should be retried
+
+    Returns:
+        Processed result or None if all attempts failed
+    """
+    logging.info(f"generate_an_response_async called with initial model_id: {model_id}")
+    logging.info(f"Prompt length: {len(prompt)}")
+
+    is_thinking_model = is_anthropic_thinking_model(model_id)
+    thinking_budget_tokens = get_budget_tokens(model_id) if is_thinking_model else None
+    logging.info(f"Is thinking model: {is_thinking_model}, Budget tokens: {thinking_budget_tokens}")
+
+    model_id = model_id.split("/")[-1].split("_")[0]
+    model_id = ANTHROPIC_MODEL_ALIASES[model_id]
+
+    for attempt in range(max_retries):
+        try:
+            if attempt > 0:
+                logging.info(
+                    f"Retry attempt {attempt} of {max_retries} for generating a response"
+                )
+
+            if rate_limiter:
+                await rate_limiter.acquire_with_backoff(prompt, model_id)
+
+            create_params = {
+                "model": model_id,
+                "messages": [{"role": "user", "content": prompt}],
+                "temperature": temperature,
+                "max_tokens": max_new_tokens,
+            }
+
+            if is_thinking_model:
+                assert thinking_budget_tokens is not None
+                create_params["thinking"] = {
+                    "type": "enabled",
+                    "budget_tokens": thinking_budget_tokens,
+                }
+                # Temperature can only be set to 1 for thinking models
+                create_params["temperature"] = 1
+                # `max_tokens` must be greater than `thinking.budget_tokens`
+                create_params["max_tokens"] = max_new_tokens + thinking_budget_tokens
+                # Set the timeout explicitly so that Anthropic doesn't complain about
+                # this request _potentially_ taking too long
+                create_params["timeout"] = MAX_THINKING_TIMEOUT
+
+            # Use acreate instead of create for async operation
+            
+            # start_time = time.perf_counter()
+            an_response = await client.messages.create(**create_params)
+            # end_time = time.perf_counter()
+
+            if rate_limiter:
+                logging.info(f"Got usage: {an_response.usage}")
+                rate_limiter.update_token_usage(an_response.usage.output_tokens)
+
+            if (
+                not an_response
+                or not an_response.content
+                or len(an_response.content) == 0
+            ):
+                logging.info("Invalid response content")
+                continue
+
+            if len(an_response.content) == 1 and isinstance(
+                an_response.content[0], TextBlock
+            ):
+                result = get_result_from_response(an_response.content[0].text)
+            elif (
+                len(an_response.content) == 2
+                and isinstance(an_response.content[0], ThinkingBlock)
+                and isinstance(an_response.content[1], TextBlock)
+            ):
+                logging.info(f"Received response thinking model: {an_response.content[1].text}")
+                # Log token usage for thinking vs output
+                # thinking_tokens = await client.messages.count_tokens(model=model_id, messages=[{"role": "user", "content": an_response.content[0].thinking}])
+                # output_tokens = await client.messages.count_tokens(model=model_id, messages=[{"role": "user", "content": an_response.content[1].text}])
+                # total_tokens = an_response.usage.output_tokens
+                # logging.info(
+                #     f"Token usage breakdown for {model_id} for problem {problem_name}:\n"
+                #     f"  Thinking tokens: {thinking_tokens.input_tokens}\n"
+                #     f"  Output tokens: {output_tokens.input_tokens}\n"
+                #     f"  Total tokens: {total_tokens}\n"
+                #     f"  Thinking percentage: {(thinking_tokens.input_tokens / total_tokens * 100):.1f}%"
+                #     f"  Time taken: {end_time - start_time:.2f} seconds"
+                # )
+                result = get_result_from_response(
+                    (
+                        an_response.content[0].thinking,
+                        an_response.content[1].text,
+                    )
+                )
+
+            if result is not None:
+                logging.info("Found valid result!")
+                return result
+
+            logging.info(
+                f"Invalid result on attempt {attempt + 1} for model {model_id}, retrying..."
+            )
+            continue
+
+        except Exception as e:
+            if attempt == max_retries:
+                logging.warning(
+                    f"Failed to process response after {max_retries} retries "
+                    f"for model {model_id}: {str(e)}"
+                )
+                return None
+            logging.warning(
+                f"Error on attempt {attempt + 1} for model {model_id}: {str(e)}, retrying..."
+            )
+            continue
+
+    return None
+
+async def generate_an_response_async_with_text(
     prompt: str,
     problem_name: str,
     model_id: str,
@@ -636,6 +773,93 @@ class ANBatchProcessor(BatchProcessor[BatchItem, BatchResult]):
             item: BatchItem, prompt: str
         ) -> tuple[BatchItem, BatchResult | None]:
             result = await generate_an_response_async(
+                prompt=prompt,
+                model_id=self.model_id,
+                client=self.client,
+                temperature=self.temperature,
+                max_new_tokens=self.max_new_tokens,
+                max_retries=self.max_retries,
+                get_result_from_response=lambda response: self.process_response(
+                    response, item
+                ),
+                rate_limiter=self.rate_limiter,
+            )
+            return (item, result)
+
+        try:
+            tasks = [process_single(item, prompt) for item, prompt in items]
+            return await tqdm.gather(*tasks)
+        except Exception as e:
+            logging.error(f"Error processing batch: {str(e)}")
+            raise e
+        finally:
+            await self.client.close()
+
+class ANBatchProcessorWithText(BatchProcessor[BatchItem, BatchResult]):
+    def __init__(
+        self,
+        model_id: str,
+        temperature: float,
+        rate_limiter: ANRateLimiter | None,
+        max_retries: int,
+        process_response: Callable[
+            [str | tuple[str | None, str | None], BatchItem], BatchResult | None
+        ],
+        max_new_tokens: int,
+    ):
+        super().__init__(
+            model_id=model_id,
+            temperature=temperature,
+            max_retries=max_retries,
+            process_response=process_response,
+            max_new_tokens=max_new_tokens,
+        )
+
+        # assert os.getenv("ANTHROPIC_API_KEY"), "ANTHROPIC_API_KEY is not set"
+        self.client = AsyncAnthropic(api_key=ANTHROPIC_API_KEY)
+        self.rate_limiter = rate_limiter
+
+    @staticmethod
+    def is_model_supported(model_id: str) -> bool:
+        supported_models = [
+            "claude-3-sonnet",
+            "claude-3-haiku",
+            "claude-3-opus",
+            "claude-3.5-sonnet",
+            "claude-3.6-sonnet",
+            "claude-3.5-haiku",
+            "claude-3.7-sonnet",
+        ]
+        return any(
+            model_id.split("/")[-1].startswith(model) for model in supported_models
+        )
+
+    async def process_batch(
+        self, items: list[tuple[BatchItem, str]]
+    ) -> list[tuple[BatchItem, BatchResult | None]]:
+        """Process a batch of items with their corresponding prompts.
+
+        Args:
+            items: List of tuples containing (item, prompt)
+
+        Returns:
+            List of tuples containing (item, result)
+        """
+        if len(items) == 0:
+            return []
+
+        if self.rate_limiter is None:
+            limits = get_anthropic_limits()
+            self.rate_limiter = ANRateLimiter(
+                requests_per_interval=limits.requests_limit,
+                tokens_per_interval=limits.tokens_limit,
+                interval_seconds=60,
+            )
+
+        async def process_single(
+            item: BatchItem, prompt: str
+        ) -> tuple[BatchItem, BatchResult | None]:
+            result = await generate_an_response_async_with_text(
                 prompt=prompt,
                 problem_name=item.name,
                 model_id=self.model_id,

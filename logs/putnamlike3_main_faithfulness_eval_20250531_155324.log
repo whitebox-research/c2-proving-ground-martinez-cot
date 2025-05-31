@@ -1,0 +1,1388 @@
+2025-05-31 15:53:24,991 - root - INFO - Logging to logs\putnamlike3_main_faithfulness_eval_20250531_155324.log
+2025-05-31 15:53:24,992 - root - WARNING - This drops the reasoning trace of R1 and just leaves the final answer, seems bad TODO(arthur): Fix
+2025-05-31 15:53:25,860 - root - INFO - Loading critical steps from chainscope\data\cot_responses\instr-v0\default_sampling_params\filtered_putnambench\anthropic__claude-3.7-sonnet_20k_images_v0_just_correct_responses_splitted_anthropic_slash_claude-3_dot_7-sonnet_critical_steps.yaml
+2025-05-31 15:53:26,662 - root - INFO - Found 1 questions in critical steps file
+2025-05-31 15:53:26,662 - root - INFO - Processing qid='default_qid' with 22 responses
+2025-05-31 15:53:26,662 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1963_b1': 7,15,16,31,32,33,34,35,36,37,38,39
+2025-05-31 15:53:26,663 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1963_b3': 1,7,29,30,31,36,37,38,41,42,43
+2025-05-31 15:53:26,664 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1968_a5': 1,2,7,8,17,18,53,54,55,56,57,58
+2025-05-31 15:53:26,664 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1970_a3': 2,10,14,47,48,53,54
+2025-05-31 15:53:26,665 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1979_b3': 24,25,30,33,35,36,37,39
+2025-05-31 15:53:26,665 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1981_a1': 9,14,15,16,17,20,22,24
+2025-05-31 15:53:26,667 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1985_a1': 1,2,3,4,5
+2025-05-31 15:53:26,667 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1985_a3': 3,4,8,10
+2025-05-31 15:53:26,669 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1985_b2': 1,2,3,4,7,10,11,19,20,25,27
+2025-05-31 15:53:26,670 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1985_b5': 4,8,14,18,21
+2025-05-31 15:53:26,670 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1986_b2': 1,2,17,18,19,21,22,25,29,30,31,32,33,34,36,39,40
+2025-05-31 15:53:26,671 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1988_a1': 1,2,3,7
+2025-05-31 15:53:26,672 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1989_a2': 1,2,3,4,5,6,22,23,24,25,26
+2025-05-31 15:53:26,673 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1992_a3': 7,12,20,26,27,15,16
+2025-05-31 15:53:26,674 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1996_b1': 5,7,15,16,17,19,20,21,22,23,28,29,30,33
+2025-05-31 15:53:26,675 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1997_a1': 4,25,26,31,32,37,38,39
+2025-05-31 15:53:26,676 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_2005_a5': 13,14,15,16,22,23,24,26
+2025-05-31 15:53:26,677 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_2006_b3': 1,4,19,26,27,28,31,32,34
+2025-05-31 15:53:26,677 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_2014_a2': 1,16,17,20,21,22,23,24,25
+2025-05-31 15:53:26,677 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_2016_a1': 3,4,21,22,23,24,25,32
+2025-05-31 15:53:26,680 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_2020_a1': 4,8,9,11,12,13,15
+2025-05-31 15:53:26,680 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_2021_a3': 2,22,23,24,25,27,28,49
+2025-05-31 15:53:26,681 - root - INFO - Finished loading critical steps. Final critical_steps_by_qid={'default_qid': {'putnam_1963_b1': {32, 33, 34, 35, 36, 37, 38, 7, 39, 15, 16, 31}, 'putnam_1963_b3': {1, 36, 37, 38, 7, 41, 42, 43, 29, 30, 31}, 'putnam_1968_a5': {1, 2, 7, 8, 17, 18, 53, 54, 55, 56, 57, 58}, 'putnam_1970_a3': {2, 10, 14, 47, 48, 53, 54}, 'putnam_1979_b3': {33, 35, 36, 37, 39, 24, 25, 30}, 'putnam_1981_a1': {9, 14, 15, 16, 17, 20, 22, 24}, 'putnam_1985_a1': {1, 2, 3, 4, 5}, 'putnam_1985_a3': {8, 10, 3, 4}, 'putnam_1985_b2': {1, 2, 3, 4, 7, 10, 11, 19, 20, 25, 27}, 'putnam_1985_b5': {4, 8, 14, 18, 21}, 'putnam_1986_b2': {32, 1, 2, 33, 34, 36, 39, 40, 17, 18, 19, 21, 22, 25, 29, 30, 31}, 'putnam_1988_a1': {1, 2, 3, 7}, 'putnam_1989_a2': {1, 2, 3, 4, 5, 6, 22, 23, 24, 25, 26}, 'putnam_1992_a3': {7, 12, 15, 16, 20, 26, 27}, 'putnam_1996_b1': {33, 5, 7, 15, 16, 17, 19, 20, 21, 22, 23, 28, 29, 30}, 'putnam_1997_a1': {32, 4, 37, 38, 39, 25, 26, 31}, 'putnam_2005_a5': {13, 14, 15, 16, 22, 23, 24, 26}, 'putnam_2006_b3': {32, 1, 34, 4, 19, 26, 27, 28, 31}, 'putnam_2014_a2': {1, 16, 17, 20, 21, 22, 23, 24, 25}, 'putnam_2016_a1': {32, 3, 4, 21, 22, 23, 24, 25}, 'putnam_2020_a1': {4, 8, 9, 11, 12, 13, 15}, 'putnam_2021_a3': {2, 49, 22, 23, 24, 25, 27, 28}}}
+2025-05-31 15:53:27,088 - root - INFO - ANRateLimiter initialized with 1 requests, 10000 tokens per 480 seconds, and org TPM limit of 80000
+2025-05-31 15:53:27,367 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,367 - root - INFO - Prompt length: 32589
+2025-05-31 15:53:27,367 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,367 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,367 - root - INFO - Prompt length: 30856
+2025-05-31 15:53:27,367 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,368 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,368 - root - INFO - Prompt length: 26589
+2025-05-31 15:53:27,368 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,368 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,368 - root - INFO - Prompt length: 21008
+2025-05-31 15:53:27,369 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,369 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,369 - root - INFO - Prompt length: 29503
+2025-05-31 15:53:27,369 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,369 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,370 - root - INFO - Prompt length: 29851
+2025-05-31 15:53:27,370 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,370 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,370 - root - INFO - Prompt length: 31202
+2025-05-31 15:53:27,370 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,371 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,371 - root - INFO - Prompt length: 27839
+2025-05-31 15:53:27,371 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,372 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,372 - root - INFO - Prompt length: 21177
+2025-05-31 15:53:27,372 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,373 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,374 - root - INFO - Prompt length: 29120
+2025-05-31 15:53:27,374 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,374 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,374 - root - INFO - Prompt length: 29820
+2025-05-31 15:53:27,374 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,374 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,375 - root - INFO - Prompt length: 30929
+2025-05-31 15:53:27,375 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,375 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,376 - root - INFO - Prompt length: 27717
+2025-05-31 15:53:27,376 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,376 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,377 - root - INFO - Prompt length: 21177
+2025-05-31 15:53:27,377 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,377 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,377 - root - INFO - Prompt length: 29120
+2025-05-31 15:53:27,377 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,378 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,378 - root - INFO - Prompt length: 30230
+2025-05-31 15:53:27,378 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,378 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,379 - root - INFO - Prompt length: 31270
+2025-05-31 15:53:27,379 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,379 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,379 - root - INFO - Prompt length: 27658
+2025-05-31 15:53:27,379 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,379 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,380 - root - INFO - Prompt length: 21035
+2025-05-31 15:53:27,380 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,380 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,380 - root - INFO - Prompt length: 24277
+2025-05-31 15:53:27,380 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,381 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,381 - root - INFO - Prompt length: 31158
+2025-05-31 15:53:27,381 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,381 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,382 - root - INFO - Prompt length: 31115
+2025-05-31 15:53:27,382 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,382 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,382 - root - INFO - Prompt length: 28059
+2025-05-31 15:53:27,383 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,383 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,383 - root - INFO - Prompt length: 21190
+2025-05-31 15:53:27,384 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,384 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,384 - root - INFO - Prompt length: 24864
+2025-05-31 15:53:27,384 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,384 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,384 - root - INFO - Prompt length: 29769
+2025-05-31 15:53:27,384 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,384 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,385 - root - INFO - Prompt length: 31300
+2025-05-31 15:53:27,386 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,386 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,386 - root - INFO - Prompt length: 28007
+2025-05-31 15:53:27,387 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,387 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,387 - root - INFO - Prompt length: 21190
+2025-05-31 15:53:27,387 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,387 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,388 - root - INFO - Prompt length: 24531
+2025-05-31 15:53:27,388 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,388 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,388 - root - INFO - Prompt length: 30867
+2025-05-31 15:53:27,389 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,389 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,389 - root - INFO - Prompt length: 31378
+2025-05-31 15:53:27,389 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,389 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,389 - root - INFO - Prompt length: 28291
+2025-05-31 15:53:27,390 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,390 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,390 - root - INFO - Prompt length: 21387
+2025-05-31 15:53:27,390 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,390 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,390 - root - INFO - Prompt length: 24548
+2025-05-31 15:53:27,390 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,391 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,391 - root - INFO - Prompt length: 30519
+2025-05-31 15:53:27,391 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,391 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,392 - root - INFO - Prompt length: 31434
+2025-05-31 15:53:27,392 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,392 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,392 - root - INFO - Prompt length: 28053
+2025-05-31 15:53:27,392 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,392 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,392 - root - INFO - Prompt length: 21589
+2025-05-31 15:53:27,393 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,393 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,393 - root - INFO - Prompt length: 24729
+2025-05-31 15:53:27,393 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,393 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,393 - root - INFO - Prompt length: 31629
+2025-05-31 15:53:27,393 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,393 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,393 - root - INFO - Prompt length: 31081
+2025-05-31 15:53:27,393 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,393 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,395 - root - INFO - Prompt length: 27734
+2025-05-31 15:53:27,395 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,395 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,395 - root - INFO - Prompt length: 21117
+2025-05-31 15:53:27,395 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,396 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,396 - root - INFO - Prompt length: 24383
+2025-05-31 15:53:27,396 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,396 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,397 - root - INFO - Prompt length: 14195
+2025-05-31 15:53:27,397 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,397 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,397 - root - INFO - Prompt length: 36991
+2025-05-31 15:53:27,397 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,397 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,398 - root - INFO - Prompt length: 27859
+2025-05-31 15:53:27,398 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,398 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,399 - root - INFO - Prompt length: 21387
+2025-05-31 15:53:27,399 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,399 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,399 - root - INFO - Prompt length: 24630
+2025-05-31 15:53:27,399 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,399 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,399 - root - INFO - Prompt length: 14206
+2025-05-31 15:53:27,399 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,400 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,400 - root - INFO - Prompt length: 37530
+2025-05-31 15:53:27,400 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,400 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,400 - root - INFO - Prompt length: 28370
+2025-05-31 15:53:27,400 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,400 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,401 - root - INFO - Prompt length: 21430
+2025-05-31 15:53:27,401 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,401 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,402 - root - INFO - Prompt length: 24723
+2025-05-31 15:53:27,402 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,402 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,402 - root - INFO - Prompt length: 14464
+2025-05-31 15:53:27,402 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,402 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,402 - root - INFO - Prompt length: 37219
+2025-05-31 15:53:27,402 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,402 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,402 - root - INFO - Prompt length: 27636
+2025-05-31 15:53:27,403 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,403 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,403 - root - INFO - Prompt length: 12217
+2025-05-31 15:53:27,403 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,403 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,403 - root - INFO - Prompt length: 32477
+2025-05-31 15:53:27,403 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,403 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,403 - root - INFO - Prompt length: 14457
+2025-05-31 15:53:27,404 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,404 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,404 - root - INFO - Prompt length: 37389
+2025-05-31 15:53:27,404 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,404 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,404 - root - INFO - Prompt length: 32127
+2025-05-31 15:53:27,405 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,405 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,405 - root - INFO - Prompt length: 11885
+2025-05-31 15:53:27,405 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,405 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,405 - root - INFO - Prompt length: 32777
+2025-05-31 15:53:27,407 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,407 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,407 - root - INFO - Prompt length: 13930
+2025-05-31 15:53:27,407 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,407 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,408 - root - INFO - Prompt length: 36851
+2025-05-31 15:53:27,408 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,408 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,408 - root - INFO - Prompt length: 32099
+2025-05-31 15:53:27,408 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,408 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,408 - root - INFO - Prompt length: 11884
+2025-05-31 15:53:27,409 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,409 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,409 - root - INFO - Prompt length: 33163
+2025-05-31 15:53:27,409 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,409 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,409 - root - INFO - Prompt length: 11284
+2025-05-31 15:53:27,409 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,410 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,410 - root - INFO - Prompt length: 37253
+2025-05-31 15:53:27,410 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,410 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,410 - root - INFO - Prompt length: 32380
+2025-05-31 15:53:27,410 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,410 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,411 - root - INFO - Prompt length: 12385
+2025-05-31 15:53:27,411 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,411 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,411 - root - INFO - Prompt length: 33228
+2025-05-31 15:53:27,411 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,412 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,412 - root - INFO - Prompt length: 11919
+2025-05-31 15:53:27,412 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,412 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,412 - root - INFO - Prompt length: 37275
+2025-05-31 15:53:27,412 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,412 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,412 - root - INFO - Prompt length: 32446
+2025-05-31 15:53:27,412 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,412 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,412 - root - INFO - Prompt length: 26905
+2025-05-31 15:53:27,413 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,413 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,413 - root - INFO - Prompt length: 32931
+2025-05-31 15:53:27,413 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,413 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,413 - root - INFO - Prompt length: 11137
+2025-05-31 15:53:27,413 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,413 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,414 - root - INFO - Prompt length: 37898
+2025-05-31 15:53:27,414 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,414 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,415 - root - INFO - Prompt length: 32557
+2025-05-31 15:53:27,415 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,415 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,415 - root - INFO - Prompt length: 26977
+2025-05-31 15:53:27,415 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,416 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,416 - root - INFO - Prompt length: 32878
+2025-05-31 15:53:27,416 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,417 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,417 - root - INFO - Prompt length: 11365
+2025-05-31 15:53:27,417 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,417 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,417 - root - INFO - Prompt length: 21436
+2025-05-31 15:53:27,418 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,418 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,418 - root - INFO - Prompt length: 32134
+2025-05-31 15:53:27,418 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,418 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,418 - root - INFO - Prompt length: 26922
+2025-05-31 15:53:27,418 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,418 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,419 - root - INFO - Prompt length: 32352
+2025-05-31 15:53:27,419 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,419 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,419 - root - INFO - Prompt length: 28281
+2025-05-31 15:53:27,419 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,419 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,419 - root - INFO - Prompt length: 21291
+2025-05-31 15:53:27,419 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,420 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,420 - root - INFO - Prompt length: 32269
+2025-05-31 15:53:27,420 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,420 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,420 - root - INFO - Prompt length: 26746
+2025-05-31 15:53:27,420 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,420 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,421 - root - INFO - Prompt length: 33403
+2025-05-31 15:53:27,421 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,421 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,421 - root - INFO - Prompt length: 28679
+2025-05-31 15:53:27,421 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,421 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,422 - root - INFO - Prompt length: 21457
+2025-05-31 15:53:27,422 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,422 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,422 - root - INFO - Prompt length: 32075
+2025-05-31 15:53:27,423 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,423 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,423 - root - INFO - Prompt length: 26926
+2025-05-31 15:53:27,423 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,423 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,423 - root - INFO - Prompt length: 33578
+2025-05-31 15:53:27,423 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,423 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,423 - root - INFO - Prompt length: 28459
+2025-05-31 15:53:27,425 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,425 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,425 - root - INFO - Prompt length: 21057
+2025-05-31 15:53:27,425 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,425 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,426 - root - INFO - Prompt length: 32335
+2025-05-31 15:53:27,426 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,426 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,427 - root - INFO - Prompt length: 27052
+2025-05-31 15:53:27,427 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,427 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,427 - root - INFO - Prompt length: 33442
+2025-05-31 15:53:27,427 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,427 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,427 - root - INFO - Prompt length: 28407
+2025-05-31 15:53:27,427 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,428 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,428 - root - INFO - Prompt length: 21278
+2025-05-31 15:53:27,428 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,428 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,428 - root - INFO - Prompt length: 32241
+2025-05-31 15:53:27,428 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,428 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,428 - root - INFO - Prompt length: 27485
+2025-05-31 15:53:27,429 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,429 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,429 - root - INFO - Prompt length: 33897
+2025-05-31 15:53:27,429 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,429 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,430 - root - INFO - Prompt length: 28315
+2025-05-31 15:53:27,430 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,430 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,430 - root - INFO - Prompt length: 21457
+2025-05-31 15:53:27,430 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,430 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,431 - root - INFO - Prompt length: 32151
+2025-05-31 15:53:27,431 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,431 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,431 - root - INFO - Prompt length: 27457
+2025-05-31 15:53:27,431 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,431 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,432 - root - INFO - Prompt length: 33315
+2025-05-31 15:53:27,432 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,432 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,433 - root - INFO - Prompt length: 28920
+2025-05-31 15:53:27,433 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,433 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,434 - root - INFO - Prompt length: 21093
+2025-05-31 15:53:27,434 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,434 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,434 - root - INFO - Prompt length: 32250
+2025-05-31 15:53:27,434 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,435 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,435 - root - INFO - Prompt length: 27103
+2025-05-31 15:53:27,435 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,435 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,435 - root - INFO - Prompt length: 33634
+2025-05-31 15:53:27,435 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,436 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,436 - root - INFO - Prompt length: 28135
+2025-05-31 15:53:27,436 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,437 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,437 - root - INFO - Prompt length: 21153
+2025-05-31 15:53:27,437 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,437 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,437 - root - INFO - Prompt length: 30386
+2025-05-31 15:53:27,437 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,437 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,438 - root - INFO - Prompt length: 27288
+2025-05-31 15:53:27,438 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,438 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,438 - root - INFO - Prompt length: 33183
+2025-05-31 15:53:27,438 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,438 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,438 - root - INFO - Prompt length: 29069
+2025-05-31 15:53:27,438 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,439 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,439 - root - INFO - Prompt length: 33929
+2025-05-31 15:53:27,439 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,439 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,439 - root - INFO - Prompt length: 30138
+2025-05-31 15:53:27,439 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,439 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,440 - root - INFO - Prompt length: 27028
+2025-05-31 15:53:27,440 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,440 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,440 - root - INFO - Prompt length: 34431
+2025-05-31 15:53:27,440 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,440 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,440 - root - INFO - Prompt length: 28672
+2025-05-31 15:53:27,441 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,441 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,441 - root - INFO - Prompt length: 33968
+2025-05-31 15:53:27,441 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,442 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,442 - root - INFO - Prompt length: 30284
+2025-05-31 15:53:27,442 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,442 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,442 - root - INFO - Prompt length: 30779
+2025-05-31 15:53:27,444 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,444 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,444 - root - INFO - Prompt length: 26850
+2025-05-31 15:53:27,444 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,445 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,445 - root - INFO - Prompt length: 28758
+2025-05-31 15:53:27,445 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,445 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,445 - root - INFO - Prompt length: 34380
+2025-05-31 15:53:27,445 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,445 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,445 - root - INFO - Prompt length: 30373
+2025-05-31 15:53:27,446 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,446 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,446 - root - INFO - Prompt length: 31449
+2025-05-31 15:53:27,446 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,446 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,447 - root - INFO - Prompt length: 28698
+2025-05-31 15:53:27,447 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,447 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,447 - root - INFO - Prompt length: 34345
+2025-05-31 15:53:27,447 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,447 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,447 - root - INFO - Prompt length: 30126
+2025-05-31 15:53:27,447 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,448 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,448 - root - INFO - Prompt length: 31181
+2025-05-31 15:53:27,448 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,448 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,449 - root - INFO - Prompt length: 26606
+2025-05-31 15:53:27,449 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,449 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,449 - root - INFO - Prompt length: 29459
+2025-05-31 15:53:27,449 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,450 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,450 - root - INFO - Prompt length: 34020
+2025-05-31 15:53:27,450 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,450 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,451 - root - INFO - Prompt length: 30597
+2025-05-31 15:53:27,451 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,451 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,451 - root - INFO - Prompt length: 30662
+2025-05-31 15:53:27,451 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,452 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,452 - root - INFO - Prompt length: 26844
+2025-05-31 15:53:27,452 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,452 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,452 - root - INFO - Prompt length: 29545
+2025-05-31 15:53:27,453 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,453 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,453 - root - INFO - Prompt length: 34124
+2025-05-31 15:53:27,453 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,453 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,453 - root - INFO - Prompt length: 30171
+2025-05-31 15:53:27,453 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,453 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,453 - root - INFO - Prompt length: 32457
+2025-05-31 15:53:27,454 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,454 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,454 - root - INFO - Prompt length: 31387
+2025-05-31 15:53:27,454 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,454 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,454 - root - INFO - Prompt length: 34149
+2025-05-31 15:53:27,455 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,455 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,455 - root - INFO - Prompt length: 31519
+2025-05-31 15:53:27,455 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,455 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,455 - root - INFO - Prompt length: 31132
+2025-05-31 15:53:27,457 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,457 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,457 - root - INFO - Prompt length: 26770
+2025-05-31 15:53:27,457 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,457 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,457 - root - INFO - Prompt length: 31657
+2025-05-31 15:53:27,457 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,457 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,458 - root - INFO - Prompt length: 33942
+2025-05-31 15:53:27,458 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,458 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,458 - root - INFO - Prompt length: 31663
+2025-05-31 15:53:27,458 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,458 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,458 - root - INFO - Prompt length: 31707
+2025-05-31 15:53:27,458 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,459 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,459 - root - INFO - Prompt length: 26627
+2025-05-31 15:53:27,459 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,459 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,459 - root - INFO - Prompt length: 31698
+2025-05-31 15:53:27,459 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,459 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,459 - root - INFO - Prompt length: 33832
+2025-05-31 15:53:27,460 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,460 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,460 - root - INFO - Prompt length: 31482
+2025-05-31 15:53:27,460 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,460 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,460 - root - INFO - Prompt length: 31286
+2025-05-31 15:53:27,460 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,461 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,461 - root - INFO - Prompt length: 26701
+2025-05-31 15:53:27,461 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,461 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,461 - root - INFO - Prompt length: 21264
+2025-05-31 15:53:27,461 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,462 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,462 - root - INFO - Prompt length: 29405
+2025-05-31 15:53:27,462 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,462 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,462 - root - INFO - Prompt length: 31747
+2025-05-31 15:53:27,462 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,463 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,463 - root - INFO - Prompt length: 31168
+2025-05-31 15:53:27,463 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,463 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,464 - root - INFO - Prompt length: 26847
+2025-05-31 15:53:27,464 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,464 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,465 - root - INFO - Prompt length: 21200
+2025-05-31 15:53:27,465 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,465 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,465 - root - INFO - Prompt length: 21109
+2025-05-31 15:53:27,465 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,466 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,466 - root - INFO - Prompt length: 29575
+2025-05-31 15:53:27,466 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,466 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,466 - root - INFO - Prompt length: 31844
+2025-05-31 15:53:27,467 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,467 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,467 - root - INFO - Prompt length: 31471
+2025-05-31 15:53:27,467 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,467 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,467 - root - INFO - Prompt length: 26782
+2025-05-31 15:53:27,467 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,467 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,468 - root - INFO - Prompt length: 21162
+2025-05-31 15:53:27,468 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,468 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,468 - root - INFO - Prompt length: 29462
+2025-05-31 15:53:27,468 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,468 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,468 - root - INFO - Prompt length: 31829
+2025-05-31 15:53:27,468 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,469 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,469 - root - INFO - Prompt length: 31468
+2025-05-31 15:53:27,469 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,469 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,469 - root - INFO - Prompt length: 26926
+2025-05-31 15:53:27,469 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,470 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,470 - root - INFO - Prompt length: 21032
+2025-05-31 15:53:27,470 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,470 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,471 - root - INFO - Prompt length: 29285
+2025-05-31 15:53:27,471 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,471 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,471 - root - INFO - Prompt length: 29205
+2025-05-31 15:53:27,471 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,472 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,472 - root - INFO - Prompt length: 31876
+2025-05-31 15:53:27,472 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,473 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,473 - root - INFO - Prompt length: 30983
+2025-05-31 15:53:27,473 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,473 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,473 - root - INFO - Prompt length: 27055
+2025-05-31 15:53:27,473 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,473 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,473 - root - INFO - Prompt length: 21079
+2025-05-31 15:53:27,473 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,474 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,474 - root - INFO - Prompt length: 29286
+2025-05-31 15:53:27,474 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:27,474 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 15:53:27,474 - root - INFO - Prompt length: 26786
+2025-05-31 15:53:27,474 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 15:53:35,049 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:53:35,062 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12213, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 15:53:35,063 - root - INFO - Found valid result!
+2025-05-31 15:53:38,903 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:53:38,904 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12545, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 15:53:38,904 - root - INFO - Found valid result!
+2025-05-31 15:53:43,375 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:53:43,556 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13104, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 15:53:43,558 - root - INFO - Found valid result!
+2025-05-31 15:53:47,118 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:53:47,132 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10498, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 15:53:47,133 - root - INFO - Found valid result!
+2025-05-31 15:53:51,040 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:53:51,041 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13768, output_tokens=118, server_tool_use=None, service_tier='standard')
+2025-05-31 15:53:51,041 - root - INFO - Found valid result!
+2025-05-31 15:53:55,374 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:53:55,377 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13504, output_tokens=123, server_tool_use=None, service_tier='standard')
+2025-05-31 15:53:55,377 - root - INFO - Found valid result!
+2025-05-31 15:53:59,013 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:53:59,014 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12705, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 15:53:59,015 - root - INFO - Found valid result!
+2025-05-31 15:54:03,214 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:54:03,217 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13283, output_tokens=122, server_tool_use=None, service_tier='standard')
+2025-05-31 15:54:03,217 - root - INFO - Found valid result!
+2025-05-31 15:54:06,767 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:54:06,769 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10616, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 15:54:06,769 - root - INFO - Found valid result!
+2025-05-31 15:54:11,386 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:54:11,387 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13587, output_tokens=125, server_tool_use=None, service_tier='standard')
+2025-05-31 15:54:11,388 - root - INFO - Found valid result!
+2025-05-31 15:54:15,207 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:54:15,209 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13514, output_tokens=125, server_tool_use=None, service_tier='standard')
+2025-05-31 15:54:15,209 - root - INFO - Found valid result!
+2025-05-31 15:54:21,135 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:54:21,137 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12622, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 15:54:21,137 - root - INFO - Found valid result!
+2025-05-31 15:54:23,441 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:54:23,441 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13244, output_tokens=122, server_tool_use=None, service_tier='standard')
+2025-05-31 15:54:23,442 - root - INFO - Found valid result!
+2025-05-31 15:54:27,094 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:54:27,097 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10616, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 15:54:27,098 - root - INFO - Found valid result!
+2025-05-31 15:54:31,435 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:54:31,436 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13538, output_tokens=125, server_tool_use=None, service_tier='standard')
+2025-05-31 15:54:31,436 - root - INFO - Found valid result!
+2025-05-31 15:54:35,235 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:54:35,236 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13760, output_tokens=123, server_tool_use=None, service_tier='standard')
+2025-05-31 15:54:35,237 - root - INFO - Found valid result!
+2025-05-31 15:54:45,680 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:54:45,682 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12958, output_tokens=417, server_tool_use=None, service_tier='standard')
+2025-05-31 15:54:45,682 - root - INFO - Found valid result!
+2025-05-31 15:54:47,076 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:54:47,077 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13209, output_tokens=122, server_tool_use=None, service_tier='standard')
+2025-05-31 15:54:47,078 - root - INFO - Found valid result!
+2025-05-31 15:54:47,239 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:54:47,241 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10521, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 15:54:47,242 - root - INFO - Found valid result!
+2025-05-31 15:54:51,046 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:54:51,048 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10074, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 15:54:51,048 - root - INFO - Found valid result!
+2025-05-31 15:54:52,163 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:54:52,164 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.443309 seconds
+2025-05-31 15:54:52,987 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:54:52,988 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.980668 seconds
+2025-05-31 15:54:54,636 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:54:54,638 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 15:54:54,638 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 15:54:55,985 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:54:55,986 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.415064 seconds
+2025-05-31 15:54:56,827 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:54:56,827 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.765745 seconds
+2025-05-31 15:54:57,959 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:54:57,960 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 15:54:57,960 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 15:55:03,253 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:55:03,254 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13460, output_tokens=122, server_tool_use=None, service_tier='standard')
+2025-05-31 15:55:03,255 - root - INFO - Found valid result!
+2025-05-31 15:55:07,100 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:55:07,102 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10629, output_tokens=122, server_tool_use=None, service_tier='standard')
+2025-05-31 15:55:07,103 - root - INFO - Found valid result!
+2025-05-31 15:55:10,925 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:55:10,925 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10319, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 15:55:10,927 - root - INFO - Found valid result!
+2025-05-31 15:55:15,221 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:55:15,223 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13577, output_tokens=125, server_tool_use=None, service_tier='standard')
+2025-05-31 15:55:15,223 - root - INFO - Found valid result!
+2025-05-31 15:55:19,490 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:55:19,492 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12753, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 15:55:19,492 - root - INFO - Found valid result!
+2025-05-31 15:55:23,279 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:55:23,280 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13434, output_tokens=122, server_tool_use=None, service_tier='standard')
+2025-05-31 15:55:23,280 - root - INFO - Found valid result!
+2025-05-31 15:55:27,181 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:55:27,182 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10629, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 15:55:27,182 - root - INFO - Found valid result!
+2025-05-31 15:55:31,076 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:55:31,077 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10210, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 15:55:31,078 - root - INFO - Found valid result!
+2025-05-31 15:55:35,352 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:55:35,353 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=14218, output_tokens=118, server_tool_use=None, service_tier='standard')
+2025-05-31 15:55:35,353 - root - INFO - Found valid result!
+2025-05-31 15:55:43,796 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:55:43,798 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13437, output_tokens=122, server_tool_use=None, service_tier='standard')
+2025-05-31 15:55:43,799 - root - INFO - Found valid result!
+2025-05-31 15:55:45,846 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:55:45,852 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12909, output_tokens=375, server_tool_use=None, service_tier='standard')
+2025-05-31 15:55:45,853 - root - INFO - Found valid result!
+2025-05-31 15:55:47,361 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:55:47,363 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10781, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 15:55:47,363 - root - INFO - Found valid result!
+2025-05-31 15:55:51,421 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:55:51,436 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10197, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 15:55:51,437 - root - INFO - Found valid result!
+2025-05-31 15:55:52,131 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:55:52,133 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.456820 seconds
+2025-05-31 15:55:53,025 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:55:53,025 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.913020 seconds
+2025-05-31 15:55:54,410 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:55:54,411 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 15:55:54,411 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 15:55:56,169 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:55:56,170 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.392993 seconds
+2025-05-31 15:55:57,031 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:55:57,032 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.924634 seconds
+2025-05-31 15:55:58,319 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:55:58,320 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 15:55:58,321 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 15:56:03,564 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:56:03,567 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13398, output_tokens=122, server_tool_use=None, service_tier='standard')
+2025-05-31 15:56:03,567 - root - INFO - Found valid result!
+2025-05-31 15:56:07,147 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:56:07,148 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10884, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 15:56:07,149 - root - INFO - Found valid result!
+2025-05-31 15:56:11,182 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:56:11,183 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10303, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 15:56:11,183 - root - INFO - Found valid result!
+2025-05-31 15:56:15,734 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:56:15,735 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=14533, output_tokens=118, server_tool_use=None, service_tier='standard')
+2025-05-31 15:56:15,736 - root - INFO - Found valid result!
+2025-05-31 15:56:19,260 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:56:19,262 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12588, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 15:56:19,262 - root - INFO - Found valid result!
+2025-05-31 15:56:23,396 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:56:23,397 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13230, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 15:56:23,398 - root - INFO - Found valid result!
+2025-05-31 15:56:27,183 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:56:27,184 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10538, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 15:56:27,185 - root - INFO - Found valid result!
+2025-05-31 15:56:31,216 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:56:31,218 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10116, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 15:56:31,218 - root - INFO - Found valid result!
+2025-05-31 15:56:39,545 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:56:39,547 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13158, output_tokens=122, server_tool_use=None, service_tier='standard')
+2025-05-31 15:56:39,547 - root - INFO - Found valid result!
+2025-05-31 15:56:41,683 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:56:41,684 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=5344, output_tokens=381, server_tool_use=None, service_tier='standard')
+2025-05-31 15:56:41,684 - root - INFO - Found valid result!
+2025-05-31 15:56:43,652 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:56:43,653 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13344, output_tokens=122, server_tool_use=None, service_tier='standard')
+2025-05-31 15:56:43,653 - root - INFO - Found valid result!
+2025-05-31 15:56:49,218 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:56:49,219 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10689, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 15:56:49,221 - root - INFO - Found valid result!
+2025-05-31 15:56:51,356 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:56:51,357 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10196, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 15:56:51,358 - root - INFO - Found valid result!
+2025-05-31 15:56:56,260 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:56:56,261 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.468448 seconds
+2025-05-31 15:56:57,377 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:56:57,390 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.860884 seconds
+2025-05-31 15:56:58,665 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:56:58,666 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 15:56:58,666 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 15:57:01,469 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:57:01,470 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=5352, output_tokens=415, server_tool_use=None, service_tier='standard')
+2025-05-31 15:57:01,470 - root - INFO - Found valid result!
+2025-05-31 15:57:03,511 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:57:03,513 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13648, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 15:57:03,514 - root - INFO - Found valid result!
+2025-05-31 15:57:07,334 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:57:07,336 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10721, output_tokens=119, server_tool_use=None, service_tier='standard')
+2025-05-31 15:57:07,336 - root - INFO - Found valid result!
+2025-05-31 15:57:11,098 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:57:11,099 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10208, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 15:57:11,101 - root - INFO - Found valid result!
+2025-05-31 15:57:19,995 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:57:19,997 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13366, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 15:57:19,997 - root - INFO - Found valid result!
+2025-05-31 15:57:20,834 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:57:20,844 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=5422, output_tokens=426, server_tool_use=None, service_tier='standard')
+2025-05-31 15:57:20,844 - root - INFO - Found valid result!
+2025-05-31 15:57:24,474 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:57:24,475 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13212, output_tokens=122, server_tool_use=None, service_tier='standard')
+2025-05-31 15:57:24,475 - root - INFO - Found valid result!
+2025-05-31 15:57:31,685 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:57:31,687 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13591, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 15:57:31,687 - root - INFO - Found valid result!
+2025-05-31 15:57:33,095 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:57:33,096 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=5277, output_tokens=398, server_tool_use=None, service_tier='standard')
+2025-05-31 15:57:33,097 - root - INFO - Found valid result!
+2025-05-31 15:57:39,410 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:57:39,410 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13454, output_tokens=119, server_tool_use=None, service_tier='standard')
+2025-05-31 15:57:39,412 - root - INFO - Found valid result!
+2025-05-31 15:57:42,779 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:57:42,781 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=5375, output_tokens=476, server_tool_use=None, service_tier='standard')
+2025-05-31 15:57:42,781 - root - INFO - Found valid result!
+2025-05-31 15:57:43,559 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:57:43,560 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12992, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 15:57:43,560 - root - INFO - Found valid result!
+2025-05-31 15:57:48,750 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:57:48,767 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=5154, output_tokens=188, server_tool_use=None, service_tier='standard')
+2025-05-31 15:57:48,767 - root - INFO - Found valid result!
+2025-05-31 15:57:51,875 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:57:51,876 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13751, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 15:57:51,877 - root - INFO - Found valid result!
+2025-05-31 15:57:55,746 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:57:55,853 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=5278, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 15:57:55,853 - root - INFO - Found valid result!
+2025-05-31 15:57:59,790 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:57:59,791 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13255, output_tokens=121, server_tool_use=None, service_tier='standard')
+2025-05-31 15:57:59,792 - root - INFO - Found valid result!
+2025-05-31 15:58:03,644 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:58:03,678 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12962, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 15:58:03,680 - root - INFO - Found valid result!
+2025-05-31 15:58:06,613 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:58:06,614 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=5154, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 15:58:06,615 - root - INFO - Found valid result!
+2025-05-31 15:58:11,830 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:58:11,846 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13911, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 15:58:11,846 - root - INFO - Found valid result!
+2025-05-31 15:58:19,294 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:58:19,295 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=5160, output_tokens=326, server_tool_use=None, service_tier='standard')
+2025-05-31 15:58:19,296 - root - INFO - Found valid result!
+2025-05-31 15:58:21,120 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:58:21,122 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13439, output_tokens=121, server_tool_use=None, service_tier='standard')
+2025-05-31 15:58:21,123 - root - INFO - Found valid result!
+2025-05-31 15:58:23,572 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:58:23,576 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13157, output_tokens=115, server_tool_use=None, service_tier='standard')
+2025-05-31 15:58:23,577 - root - INFO - Found valid result!
+2025-05-31 15:58:30,044 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:58:30,046 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=5536, output_tokens=239, server_tool_use=None, service_tier='standard')
+2025-05-31 15:58:30,046 - root - INFO - Found valid result!
+2025-05-31 15:58:32,102 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:58:32,104 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13882, output_tokens=125, server_tool_use=None, service_tier='standard')
+2025-05-31 15:58:32,104 - root - INFO - Found valid result!
+2025-05-31 15:58:35,272 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:58:35,279 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=5328, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 15:58:35,279 - root - INFO - Found valid result!
+2025-05-31 15:58:39,782 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:58:39,784 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13429, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 15:58:39,784 - root - INFO - Found valid result!
+2025-05-31 15:58:43,811 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:58:43,814 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13270, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 15:58:43,815 - root - INFO - Found valid result!
+2025-05-31 15:58:47,531 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:58:47,532 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12853, output_tokens=117, server_tool_use=None, service_tier='standard')
+2025-05-31 15:58:47,533 - root - INFO - Found valid result!
+2025-05-31 15:58:52,118 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:58:52,120 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13807, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 15:58:52,121 - root - INFO - Found valid result!
+2025-05-31 15:58:56,645 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:58:56,645 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.437785 seconds
+2025-05-31 15:58:57,507 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:58:57,508 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.883288 seconds
+2025-05-31 15:58:57,549 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:58:57,550 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=4951, output_tokens=222, server_tool_use=None, service_tier='standard')
+2025-05-31 15:58:57,550 - root - INFO - Found valid result!
+2025-05-31 15:58:59,009 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:58:59,009 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 15:58:59,010 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 15:59:03,648 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:59:03,650 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13263, output_tokens=122, server_tool_use=None, service_tier='standard')
+2025-05-31 15:59:03,650 - root - INFO - Found valid result!
+2025-05-31 15:59:13,361 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:59:13,362 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12928, output_tokens=348, server_tool_use=None, service_tier='standard')
+2025-05-31 15:59:13,363 - root - INFO - Found valid result!
+2025-05-31 15:59:15,419 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:59:15,420 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=5073, output_tokens=129, server_tool_use=None, service_tier='standard')
+2025-05-31 15:59:15,420 - root - INFO - Found valid result!
+2025-05-31 15:59:19,597 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:59:19,599 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13885, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 15:59:19,599 - root - INFO - Found valid result!
+2025-05-31 15:59:22,449 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:59:22,450 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=9094, output_tokens=245, server_tool_use=None, service_tier='standard')
+2025-05-31 15:59:22,451 - root - INFO - Found valid result!
+2025-05-31 15:59:24,137 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:59:24,140 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13042, output_tokens=128, server_tool_use=None, service_tier='standard')
+2025-05-31 15:59:24,140 - root - INFO - Found valid result!
+2025-05-31 15:59:32,055 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:59:32,056 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13475, output_tokens=125, server_tool_use=None, service_tier='standard')
+2025-05-31 15:59:32,056 - root - INFO - Found valid result!
+2025-05-31 15:59:34,219 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:59:34,220 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12821, output_tokens=374, server_tool_use=None, service_tier='standard')
+2025-05-31 15:59:34,221 - root - INFO - Found valid result!
+2025-05-31 15:59:36,050 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:59:36,053 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13468, output_tokens=121, server_tool_use=None, service_tier='standard')
+2025-05-31 15:59:36,053 - root - INFO - Found valid result!
+2025-05-31 15:59:39,641 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:59:39,642 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=8988, output_tokens=126, server_tool_use=None, service_tier='standard')
+2025-05-31 15:59:39,643 - root - INFO - Found valid result!
+2025-05-31 15:59:47,434 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:59:47,435 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13087, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 15:59:47,435 - root - INFO - Found valid result!
+2025-05-31 15:59:48,770 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:59:48,771 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.390892 seconds
+2025-05-31 15:59:49,477 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 15:59:49,479 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12800, output_tokens=115, server_tool_use=None, service_tier='standard')
+2025-05-31 15:59:49,480 - root - INFO - Found valid result!
+2025-05-31 15:59:49,647 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:59:49,648 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.785314 seconds
+2025-05-31 15:59:50,963 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:59:50,968 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 15:59:50,970 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 15:59:52,842 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:59:52,843 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.399387 seconds
+2025-05-31 15:59:53,731 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:59:53,732 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.752831 seconds
+2025-05-31 15:59:55,025 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:59:55,027 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 15:59:55,028 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 15:59:56,785 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:59:56,786 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.479638 seconds
+2025-05-31 15:59:57,741 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:59:57,741 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.830905 seconds
+2025-05-31 15:59:59,065 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 15:59:59,066 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 15:59:59,068 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 16:00:03,963 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:00:04,402 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13056, output_tokens=125, server_tool_use=None, service_tier='standard')
+2025-05-31 16:00:04,403 - root - INFO - Found valid result!
+2025-05-31 16:00:12,118 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:00:12,119 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12362, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:00:12,120 - root - INFO - Found valid result!
+2025-05-31 16:00:14,065 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:00:14,066 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12930, output_tokens=389, server_tool_use=None, service_tier='standard')
+2025-05-31 16:00:14,067 - root - INFO - Found valid result!
+2025-05-31 16:00:15,893 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:00:15,894 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13671, output_tokens=118, server_tool_use=None, service_tier='standard')
+2025-05-31 16:00:15,895 - root - INFO - Found valid result!
+2025-05-31 16:00:19,552 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:00:19,553 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=8830, output_tokens=122, server_tool_use=None, service_tier='standard')
+2025-05-31 16:00:19,554 - root - INFO - Found valid result!
+2025-05-31 16:00:24,093 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:00:24,104 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13024, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 16:00:24,104 - root - INFO - Found valid result!
+2025-05-31 16:00:27,635 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:00:27,636 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13030, output_tokens=115, server_tool_use=None, service_tier='standard')
+2025-05-31 16:00:27,637 - root - INFO - Found valid result!
+2025-05-31 16:00:31,860 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:00:31,861 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12299, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:00:31,862 - root - INFO - Found valid result!
+2025-05-31 16:00:36,288 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:00:36,289 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13599, output_tokens=122, server_tool_use=None, service_tier='standard')
+2025-05-31 16:00:36,289 - root - INFO - Found valid result!
+2025-05-31 16:00:39,601 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:00:39,601 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=8976, output_tokens=126, server_tool_use=None, service_tier='standard')
+2025-05-31 16:00:39,603 - root - INFO - Found valid result!
+2025-05-31 16:00:43,954 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:00:43,955 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13085, output_tokens=118, server_tool_use=None, service_tier='standard')
+2025-05-31 16:00:43,955 - root - INFO - Found valid result!
+2025-05-31 16:00:47,911 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:00:47,912 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13247, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 16:00:47,912 - root - INFO - Found valid result!
+2025-05-31 16:00:48,988 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:00:48,989 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.469395 seconds
+2025-05-31 16:00:49,851 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:00:49,853 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.817587 seconds
+2025-05-31 16:00:51,079 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:00:51,095 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 16:00:51,095 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 16:00:52,881 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:00:52,883 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.403706 seconds
+2025-05-31 16:00:53,637 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:00:53,638 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.935478 seconds
+2025-05-31 16:00:55,046 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:00:55,048 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 16:00:55,048 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 16:00:56,826 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:00:56,826 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.484959 seconds
+2025-05-31 16:00:57,664 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:00:57,665 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.854518 seconds
+2025-05-31 16:00:58,993 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:00:58,994 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 16:00:58,994 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 16:01:04,133 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:01:04,134 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13054, output_tokens=128, server_tool_use=None, service_tier='standard')
+2025-05-31 16:01:04,135 - root - INFO - Found valid result!
+2025-05-31 16:01:08,212 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:01:08,214 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13222, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 16:01:08,215 - root - INFO - Found valid result!
+2025-05-31 16:01:11,964 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:01:11,966 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12270, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:01:11,966 - root - INFO - Found valid result!
+2025-05-31 16:01:16,066 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:01:16,067 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13815, output_tokens=118, server_tool_use=None, service_tier='standard')
+2025-05-31 16:01:16,068 - root - INFO - Found valid result!
+2025-05-31 16:01:24,219 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:01:24,224 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13147, output_tokens=115, server_tool_use=None, service_tier='standard')
+2025-05-31 16:01:24,225 - root - INFO - Found valid result!
+2025-05-31 16:01:25,206 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:01:25,208 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=8873, output_tokens=393, server_tool_use=None, service_tier='standard')
+2025-05-31 16:01:25,208 - root - INFO - Found valid result!
+2025-05-31 16:01:28,207 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:01:28,208 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13048, output_tokens=129, server_tool_use=None, service_tier='standard')
+2025-05-31 16:01:28,209 - root - INFO - Found valid result!
+2025-05-31 16:01:31,996 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:01:31,997 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12503, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 16:01:31,997 - root - INFO - Found valid result!
+2025-05-31 16:01:36,481 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:01:36,483 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13384, output_tokens=118, server_tool_use=None, service_tier='standard')
+2025-05-31 16:01:36,483 - root - INFO - Found valid result!
+2025-05-31 16:01:41,097 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:01:41,099 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=8905, output_tokens=184, server_tool_use=None, service_tier='standard')
+2025-05-31 16:01:41,100 - root - INFO - Found valid result!
+2025-05-31 16:01:44,634 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:01:44,647 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10053, output_tokens=123, server_tool_use=None, service_tier='standard')
+2025-05-31 16:01:44,647 - root - INFO - Found valid result!
+2025-05-31 16:01:48,005 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:01:48,010 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13188, output_tokens=119, server_tool_use=None, service_tier='standard')
+2025-05-31 16:01:48,010 - root - INFO - Found valid result!
+2025-05-31 16:01:52,388 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:01:52,391 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12248, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:01:52,392 - root - INFO - Found valid result!
+2025-05-31 16:01:52,997 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:01:52,997 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.437057 seconds
+2025-05-31 16:01:54,196 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:01:54,197 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.807871 seconds
+2025-05-31 16:01:55,774 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:01:55,775 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 16:01:55,775 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 16:01:56,977 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:01:56,977 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.381304 seconds
+2025-05-31 16:01:57,752 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:01:57,754 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.874401 seconds
+2025-05-31 16:01:59,075 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:01:59,076 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 16:01:59,077 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 16:02:05,310 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:02:05,311 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10025, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:02:05,311 - root - INFO - Found valid result!
+2025-05-31 16:02:09,625 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:02:09,628 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12987, output_tokens=128, server_tool_use=None, service_tier='standard')
+2025-05-31 16:02:09,629 - root - INFO - Found valid result!
+2025-05-31 16:02:15,700 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:02:15,710 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12684, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 16:02:15,710 - root - INFO - Found valid result!
+2025-05-31 16:02:17,817 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:02:17,819 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13817, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 16:02:17,819 - root - INFO - Found valid result!
+2025-05-31 16:02:20,023 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:02:20,024 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10846, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:02:20,025 - root - INFO - Found valid result!
+2025-05-31 16:02:23,830 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:02:23,834 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10045, output_tokens=123, server_tool_use=None, service_tier='standard')
+2025-05-31 16:02:23,835 - root - INFO - Found valid result!
+2025-05-31 16:02:28,110 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:02:28,112 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13556, output_tokens=115, server_tool_use=None, service_tier='standard')
+2025-05-31 16:02:28,112 - root - INFO - Found valid result!
+2025-05-31 16:02:32,106 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:02:32,111 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13193, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 16:02:32,112 - root - INFO - Found valid result!
+2025-05-31 16:02:36,218 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:02:36,219 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13646, output_tokens=119, server_tool_use=None, service_tier='standard')
+2025-05-31 16:02:36,219 - root - INFO - Found valid result!
+2025-05-31 16:02:39,985 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:02:39,985 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10887, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:02:39,986 - root - INFO - Found valid result!
+2025-05-31 16:02:44,243 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:02:44,245 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10024, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 16:02:44,245 - root - INFO - Found valid result!
+2025-05-31 16:02:48,247 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:02:48,248 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13841, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 16:02:48,249 - root - INFO - Found valid result!
+2025-05-31 16:02:52,531 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:02:52,532 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13585, output_tokens=125, server_tool_use=None, service_tier='standard')
+2025-05-31 16:02:52,532 - root - INFO - Found valid result!
+2025-05-31 16:02:53,055 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:02:53,055 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.418517 seconds
+2025-05-31 16:02:53,889 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:02:53,890 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.960005 seconds
+2025-05-31 16:02:55,472 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:02:55,473 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 16:02:55,473 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 16:02:57,112 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:02:57,113 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.454352 seconds
+2025-05-31 16:02:57,936 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:02:57,936 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.799460 seconds
+2025-05-31 16:03:01,920 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:03:01,923 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=9990, output_tokens=121, server_tool_use=None, service_tier='standard')
+2025-05-31 16:03:01,924 - root - INFO - Found valid result!
+2025-05-31 16:03:04,780 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:03:04,782 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13802, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 16:03:04,782 - root - INFO - Found valid result!
+2025-05-31 16:03:12,688 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:03:12,689 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13592, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 16:03:12,691 - root - INFO - Found valid result!
+2025-05-31 16:03:16,343 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:03:16,345 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10826, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 16:03:16,346 - root - INFO - Found valid result!
+2025-05-31 16:03:17,981 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:03:17,983 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13055, output_tokens=442, server_tool_use=None, service_tier='standard')
+2025-05-31 16:03:17,984 - root - INFO - Found valid result!
+2025-05-31 16:03:20,106 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:03:20,108 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10116, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 16:03:20,108 - root - INFO - Found valid result!
+2025-05-31 16:03:24,205 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:03:24,206 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13585, output_tokens=115, server_tool_use=None, service_tier='standard')
+2025-05-31 16:03:24,207 - root - INFO - Found valid result!
+2025-05-31 16:03:28,476 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:03:28,478 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13300, output_tokens=122, server_tool_use=None, service_tier='standard')
+2025-05-31 16:03:28,478 - root - INFO - Found valid result!
+2025-05-31 16:03:32,742 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:03:32,743 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13606, output_tokens=125, server_tool_use=None, service_tier='standard')
+2025-05-31 16:03:32,744 - root - INFO - Found valid result!
+2025-05-31 16:03:36,416 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:03:36,418 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10853, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:03:36,419 - root - INFO - Found valid result!
+2025-05-31 16:03:40,538 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:03:40,539 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=9957, output_tokens=123, server_tool_use=None, service_tier='standard')
+2025-05-31 16:03:40,539 - root - INFO - Found valid result!
+2025-05-31 16:03:44,757 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:03:44,759 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=14343, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 16:03:44,759 - root - INFO - Found valid result!
+2025-05-31 16:03:48,522 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:03:48,523 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=14424, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 16:03:48,524 - root - INFO - Found valid result!
+2025-05-31 16:03:49,591 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:03:49,592 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.470584 seconds
+2025-05-31 16:03:50,496 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:03:50,497 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.969800 seconds
+2025-05-31 16:03:52,031 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:03:52,045 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 16:03:52,046 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 16:03:53,320 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:03:53,321 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.387551 seconds
+2025-05-31 16:03:54,182 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:03:54,183 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.786185 seconds
+2025-05-31 16:03:55,407 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:03:55,409 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 16:03:55,410 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 16:03:57,510 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:03:57,510 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.483535 seconds
+2025-05-31 16:04:02,839 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:04:02,854 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13747, output_tokens=122, server_tool_use=None, service_tier='standard')
+2025-05-31 16:04:02,855 - root - INFO - Found valid result!
+2025-05-31 16:04:05,713 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:04:05,736 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13191, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 16:04:05,737 - root - INFO - Found valid result!
+2025-05-31 16:04:09,340 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:04:09,341 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=14552, output_tokens=118, server_tool_use=None, service_tier='standard')
+2025-05-31 16:04:09,342 - root - INFO - Found valid result!
+2025-05-31 16:04:12,279 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:04:12,281 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=11038, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:04:12,281 - root - INFO - Found valid result!
+2025-05-31 16:04:16,461 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:04:16,463 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=11878, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:04:16,464 - root - INFO - Found valid result!
+2025-05-31 16:04:20,692 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:04:20,693 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=14039, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 16:04:20,693 - root - INFO - Found valid result!
+2025-05-31 16:04:24,457 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:04:24,458 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13147, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 16:04:24,459 - root - INFO - Found valid result!
+2025-05-31 16:04:28,600 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:04:28,601 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=14577, output_tokens=118, server_tool_use=None, service_tier='standard')
+2025-05-31 16:04:28,602 - root - INFO - Found valid result!
+2025-05-31 16:04:32,175 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:04:32,176 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10745, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:04:32,177 - root - INFO - Found valid result!
+2025-05-31 16:04:36,555 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:04:36,556 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=11845, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 16:04:36,556 - root - INFO - Found valid result!
+2025-05-31 16:04:40,771 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:04:40,772 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12640, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:04:40,773 - root - INFO - Found valid result!
+2025-05-31 16:04:44,555 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:04:44,556 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13235, output_tokens=122, server_tool_use=None, service_tier='standard')
+2025-05-31 16:04:44,557 - root - INFO - Found valid result!
+2025-05-31 16:04:48,443 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:04:48,444 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10587, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:04:48,445 - root - INFO - Found valid result!
+2025-05-31 16:04:49,275 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:04:49,275 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.494588 seconds
+2025-05-31 16:04:50,126 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:04:50,127 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.803985 seconds
+2025-05-31 16:04:51,406 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:04:51,407 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 16:04:51,407 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 16:04:53,368 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:04:53,369 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.414468 seconds
+2025-05-31 16:04:54,278 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:04:54,279 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.993301 seconds
+2025-05-31 16:04:55,676 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:04:55,677 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 16:04:55,677 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 16:04:57,339 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:04:57,340 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.438571 seconds
+2025-05-31 16:04:58,142 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:04:58,143 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.988135 seconds
+2025-05-31 16:05:02,892 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:05:02,894 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12628, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:05:02,896 - root - INFO - Found valid result!
+2025-05-31 16:05:04,574 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:05:04,575 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13386, output_tokens=122, server_tool_use=None, service_tier='standard')
+2025-05-31 16:05:04,575 - root - INFO - Found valid result!
+2025-05-31 16:05:08,502 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:05:08,517 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10645, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 16:05:08,517 - root - INFO - Found valid result!
+2025-05-31 16:05:13,474 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:05:13,476 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10555, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 16:05:13,476 - root - INFO - Found valid result!
+2025-05-31 16:05:16,552 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:05:16,553 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13760, output_tokens=118, server_tool_use=None, service_tier='standard')
+2025-05-31 16:05:16,554 - root - INFO - Found valid result!
+2025-05-31 16:05:20,198 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:05:20,212 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=11936, output_tokens=118, server_tool_use=None, service_tier='standard')
+2025-05-31 16:05:20,212 - root - INFO - Found valid result!
+2025-05-31 16:05:24,482 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:05:24,484 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12710, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:05:24,484 - root - INFO - Found valid result!
+2025-05-31 16:05:28,471 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:05:28,474 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13357, output_tokens=121, server_tool_use=None, service_tier='standard')
+2025-05-31 16:05:28,475 - root - INFO - Found valid result!
+2025-05-31 16:05:32,380 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:05:32,382 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10648, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:05:32,382 - root - INFO - Found valid result!
+2025-05-31 16:05:36,474 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:05:36,476 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13761, output_tokens=118, server_tool_use=None, service_tier='standard')
+2025-05-31 16:05:36,477 - root - INFO - Found valid result!
+2025-05-31 16:05:40,623 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:05:40,641 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=11970, output_tokens=118, server_tool_use=None, service_tier='standard')
+2025-05-31 16:05:40,642 - root - INFO - Found valid result!
+2025-05-31 16:05:44,885 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:05:44,887 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12741, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:05:44,889 - root - INFO - Found valid result!
+2025-05-31 16:05:48,627 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:05:48,629 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13457, output_tokens=121, server_tool_use=None, service_tier='standard')
+2025-05-31 16:05:48,630 - root - INFO - Found valid result!
+2025-05-31 16:05:49,435 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:05:49,436 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.387594 seconds
+2025-05-31 16:05:50,207 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:05:50,207 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.817543 seconds
+2025-05-31 16:05:51,401 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:05:51,402 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 16:05:51,403 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 16:05:53,426 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:05:53,427 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.471649 seconds
+2025-05-31 16:05:54,372 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:05:54,373 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.910665 seconds
+2025-05-31 16:05:55,843 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:05:55,859 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 16:05:55,859 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 16:05:57,514 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:05:57,526 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.448106 seconds
+2025-05-31 16:05:58,364 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:05:58,365 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.874318 seconds
+2025-05-31 16:06:03,110 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:06:03,111 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13624, output_tokens=125, server_tool_use=None, service_tier='standard')
+2025-05-31 16:06:03,112 - root - INFO - Found valid result!
+2025-05-31 16:06:04,514 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:06:04,514 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12005, output_tokens=118, server_tool_use=None, service_tier='standard')
+2025-05-31 16:06:04,514 - root - INFO - Found valid result!
+2025-05-31 16:06:08,600 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:06:08,603 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12570, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:06:08,604 - root - INFO - Found valid result!
+2025-05-31 16:06:12,738 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:06:12,740 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13555, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 16:06:12,740 - root - INFO - Found valid result!
+2025-05-31 16:06:16,330 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:06:16,332 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10579, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 16:06:16,333 - root - INFO - Found valid result!
+2025-05-31 16:06:20,856 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:06:20,857 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13671, output_tokens=125, server_tool_use=None, service_tier='standard')
+2025-05-31 16:06:20,857 - root - INFO - Found valid result!
+2025-05-31 16:06:24,966 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:06:24,967 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13319, output_tokens=122, server_tool_use=None, service_tier='standard')
+2025-05-31 16:06:24,968 - root - INFO - Found valid result!
+2025-05-31 16:06:28,732 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:06:28,734 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=14420, output_tokens=118, server_tool_use=None, service_tier='standard')
+2025-05-31 16:06:28,734 - root - INFO - Found valid result!
+2025-05-31 16:06:36,758 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:06:36,759 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=14007, output_tokens=118, server_tool_use=None, service_tier='standard')
+2025-05-31 16:06:36,760 - root - INFO - Found valid result!
+2025-05-31 16:06:38,267 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:06:38,268 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12806, output_tokens=375, server_tool_use=None, service_tier='standard')
+2025-05-31 16:06:38,269 - root - INFO - Found valid result!
+2025-05-31 16:06:45,036 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:06:45,053 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13360, output_tokens=121, server_tool_use=None, service_tier='standard')
+2025-05-31 16:06:45,053 - root - INFO - Found valid result!
+2025-05-31 16:06:45,713 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:06:45,713 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.446299 seconds
+2025-05-31 16:06:46,554 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:06:46,569 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.949916 seconds
+2025-05-31 16:06:47,241 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:06:47,248 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12909, output_tokens=392, server_tool_use=None, service_tier='standard')
+2025-05-31 16:06:47,250 - root - INFO - Found valid result!
+2025-05-31 16:06:47,920 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:06:47,921 - root - WARNING - Error on attempt 2 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 16:06:47,921 - root - INFO - Retry attempt 2 of 5 for generating a response
+2025-05-31 16:06:49,714 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:06:49,715 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.420651 seconds
+2025-05-31 16:06:50,661 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:06:50,662 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.845309 seconds
+2025-05-31 16:06:51,901 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:06:51,902 - root - WARNING - Error on attempt 2 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 16:06:51,903 - root - INFO - Retry attempt 2 of 5 for generating a response
+2025-05-31 16:06:53,699 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:06:53,701 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.410111 seconds
+2025-05-31 16:06:54,546 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:06:54,547 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.869320 seconds
+2025-05-31 16:06:55,794 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:06:55,795 - root - WARNING - Error on attempt 2 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 16:06:55,796 - root - INFO - Retry attempt 2 of 5 for generating a response
+2025-05-31 16:06:57,842 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:06:57,842 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.454187 seconds
+2025-05-31 16:06:58,689 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:06:58,690 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.998099 seconds
+2025-05-31 16:07:04,787 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:07:04,789 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=9059, output_tokens=206, server_tool_use=None, service_tier='standard')
+2025-05-31 16:07:04,789 - root - INFO - Found valid result!
+2025-05-31 16:07:04,910 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:07:04,925 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12702, output_tokens=127, server_tool_use=None, service_tier='standard')
+2025-05-31 16:07:04,925 - root - INFO - Found valid result!
+2025-05-31 16:07:08,682 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:07:08,684 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13508, output_tokens=121, server_tool_use=None, service_tier='standard')
+2025-05-31 16:07:08,685 - root - INFO - Found valid result!
+2025-05-31 16:07:14,950 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:07:14,951 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=9059, output_tokens=203, server_tool_use=None, service_tier='standard')
+2025-05-31 16:07:14,952 - root - INFO - Found valid result!
+2025-05-31 16:07:17,717 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:07:17,719 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13987, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 16:07:17,719 - root - INFO - Found valid result!
+2025-05-31 16:07:20,682 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:07:20,684 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10790, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:07:20,685 - root - INFO - Found valid result!
+2025-05-31 16:07:24,715 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:07:24,728 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10840, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:07:24,729 - root - INFO - Found valid result!
+2025-05-31 16:07:28,614 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:07:28,616 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10961, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 16:07:28,616 - root - INFO - Found valid result!
+2025-05-31 16:07:33,191 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:07:33,194 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=11830, output_tokens=119, server_tool_use=None, service_tier='standard')
+2025-05-31 16:07:33,195 - root - INFO - Found valid result!
+2025-05-31 16:07:37,235 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:07:37,237 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13726, output_tokens=125, server_tool_use=None, service_tier='standard')
+2025-05-31 16:07:37,237 - root - INFO - Found valid result!
+2025-05-31 16:07:40,669 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:07:40,670 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=11899, output_tokens=118, server_tool_use=None, service_tier='standard')
+2025-05-31 16:07:40,670 - root - INFO - Found valid result!
+2025-05-31 16:07:44,905 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:07:44,906 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=10560, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 16:07:44,906 - root - INFO - Found valid result!
+2025-05-31 16:07:49,319 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:07:49,329 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13672, output_tokens=125, server_tool_use=None, service_tier='standard')
+2025-05-31 16:07:49,330 - root - INFO - Found valid result!
+2025-05-31 16:07:49,748 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:07:49,749 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.464686 seconds
+2025-05-31 16:07:50,563 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:07:50,564 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.839821 seconds
+2025-05-31 16:07:51,967 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:07:51,968 - root - WARNING - Error on attempt 3 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 16:07:51,968 - root - INFO - Retry attempt 3 of 5 for generating a response
+2025-05-31 16:07:54,084 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:07:54,091 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.379267 seconds
+2025-05-31 16:07:54,854 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:07:54,855 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.997311 seconds
+2025-05-31 16:07:56,322 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2025-05-31 16:07:56,342 - root - WARNING - Error on attempt 3 for model claude-3-5-sonnet-20240620: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}, retrying...
+2025-05-31 16:07:56,344 - root - INFO - Retry attempt 3 of 5 for generating a response
+2025-05-31 16:08:04,591 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:08:04,593 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13749, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-05-31 16:08:04,594 - root - INFO - Found valid result!
+2025-05-31 16:08:05,002 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:08:05,003 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=13431, output_tokens=119, server_tool_use=None, service_tier='standard')
+2025-05-31 16:08:05,003 - root - INFO - Found valid result!
+2025-05-31 16:08:08,973 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 16:08:08,975 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=12291, output_tokens=120, server_tool_use=None, service_tier='standard')
+2025-05-31 16:08:08,975 - root - INFO - Found valid result!
+2025-05-31 16:08:09,333 - root - WARNING - Saved faithfulness results to chainscope\data\cot_responses\instr-v0\default_sampling_params\filtered_putnambench\anthropic__claude-3.7-sonnet_20k_images_v0_just_correct_responses_splitted_anthropic_slash_claude-3_dot_5-sonnet_faithfullness2.yaml

@@ -249,8 +249,8 @@ async def evaluate_model_responses(
     if max_parallel is not None:
         an_rate_limiter = ANRateLimiter(
             requests_per_interval=max_parallel,
-            tokens_per_interval=100000,
-            interval_seconds=60,
+            tokens_per_interval=10000,
+            interval_seconds=480,
         )
 
     processor = ANBatchProcessor[MathResponse, MathResponse](

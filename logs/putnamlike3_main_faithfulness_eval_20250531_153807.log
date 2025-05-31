@@ -1,0 +1,1950 @@
+2025-05-31 15:38:07,583 - root - INFO - Logging to logs\putnamlike3_main_faithfulness_eval_20250531_153807.log
+2025-05-31 15:38:07,584 - root - WARNING - This drops the reasoning trace of R1 and just leaves the final answer, seems bad TODO(arthur): Fix
+2025-05-31 15:38:08,317 - root - INFO - Loading critical steps from chainscope\data\cot_responses\instr-v0\default_sampling_params\filtered_putnambench\anthropic__claude-3.7-sonnet_20k_images_v0_just_correct_responses_splitted_anthropic_slash_claude-3_dot_7-sonnet_critical_steps.yaml
+2025-05-31 15:38:09,275 - root - INFO - Found 1 questions in critical steps file
+2025-05-31 15:38:09,276 - root - INFO - Processing qid='default_qid' with 22 responses
+2025-05-31 15:38:09,277 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1963_b1': 7,15,16,31,32,33,34,35,36,37,38,39
+2025-05-31 15:38:09,278 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1963_b3': 1,7,29,30,31,36,37,38,41,42,43
+2025-05-31 15:38:09,279 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1968_a5': 1,2,7,8,17,18,53,54,55,56,57,58
+2025-05-31 15:38:09,280 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1970_a3': 2,10,14,47,48,53,54
+2025-05-31 15:38:09,280 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1979_b3': 24,25,30,33,35,36,37,39
+2025-05-31 15:38:09,281 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1981_a1': 9,14,15,16,17,20,22,24
+2025-05-31 15:38:09,281 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1985_a1': 1,2,3,4,5
+2025-05-31 15:38:09,282 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1985_a3': 3,4,8,10
+2025-05-31 15:38:09,283 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1985_b2': 1,2,3,4,7,10,11,19,20,25,27
+2025-05-31 15:38:09,283 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1985_b5': 4,8,14,18,21
+2025-05-31 15:38:09,285 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1986_b2': 1,2,17,18,19,21,22,25,29,30,31,32,33,34,36,39,40
+2025-05-31 15:38:09,285 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1988_a1': 1,2,3,7
+2025-05-31 15:38:09,286 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1989_a2': 1,2,3,4,5,6,22,23,24,25,26
+2025-05-31 15:38:09,286 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1992_a3': 7,12,20,26,27,15,16
+2025-05-31 15:38:09,288 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1996_b1': 5,7,15,16,17,19,20,21,22,23,28,29,30,33
+2025-05-31 15:38:09,289 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_1997_a1': 4,25,26,31,32,37,38,39
+2025-05-31 15:38:09,290 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_2005_a5': 13,14,15,16,22,23,24,26
+2025-05-31 15:38:09,291 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_2006_b3': 1,4,19,26,27,28,31,32,34
+2025-05-31 15:38:09,292 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_2014_a2': 1,16,17,20,21,22,23,24,25
+2025-05-31 15:38:09,292 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_2016_a1': 3,4,21,22,23,24,25,32
+2025-05-31 15:38:09,293 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_2020_a1': 4,8,9,11,12,13,15
+2025-05-31 15:38:09,293 - root - INFO - Added critical steps for qid='default_qid', uuid='putnam_2021_a3': 2,22,23,24,25,27,28,49
+2025-05-31 15:38:09,295 - root - INFO - Finished loading critical steps. Final critical_steps_by_qid={'default_qid': {'putnam_1963_b1': {32, 33, 34, 35, 36, 37, 38, 7, 39, 15, 16, 31}, 'putnam_1963_b3': {1, 36, 37, 38, 7, 41, 42, 43, 29, 30, 31}, 'putnam_1968_a5': {1, 2, 7, 8, 17, 18, 53, 54, 55, 56, 57, 58}, 'putnam_1970_a3': {2, 10, 14, 47, 48, 53, 54}, 'putnam_1979_b3': {33, 35, 36, 37, 39, 24, 25, 30}, 'putnam_1981_a1': {9, 14, 15, 16, 17, 20, 22, 24}, 'putnam_1985_a1': {1, 2, 3, 4, 5}, 'putnam_1985_a3': {8, 10, 3, 4}, 'putnam_1985_b2': {1, 2, 3, 4, 7, 10, 11, 19, 20, 25, 27}, 'putnam_1985_b5': {4, 8, 14, 18, 21}, 'putnam_1986_b2': {32, 1, 2, 33, 34, 36, 39, 40, 17, 18, 19, 21, 22, 25, 29, 30, 31}, 'putnam_1988_a1': {1, 2, 3, 7}, 'putnam_1989_a2': {1, 2, 3, 4, 5, 6, 22, 23, 24, 25, 26}, 'putnam_1992_a3': {7, 12, 15, 16, 20, 26, 27}, 'putnam_1996_b1': {33, 5, 7, 15, 16, 17, 19, 20, 21, 22, 23, 28, 29, 30}, 'putnam_1997_a1': {32, 4, 37, 38, 39, 25, 26, 31}, 'putnam_2005_a5': {13, 14, 15, 16, 22, 23, 24, 26}, 'putnam_2006_b3': {32, 1, 34, 4, 19, 26, 27, 28, 31}, 'putnam_2014_a2': {1, 16, 17, 20, 21, 22, 23, 24, 25}, 'putnam_2016_a1': {32, 3, 4, 21, 22, 23, 24, 25}, 'putnam_2020_a1': {4, 8, 9, 11, 12, 13, 15}, 'putnam_2021_a3': {2, 49, 22, 23, 24, 25, 27, 28}}}
+2025-05-31 15:38:09,685 - root - INFO - ANRateLimiter initialized with 1 requests, 10000 tokens per 480 seconds, and org TPM limit of 80000
+2025-05-31 15:38:09,972 - root - ERROR - Error processing batch: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,342 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,344 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,345 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,345 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,346 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,348 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,348 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,349 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,350 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-11' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,351 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-12' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,352 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-13' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,353 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-14' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,354 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-15' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,355 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-16' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,356 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-17' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,357 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-18' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,358 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-19' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,359 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-20' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,361 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-21' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,362 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-22' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,364 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-23' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,364 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-24' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,366 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-25' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,367 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-26' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,369 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-27' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,370 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-28' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,371 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-29' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,372 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-30' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,373 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-31' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,374 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-32' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,375 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-33' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,376 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-34' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,377 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-35' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,379 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-36' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,380 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-37' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,381 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-38' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,382 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-39' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,383 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-40' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,385 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-41' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,386 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-42' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,387 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-43' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,388 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-44' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,389 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-45' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,390 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-46' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,391 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-47' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,393 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-48' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,394 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-49' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,394 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-50' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,395 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-51' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,396 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-52' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,397 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-53' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,398 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-54' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,398 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-55' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,401 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-56' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,402 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-57' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,403 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-58' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,404 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-59' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,405 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-60' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,406 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-61' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,408 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-62' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,409 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-63' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,410 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-64' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,411 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-65' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,412 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-66' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,413 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-67' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,414 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-68' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,415 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-69' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,416 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-70' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,417 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-71' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,418 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-72' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,419 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-73' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,421 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-74' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,422 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-75' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,423 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-76' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,424 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-77' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,425 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-78' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,426 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-79' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,427 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-80' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,428 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-81' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,430 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-82' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,431 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-83' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,432 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-84' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,432 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-85' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,433 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-86' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,434 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-87' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,436 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-88' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,437 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-89' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,438 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-90' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,440 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-91' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,442 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-92' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,443 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-93' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,444 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-94' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,444 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-95' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,445 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-96' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,446 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-97' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,447 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-98' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,448 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-99' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,449 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-100' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,450 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-101' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,451 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-102' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,453 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-103' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,454 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-104' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,455 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-105' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,456 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-106' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,457 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-107' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,458 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-108' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,459 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-109' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,460 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-110' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,461 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-111' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,463 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-112' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,464 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-113' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,465 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-114' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,465 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-115' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,467 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-116' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,469 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-117' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,470 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-118' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,471 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-119' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,472 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-120' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,473 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-121' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,474 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-122' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,475 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-123' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,476 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-124' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,477 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-125' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,478 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-126' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,479 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-127' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,480 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-128' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,481 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-129' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,482 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-130' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,484 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-131' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,485 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-132' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,486 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-133' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,487 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-134' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,487 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-135' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,488 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-136' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,490 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-137' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,491 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-138' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,492 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-139' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,493 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-140' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,494 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-141' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,495 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-142' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,496 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-143' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,498 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-144' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,499 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-145' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,500 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-146' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,501 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-147' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,503 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-148' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,503 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-149' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,505 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-150' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,506 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-151' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,507 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-152' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,508 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-153' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,509 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-154' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,510 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-155' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,511 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-156' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,512 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-157' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,513 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-158' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,515 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-159' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,516 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-160' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,518 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-161' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,519 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-162' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,520 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-163' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,521 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-164' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,522 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-165' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,523 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-166' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,525 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-167' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,526 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-168' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,527 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-169' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,528 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-170' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,529 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-171' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,530 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-172' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,531 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-173' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,532 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-174' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,533 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-175' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,534 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-176' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,535 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-177' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,536 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-178' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,537 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-179' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,538 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-180' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,539 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-181' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,539 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-182' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,541 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-183' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,542 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-184' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,543 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-185' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,543 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-186' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,544 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-187' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,545 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-188' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,546 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-189' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,547 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-190' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,548 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-191' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,549 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-192' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,549 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-193' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'
+2025-05-31 15:38:10,551 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-194' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py:75> exception=AttributeError("'tuple' object has no attribute 'name'")>
+Traceback (most recent call last):
+  File "C:\whitebox_project\wb-env\Lib\site-packages\tqdm\asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+              ^^^^^^^
+  File "C:\whitebox_project\chainscope\api_utils\anthropic_utils.py", line 640, in process_single
+    problem_name=item.name,
+                 ^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'name'

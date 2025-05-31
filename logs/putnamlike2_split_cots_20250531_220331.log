@@ -1,0 +1,142 @@
+2025-05-31 22:03:31,484 - root - INFO - Logging to logs\putnamlike2_split_cots_20250531_220331.log
+2025-05-31 22:03:31,484 - root - WARNING - WARNING! This is somewhat unreliable, particularly for really long rollouts, as it does only very basic checks of the correct format by checking that the length of the steps added together is within 10% of the original response length
+2025-05-31 22:03:35,509 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-05-31 22:03:35,753 - root - INFO - ANRateLimiter initialized with 1 requests, 480000 tokens per 60 seconds, and org TPM limit of 80000
+2025-05-31 22:03:36,009 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,009 - root - INFO - Prompt length: 30190
+2025-05-31 22:03:36,009 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,009 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,009 - root - INFO - Prompt length: 28238
+2025-05-31 22:03:36,010 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,010 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,010 - root - INFO - Prompt length: 37176
+2025-05-31 22:03:36,010 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,011 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,011 - root - INFO - Prompt length: 33244
+2025-05-31 22:03:36,011 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,011 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,011 - root - INFO - Prompt length: 26581
+2025-05-31 22:03:36,011 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,011 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,012 - root - INFO - Prompt length: 28392
+2025-05-31 22:03:36,012 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,012 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,012 - root - INFO - Prompt length: 21342
+2025-05-31 22:03:36,013 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,013 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,013 - root - INFO - Prompt length: 19158
+2025-05-31 22:03:36,013 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,014 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,014 - root - INFO - Prompt length: 17864
+2025-05-31 22:03:36,014 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,015 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,015 - root - INFO - Prompt length: 28143
+2025-05-31 22:03:36,015 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,015 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,016 - root - INFO - Prompt length: 35440
+2025-05-31 22:03:36,016 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,016 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,016 - root - INFO - Prompt length: 45222
+2025-05-31 22:03:36,016 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,017 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,017 - root - INFO - Prompt length: 32057
+2025-05-31 22:03:36,018 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,018 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,019 - root - INFO - Prompt length: 41318
+2025-05-31 22:03:36,019 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,019 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,019 - root - INFO - Prompt length: 64161
+2025-05-31 22:03:36,020 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,020 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,021 - root - INFO - Prompt length: 46389
+2025-05-31 22:03:36,021 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,022 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,022 - root - INFO - Prompt length: 30957
+2025-05-31 22:03:36,023 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,023 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,023 - root - INFO - Prompt length: 33262
+2025-05-31 22:03:36,023 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,024 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,024 - root - INFO - Prompt length: 38156
+2025-05-31 22:03:36,025 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,025 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,025 - root - INFO - Prompt length: 35795
+2025-05-31 22:03:36,026 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,026 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,026 - root - INFO - Prompt length: 22492
+2025-05-31 22:03:36,026 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:36,027 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-05-31 22:03:36,027 - root - INFO - Prompt length: 46919
+2025-05-31 22:03:36,028 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-05-31 22:03:40,895 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:03:40,897 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:03:40,897 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:03:44,476 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:03:44,477 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:03:44,477 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:03:48,519 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:03:48,521 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:03:48,522 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:03:52,521 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:03:52,523 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:03:52,524 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:03:56,489 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:03:56,490 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:03:56,491 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:04:00,547 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:04:00,548 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:04:00,548 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:04:07,299 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:04:07,300 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:04:07,301 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:04:08,483 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:04:08,485 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:04:08,485 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:04:12,562 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:04:12,564 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:04:12,564 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:04:16,966 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:04:17,500 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:04:17,500 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:04:20,607 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:04:20,608 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:04:20,608 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:04:24,968 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:04:24,969 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:04:24,970 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:04:28,613 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:04:28,616 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:04:28,616 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:04:32,634 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:04:32,652 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:04:32,652 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:04:38,058 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:04:38,059 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:04:38,060 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:04:40,656 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:04:40,657 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:04:40,657 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:04:45,151 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:04:45,152 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:04:45,152 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:04:48,653 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:04:48,654 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:04:48,654 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:04:52,698 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:04:52,699 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:04:52,700 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:04:56,729 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:04:56,745 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:04:56,746 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:05:00,682 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:05:00,683 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:05:00,683 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:05:04,744 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:05:04,745 - root - WARNING - Error on attempt 1 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:05:04,746 - root - INFO - Retry attempt 1 of 5 for generating a response
+2025-05-31 22:05:08,726 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:05:08,727 - root - WARNING - Error on attempt 2 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:05:08,728 - root - INFO - Retry attempt 2 of 5 for generating a response
+2025-05-31 22:05:12,770 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-05-31 22:05:12,771 - root - WARNING - Error on attempt 2 for model claude-3-5-sonnet-20240620: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'max_tokens: 12500 > 8192, which is the maximum allowed number of output tokens for claude-3-5-sonnet-20240620'}}, retrying...
+2025-05-31 22:05:12,772 - root - INFO - Retry attempt 2 of 5 for generating a response

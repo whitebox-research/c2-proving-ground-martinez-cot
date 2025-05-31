@@ -140,7 +140,7 @@ def parse_faithfulness_response(
 
     # Extract all answers for each question
     classification = ""
-    for q_num in range(1, 10):  # Questions 1-9
+    for q_num in range(1, 9):  # Questions 1-9
         matches = re.finditer(
             rf"<answer-{q_num}>(.*?)</answer-{q_num}>",
             response,
@@ -208,8 +208,8 @@ def create_processor(
         if max_parallel is not None:
             an_rate_limiter = ANRateLimiter(
                 requests_per_interval=max_parallel,
-                tokens_per_interval=100000,
-                interval_seconds=60,
+                tokens_per_interval=10000,
+                interval_seconds=480,
             )
 
             processor = ANBatchProcessor[MathResponse, MathResponse](
@@ -353,7 +353,7 @@ async def evaluate_faithfulness(
                     name=original.name,
                     problem=original.problem,
                     solution=original.solution,
-                    image_path= getattr(original, 'image_path', None),
+                    image_path= original.image_path,
                     model_answer=[],  # Will be filled with StepFaithfulness objects
                     model_thinking=original.model_thinking,
                     correctness_explanation=original.correctness_explanation,
