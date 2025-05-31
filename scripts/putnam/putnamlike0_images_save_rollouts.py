@@ -154,6 +154,7 @@ def create_processor(
     max_parallel: Optional[int],
     force_open_router: bool = False,
     track_api_usage: str = "none",
+    is_text: bool = False
 ):
     """Create the appropriate processor based on the model ID."""
 
@@ -201,17 +202,18 @@ def create_processor(
                 interval_seconds=1,
             )
 
-            processor = GOBatchProcessorWithImage[MathResponse, MathResponse](
-                model_id=model_id,
-                max_retries=max_retries,
-                max_new_tokens=1000,
-                temperature=0.0,
-                process_response=get_tuple_or_str_response,
-                rate_limiter=go_rate_limiter,
-                track_api_usage=track_api_usage,
-            )
+        processor = GOBatchProcessorWithImage[MathResponse, MathResponse](
+            model_id=model_id,
+            max_retries=max_retries,
+            max_new_tokens=1000,
+            temperature=0.0,
+            process_response=get_tuple_or_str_response,
+            rate_limiter=go_rate_limiter,
+            track_api_usage=track_api_usage,
+            is_text=is_text,  # Use text-only if specified
+        )
 
-            return processor
+        return processor
     else:
         # OpenRouter processor
         logging.info(f"Using Anthropic model {model_id}")
@@ -244,6 +246,7 @@ async def generate_rollouts(
     force_open_router: bool = False,
     preamble: str = "",
     track_api_usage: str = "none",
+    is_text: bool = False
 ) -> CotResponses:
     """Generate rollouts for each problem in the dataset."""
 
@@ -253,6 +256,7 @@ async def generate_rollouts(
         max_parallel=max_parallel,
         force_open_router=force_open_router,
         track_api_usage=track_api_usage,
+        is_text=is_text,
     )
 
     # Prepare questions for processing
@@ -342,6 +346,11 @@ async def generate_rollouts(
     is_flag=True,
     help="Force using OpenRouter even for DeepSeek models",
 )
+@click.option(
+    "--text",
+    is_flag=True,
+    help="Use text-only, i.e. no images (default is to use images if available)",
+)
 def main(
     input_yaml: str,
     model_id: str,
@@ -351,6 +360,7 @@ def main(
     verbose: bool,
     open_router: bool,
     preamble: str,
+    text:bool = False,
 ):
     """Generate rollouts for Putnam problems using OpenRouter or DeepSeek models."""
     # Set up logging to both console and file
@@ -374,6 +384,7 @@ def main(
             prefix=prefix,
             force_open_router=open_router,
             track_api_usage=track_api_usage,
+            is_text=text,  # Use text-only if specified
         )
     )
 

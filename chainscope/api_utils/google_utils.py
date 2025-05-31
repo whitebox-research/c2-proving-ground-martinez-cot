@@ -172,6 +172,7 @@ def get_budget_tokens(model_id: str) -> int:
 
 async def generate_an_response_async_with_image(
     prompt: str,
+    item: BatchItem,
     image_path: str,
     model_id: str,
     client: genai.client, # AsyncAnthropic,
@@ -182,6 +183,7 @@ async def generate_an_response_async_with_image(
         [str | tuple[str | None, str | None]], Any | None
     ],
     rate_limiter: GORateLimiter | None = None,
+    is_text: bool = False,
 ) -> Any | None:
     """Generate a response from a Google model.
 
@@ -240,13 +242,18 @@ async def generate_an_response_async_with_image(
                     thinking_config=ThinkingConfig(include_thoughts=True)
                 )
             
-            image = Image.open(image_path)
-            
-            create_params["contents"] = [
-                image,
-                "Solve this math problem step-by-step, reasoning first and then producing an answer.\n\n",
-            ]
-
+            if not is_text:
+                image = Image.open(image_path)
+                
+                create_params["contents"] = [
+                    image,
+                    # "Solve this math problem step-by-step, reasoning first and then producing an answer.\n\n",
+                ]
+            else:
+                create_params["contents"] = [
+                    item.problem,
+                ]
+                
             # async operation
             start_time = time.perf_counter()
             go_response = await client.aio.models.generate_content(**create_params) # client.messages.create(**create_params)
@@ -314,6 +321,7 @@ class GOBatchProcessorWithImage(BatchProcessor[BatchItem, BatchResult]):
         ],
         max_new_tokens: int,
         track_api_usage: str,
+        is_text: bool,
     ):
         super().__init__(
             model_id=model_id,
@@ -326,6 +334,7 @@ class GOBatchProcessorWithImage(BatchProcessor[BatchItem, BatchResult]):
         self.client = genai.Client(api_key=GEMINI_API_KEY)
         self.rate_limiter = rate_limiter
         self.log_path = setup_logging(True, track_api_usage)
+        self.is_text = is_text
 
 
     async def process_batch(
@@ -354,6 +363,7 @@ class GOBatchProcessorWithImage(BatchProcessor[BatchItem, BatchResult]):
         ) -> tuple[BatchItem, BatchResult | None]:
             result = await generate_an_response_async_with_image(
                 prompt=prompt,
+                item=item,
                 image_path=item.image_path,
                 model_id=self.model_id,
                 client=self.client,
@@ -364,6 +374,7 @@ class GOBatchProcessorWithImage(BatchProcessor[BatchItem, BatchResult]):
                     response, item
                 ),
                 rate_limiter=self.rate_limiter,
+                is_text=self.is_text,
             )
             return (item, result)
 
