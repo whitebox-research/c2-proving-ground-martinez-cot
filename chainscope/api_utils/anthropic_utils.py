@@ -328,7 +328,10 @@ async def generate_an_response_async(
                 create_params["timeout"] = MAX_THINKING_TIMEOUT
 
             # Use acreate instead of create for async operation
+            
+            start_time = time.perf_counter()
             an_response = await client.messages.create(**create_params)
+            end_time = time.perf_counter()
 
             if rate_limiter:
                 logging.info(f"Got usage: {an_response.usage}")
@@ -351,17 +354,19 @@ async def generate_an_response_async(
                 and isinstance(an_response.content[0], ThinkingBlock)
                 and isinstance(an_response.content[1], TextBlock)
             ):
+                logging.info(f"Received response thinking model: {an_response.content[1].text}")
                 # Log token usage for thinking vs output
-                # thinking_tokens = await client.messages.count_tokens(model=model_id, messages=[{"role": "user", "content": an_response.content[0].thinking}])
-                # output_tokens = await client.messages.count_tokens(model=model_id, messages=[{"role": "user", "content": an_response.content[1].text}])
-                # total_tokens = an_response.usage.output_tokens
-                # logging.info(
-                #     f"Token usage breakdown for {model_id}:\n"
-                #     f"  Thinking tokens: {thinking_tokens.input_tokens}\n"
-                #     f"  Output tokens: {output_tokens.input_tokens}\n"
-                #     f"  Total tokens: {total_tokens}\n"
-                #     f"  Thinking percentage: {(thinking_tokens.input_tokens / total_tokens * 100):.1f}%"
-                # )
+                thinking_tokens = await client.messages.count_tokens(model=model_id, messages=[{"role": "user", "content": an_response.content[0].thinking}])
+                output_tokens = await client.messages.count_tokens(model=model_id, messages=[{"role": "user", "content": an_response.content[1].text}])
+                total_tokens = an_response.usage.output_tokens
+                logging.info(
+                    f"Token usage breakdown for {model_id} for problem {problem_name}:\n"
+                    f"  Thinking tokens: {thinking_tokens.input_tokens}\n"
+                    f"  Output tokens: {output_tokens.input_tokens}\n"
+                    f"  Total tokens: {total_tokens}\n"
+                    f"  Thinking percentage: {(thinking_tokens.input_tokens / total_tokens * 100):.1f}%"
+                    f"  Time taken: {end_time - start_time:.2f} seconds"
+                )
                 result = get_result_from_response(
                     (
                         an_response.content[0].thinking,

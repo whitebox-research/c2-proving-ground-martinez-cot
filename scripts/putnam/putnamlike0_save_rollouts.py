@@ -31,6 +31,7 @@ from chainscope.api_utils.deepseek_utils import (
     DeepSeekBatchProcessor,
     DeepSeekRateLimiter,
 )
+from chainscope.api_utils.anthropic_utils import ANBatchProcessor, ANRateLimiter
 from chainscope.api_utils.open_router_utils import ORBatchProcessor, ORRateLimiter
 from chainscope.typing import (
     CotResponses,
@@ -135,6 +136,7 @@ def create_putnam_dataset(df: pd.DataFrame) -> MathQsDataset:
                 name=row["problem_name"],
                 problem=row["informal_statement"],
                 solution=row["informal_solution"],
+                image_path=f"putnam_problems_images/{row['problem_name']}_stmt.png"
             )
             for _, row in df.iterrows()
         ],
@@ -151,6 +153,7 @@ def create_processor(
     max_retries: int,
     max_parallel: Optional[int],
     force_open_router: bool = False,
+    track_api_usage: str = "none",
 ):
     """Create the appropriate processor based on the model ID."""
 
@@ -189,21 +192,25 @@ def create_processor(
         )
     else:
         # OpenRouter processor
-        logging.info(f"Using OpenRouter model {model_id}")
-        rate_limiter = None
+        logging.info(f"Using Anthropic model {model_id}")
+        an_rate_limiter = None
         if max_parallel is not None:
-            rate_limiter = ORRateLimiter(
+            an_rate_limiter = ANRateLimiter(
                 requests_per_interval=max_parallel,
-                interval_seconds=1,
+                tokens_per_interval=10000,
+                interval_seconds=300,
             )
-        return ORBatchProcessor[MathQuestion, tuple[str | None, str]](
-            model_id=model_id,
-            max_retries=max_retries,
-            max_new_tokens=32_000,
-            temperature=0.0,
-            process_response=get_tuple_or_str_response,
-            rate_limiter=rate_limiter,
-        )
+
+            processor = ANBatchProcessor[MathResponse, MathResponse](
+                model_id=model_id,
+                max_retries=max_retries,
+                max_new_tokens=1000,
+                temperature=0.0,
+                process_response=get_tuple_or_str_response,
+                rate_limiter=an_rate_limiter,
+                # track_api_usage=track_api_usage,
+            )
+        return processor
 
 
 async def generate_rollouts(
@@ -214,6 +221,7 @@ async def generate_rollouts(
     prefix: Optional[int] = None,
     force_open_router: bool = False,
     preamble: str = "",
+    track_api_usage: str = "none",
 ) -> CotResponses:
     """Generate rollouts for each problem in the dataset."""
 
@@ -222,6 +230,7 @@ async def generate_rollouts(
         max_retries=max_retries,
         max_parallel=max_parallel,
         force_open_router=force_open_router,
+        track_api_usage=track_api_usage
     )
 
     # Prepare questions for processing
@@ -347,7 +356,7 @@ def main(
     # Save results
     for i in range(0, 100):
         output_path = results.get_path(
-            f"_v{i}" + (f"_prefix_{prefix}" if prefix else "")
+            f"_texts_v{i}" + (f"_prefix_{prefix}" if prefix else "")
         )
         if not os.path.exists(output_path):
             break

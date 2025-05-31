@@ -1,0 +1,4 @@
+2025-05-30 20:43:59,676 - root - INFO - Logging to logs\putnamlike0_images_save_rollouts_20250530_204359.log
+2025-05-30 20:43:59,676 - root - INFO - Loading dataset from chainscope\data\putnam2\putnam_problems_filtered_2.yaml
+2025-05-30 20:43:59,798 - root - INFO - Using Anthropic model anthropic/claude-3.7-sonnet_20k
+2025-05-30 20:44:00,159 - root - INFO - ANRateLimiter initialized with 1 requests, 100000 tokens per 60 seconds, and org TPM limit of 80000

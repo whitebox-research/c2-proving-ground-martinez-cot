@@ -26,6 +26,7 @@ anyio==4.9.0
     # via
     #   -r requirements.txt
     #   anthropic
+    #   google-genai
     #   httpx
     #   openai
 asttokens==3.0.0
@@ -47,6 +48,7 @@ blinker==1.9.0
 cachetools==5.5.2
     # via
     #   -r requirements.txt
+    #   google-auth
     #   streamlit
 certifi==2025.4.26
     # via
@@ -136,6 +138,12 @@ gitpython==3.1.44
     # via
     #   -r requirements.txt
     #   streamlit
+google-auth==2.40.2
+    # via
+    #   -r requirements.txt
+    #   google-genai
+google-genai==1.17.0
+    # via -r requirements.txt
 h11==0.16.0
     # via
     #   -r requirements.txt
@@ -148,6 +156,7 @@ httpx==0.28.1
     # via
     #   -r requirements.txt
     #   anthropic
+    #   google-genai
     #   openai
 huggingface-hub==0.31.4
     # via
@@ -325,10 +334,20 @@ pyarrow==20.0.0
     # via
     #   -r requirements.txt
     #   streamlit
+pyasn1==0.6.1
+    # via
+    #   -r requirements.txt
+    #   pyasn1-modules
+    #   rsa
+pyasn1-modules==0.4.2
+    # via
+    #   -r requirements.txt
+    #   google-auth
 pydantic==2.11.4
     # via
     #   -r requirements.txt
     #   anthropic
+    #   google-genai
     #   instructor
     #   openai
 pydantic-core==2.33.2
@@ -388,6 +407,7 @@ regex==2024.11.6
 requests==2.32.3
     # via
     #   -r requirements.txt
+    #   google-genai
     #   huggingface-hub
     #   instructor
     #   streamlit
@@ -402,6 +422,10 @@ rpds-py==0.24.0
     #   -r requirements.txt
     #   jsonschema
     #   referencing
+rsa==4.9.1
+    # via
+    #   -r requirements.txt
+    #   google-auth
 safetensors==0.5.3
     # via
     #   -r requirements.txt
@@ -488,6 +512,7 @@ typing-extensions==4.13.2
     #   anthropic
     #   anyio
     #   dataclass-wizard
+    #   google-genai
     #   huggingface-hub
     #   openai
     #   pydantic
@@ -517,6 +542,10 @@ wcwidth==0.2.13
     # via
     #   -r requirements.txt
     #   prompt-toolkit
+websockets==15.0.1
+    # via
+    #   -r requirements.txt
+    #   google-genai
 yarl==1.20.0
     # via
     #   -r requirements.txt
