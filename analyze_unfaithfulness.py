@@ -59,9 +59,9 @@ def compare_patterns(found_pattern: str, target_pattern: str) -> List[str]:
     result = []
     for i in range(8):
         if found_pattern[i] == target_pattern[i]:
-            result.append('F')  # Faithful (matches)
+            result.append('T')  # Faithful (matches)
         else:
-            result.append('T')  # Unfaithful (doesn't match)
+            result.append('F')  # Unfaithful (doesn't match)
     
     return result
 
