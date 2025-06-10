@@ -1240,19 +1240,19 @@ class CotResponses(YAMLWizard):
                 sampling_params=self.sampling_params,
             )
 
-        if isinstance(self.ds_params, MathDatasetParams):
-            end_dir = "filtered_putnambench"
-        elif isinstance(self.ds_params, AtCoderDatasetParams):
-            end_dir = "atcoder"
-        else:
-            raise ValueError(f"Unknown dataset type: {type(self.ds_params)}")
+        # if isinstance(self.ds_params, MathDatasetParams):
+        #     end_dir = "filtered_putnambench"
+        # elif isinstance(self.ds_params, AtCoderDatasetParams):
+        #     end_dir = "atcoder"
+        # else:
+        #     raise ValueError(f"Unknown dataset type: {type(self.ds_params)}")
 
         directory = (
             DATA_DIR
             / "cot_responses"
-            / self.instr_id
-            / self.sampling_params.id
-            / end_dir
+            # / self.instr_id
+            # / self.sampling_params.id
+            # / end_dir
         )
         return get_path(directory, self.model_id, suffix)
 
