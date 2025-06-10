@@ -1,0 +1,314 @@
+2025-06-01 11:28:35,454 - root - INFO - Logging to logs\putnamlike1_are_rollouts_correct_20250601_112835.log
+2025-06-01 11:28:37,137 - root - INFO - Loaded YAML data with keys: ['atcoder_stats', 'ds_params', 'instr_id', 'model_id', 'responses_by_qid', 'sampling_params']
+2025-06-01 11:28:37,137 - root - INFO - Found 34 qids in responses_by_qid
+2025-06-01 11:28:37,137 - root - INFO - Processing qid putnam_1964_a2 with 1 responses
+2025-06-01 11:28:37,137 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,139 - root - INFO - Added question putnam_1964_a2
+2025-06-01 11:28:37,139 - root - INFO - Processing qid putnam_1975_b1 with 1 responses
+2025-06-01 11:28:37,140 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,140 - root - INFO - Added question putnam_1975_b1
+2025-06-01 11:28:37,140 - root - INFO - Processing qid putnam_1978_a3 with 1 responses
+2025-06-01 11:28:37,140 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,141 - root - INFO - Added question putnam_1978_a3
+2025-06-01 11:28:37,141 - root - INFO - Processing qid putnam_1982_a3 with 1 responses
+2025-06-01 11:28:37,141 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,141 - root - INFO - Added question putnam_1982_a3
+2025-06-01 11:28:37,141 - root - INFO - Processing qid putnam_1982_b3 with 1 responses
+2025-06-01 11:28:37,142 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,142 - root - INFO - Added question putnam_1982_b3
+2025-06-01 11:28:37,142 - root - INFO - Processing qid putnam_1983_a6 with 1 responses
+2025-06-01 11:28:37,142 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,142 - root - INFO - Added question putnam_1983_a6
+2025-06-01 11:28:37,143 - root - INFO - Processing qid putnam_1984_a5 with 1 responses
+2025-06-01 11:28:37,143 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,143 - root - INFO - Added question putnam_1984_a5
+2025-06-01 11:28:37,144 - root - INFO - Processing qid putnam_1985_a5 with 1 responses
+2025-06-01 11:28:37,144 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,144 - root - INFO - Added question putnam_1985_a5
+2025-06-01 11:28:37,145 - root - INFO - Processing qid putnam_1986_b1 with 1 responses
+2025-06-01 11:28:37,145 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,145 - root - INFO - Added question putnam_1986_b1
+2025-06-01 11:28:37,145 - root - INFO - Processing qid putnam_1987_b4 with 1 responses
+2025-06-01 11:28:37,145 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,145 - root - INFO - Added question putnam_1987_b4
+2025-06-01 11:28:37,145 - root - INFO - Processing qid putnam_1990_a1 with 1 responses
+2025-06-01 11:28:37,146 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,146 - root - INFO - Added question putnam_1990_a1
+2025-06-01 11:28:37,146 - root - INFO - Processing qid putnam_1990_a6 with 1 responses
+2025-06-01 11:28:37,147 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,147 - root - INFO - Added question putnam_1990_a6
+2025-06-01 11:28:37,147 - root - INFO - Processing qid putnam_1991_b6 with 1 responses
+2025-06-01 11:28:37,147 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,147 - root - INFO - Added question putnam_1991_b6
+2025-06-01 11:28:37,147 - root - INFO - Processing qid putnam_1993_b1 with 1 responses
+2025-06-01 11:28:37,148 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,148 - root - INFO - Added question putnam_1993_b1
+2025-06-01 11:28:37,148 - root - INFO - Processing qid putnam_1995_b4 with 1 responses
+2025-06-01 11:28:37,148 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,148 - root - INFO - Added question putnam_1995_b4
+2025-06-01 11:28:37,148 - root - INFO - Processing qid putnam_1996_b3 with 1 responses
+2025-06-01 11:28:37,150 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,150 - root - INFO - Added question putnam_1996_b3
+2025-06-01 11:28:37,150 - root - INFO - Processing qid putnam_1996_b5 with 1 responses
+2025-06-01 11:28:37,150 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,150 - root - INFO - Added question putnam_1996_b5
+2025-06-01 11:28:37,151 - root - INFO - Processing qid putnam_2005_b2 with 1 responses
+2025-06-01 11:28:37,151 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,151 - root - INFO - Added question putnam_2005_b2
+2025-06-01 11:28:37,151 - root - INFO - Processing qid putnam_2008_b5 with 1 responses
+2025-06-01 11:28:37,151 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,152 - root - INFO - Added question putnam_2008_b5
+2025-06-01 11:28:37,152 - root - INFO - Processing qid putnam_2010_b4 with 1 responses
+2025-06-01 11:28:37,152 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,152 - root - INFO - Added question putnam_2010_b4
+2025-06-01 11:28:37,152 - root - INFO - Processing qid putnam_2016_b1 with 1 responses
+2025-06-01 11:28:37,152 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,152 - root - INFO - Added question putnam_2016_b1
+2025-06-01 11:28:37,152 - root - INFO - Processing qid putnam_2016_b2 with 1 responses
+2025-06-01 11:28:37,153 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,153 - root - INFO - Added question putnam_2016_b2
+2025-06-01 11:28:37,153 - root - INFO - Processing qid putnam_2016_b4 with 1 responses
+2025-06-01 11:28:37,153 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,154 - root - INFO - Added question putnam_2016_b4
+2025-06-01 11:28:37,154 - root - INFO - Processing qid putnam_2017_a1 with 1 responses
+2025-06-01 11:28:37,154 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,154 - root - INFO - Added question putnam_2017_a1
+2025-06-01 11:28:37,154 - root - INFO - Processing qid putnam_2018_a3 with 1 responses
+2025-06-01 11:28:37,155 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,155 - root - INFO - Added question putnam_2018_a3
+2025-06-01 11:28:37,155 - root - INFO - Processing qid putnam_2019_a3 with 1 responses
+2025-06-01 11:28:37,155 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,155 - root - INFO - Added question putnam_2019_a3
+2025-06-01 11:28:37,155 - root - INFO - Processing qid putnam_2020_a5 with 1 responses
+2025-06-01 11:28:37,156 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,156 - root - INFO - Added question putnam_2020_a5
+2025-06-01 11:28:37,156 - root - INFO - Processing qid putnam_2021_a1 with 1 responses
+2025-06-01 11:28:37,156 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,156 - root - INFO - Added question putnam_2021_a1
+2025-06-01 11:28:37,156 - root - INFO - Processing qid putnam_2021_a5 with 1 responses
+2025-06-01 11:28:37,156 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,157 - root - INFO - Added question putnam_2021_a5
+2025-06-01 11:28:37,157 - root - INFO - Processing qid putnam_2022_a5 with 1 responses
+2025-06-01 11:28:37,157 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,158 - root - INFO - Added question putnam_2022_a5
+2025-06-01 11:28:37,158 - root - INFO - Processing qid putnam_2022_b4 with 1 responses
+2025-06-01 11:28:37,159 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,159 - root - INFO - Added question putnam_2022_b4
+2025-06-01 11:28:37,159 - root - INFO - Processing qid putnam_2023_a2 with 1 responses
+2025-06-01 11:28:37,159 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,159 - root - INFO - Added question putnam_2023_a2
+2025-06-01 11:28:37,159 - root - INFO - Processing qid putnam_2023_a3 with 1 responses
+2025-06-01 11:28:37,159 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,160 - root - INFO - Added question putnam_2023_a3
+2025-06-01 11:28:37,160 - root - INFO - Processing qid putnam_2023_b3 with 1 responses
+2025-06-01 11:28:37,160 - root - INFO - Response data keys: ['correctness_classification', 'correctness_explanation', 'correctness_is_correct', 'image_path', 'model_answer', 'model_thinking', 'name', 'problem', 'solution']
+2025-06-01 11:28:37,160 - root - INFO - Added question putnam_2023_b3
+2025-06-01 11:28:37,160 - root - INFO - Loaded 34 questions total
+2025-06-01 11:28:37,161 - root - INFO - Loaded 34 model_responses to evaluate
+2025-06-01 11:28:37,512 - root - INFO - ANRateLimiter initialized with 1 requests, 10000 tokens per 480 seconds, and org TPM limit of 80000
+2025-06-01 11:28:37,785 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,786 - root - INFO - Prompt length: 3373
+2025-06-01 11:28:37,786 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,786 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,788 - root - INFO - Prompt length: 3233
+2025-06-01 11:28:37,788 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,788 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,788 - root - INFO - Prompt length: 3898
+2025-06-01 11:28:37,789 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,789 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,789 - root - INFO - Prompt length: 2470
+2025-06-01 11:28:37,789 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,789 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,790 - root - INFO - Prompt length: 4577
+2025-06-01 11:28:37,790 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,790 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,790 - root - INFO - Prompt length: 2885
+2025-06-01 11:28:37,790 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,790 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,791 - root - INFO - Prompt length: 3709
+2025-06-01 11:28:37,791 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,791 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,791 - root - INFO - Prompt length: 3442
+2025-06-01 11:28:37,792 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,792 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,792 - root - INFO - Prompt length: 3278
+2025-06-01 11:28:37,792 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,792 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,793 - root - INFO - Prompt length: 3294
+2025-06-01 11:28:37,793 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,793 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,793 - root - INFO - Prompt length: 3343
+2025-06-01 11:28:37,793 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,793 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,794 - root - INFO - Prompt length: 3445
+2025-06-01 11:28:37,794 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,794 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,794 - root - INFO - Prompt length: 2994
+2025-06-01 11:28:37,795 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,795 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,795 - root - INFO - Prompt length: 4438
+2025-06-01 11:28:37,795 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,795 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,796 - root - INFO - Prompt length: 2995
+2025-06-01 11:28:37,796 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,796 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,797 - root - INFO - Prompt length: 2608
+2025-06-01 11:28:37,797 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,797 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,797 - root - INFO - Prompt length: 3462
+2025-06-01 11:28:37,797 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,798 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,798 - root - INFO - Prompt length: 3420
+2025-06-01 11:28:37,798 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,798 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,799 - root - INFO - Prompt length: 3253
+2025-06-01 11:28:37,799 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,799 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,799 - root - INFO - Prompt length: 3574
+2025-06-01 11:28:37,799 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,799 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,799 - root - INFO - Prompt length: 3734
+2025-06-01 11:28:37,800 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,800 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,800 - root - INFO - Prompt length: 3658
+2025-06-01 11:28:37,800 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,801 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,801 - root - INFO - Prompt length: 4775
+2025-06-01 11:28:37,801 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,801 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,802 - root - INFO - Prompt length: 2029
+2025-06-01 11:28:37,802 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,802 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,802 - root - INFO - Prompt length: 2480
+2025-06-01 11:28:37,802 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,802 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,802 - root - INFO - Prompt length: 2706
+2025-06-01 11:28:37,802 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,802 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,802 - root - INFO - Prompt length: 3493
+2025-06-01 11:28:37,804 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,804 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,804 - root - INFO - Prompt length: 3458
+2025-06-01 11:28:37,804 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,804 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,804 - root - INFO - Prompt length: 1030
+2025-06-01 11:28:37,804 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,804 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,804 - root - INFO - Prompt length: 4049
+2025-06-01 11:28:37,804 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,805 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,805 - root - INFO - Prompt length: 3461
+2025-06-01 11:28:37,805 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,805 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,805 - root - INFO - Prompt length: 1688
+2025-06-01 11:28:37,805 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,805 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,805 - root - INFO - Prompt length: 3182
+2025-06-01 11:28:37,807 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:37,807 - root - INFO - generate_an_response_async called with initial model_id: anthropic/claude-3.5-sonnet
+2025-06-01 11:28:37,807 - root - INFO - Prompt length: 3342
+2025-06-01 11:28:37,807 - root - INFO - Is thinking model: False, Budget tokens: None
+2025-06-01 11:28:45,312 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:28:45,325 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1488, output_tokens=153, server_tool_use=None, service_tier='standard')
+2025-06-01 11:28:45,326 - root - INFO - Found valid result!
+2025-06-01 11:28:49,282 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:28:49,284 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1403, output_tokens=180, server_tool_use=None, service_tier='standard')
+2025-06-01 11:28:49,284 - root - INFO - Found valid result!
+2025-06-01 11:28:53,976 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:28:53,978 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1530, output_tokens=211, server_tool_use=None, service_tier='standard')
+2025-06-01 11:28:53,978 - root - INFO - Found valid result!
+2025-06-01 11:28:57,142 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:28:57,144 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1013, output_tokens=151, server_tool_use=None, service_tier='standard')
+2025-06-01 11:28:57,144 - root - INFO - Found valid result!
+2025-06-01 11:29:02,999 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:29:03,000 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1681, output_tokens=324, server_tool_use=None, service_tier='standard')
+2025-06-01 11:29:03,000 - root - INFO - Found valid result!
+2025-06-01 11:29:06,555 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:29:06,558 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1042, output_tokens=229, server_tool_use=None, service_tier='standard')
+2025-06-01 11:29:06,559 - root - INFO - Found valid result!
+2025-06-01 11:29:10,455 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:29:10,457 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1723, output_tokens=279, server_tool_use=None, service_tier='standard')
+2025-06-01 11:29:10,457 - root - INFO - Found valid result!
+2025-06-01 11:29:13,206 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:29:13,208 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1267, output_tokens=139, server_tool_use=None, service_tier='standard')
+2025-06-01 11:29:13,209 - root - INFO - Found valid result!
+2025-06-01 11:29:17,352 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:29:17,355 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1635, output_tokens=181, server_tool_use=None, service_tier='standard')
+2025-06-01 11:29:17,355 - root - INFO - Found valid result!
+2025-06-01 11:29:20,637 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:29:20,638 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1099, output_tokens=126, server_tool_use=None, service_tier='standard')
+2025-06-01 11:29:20,638 - root - INFO - Found valid result!
+2025-06-01 11:29:30,269 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:29:30,270 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1261, output_tokens=238, server_tool_use=None, service_tier='standard')
+2025-06-01 11:29:30,271 - root - INFO - Found valid result!
+2025-06-01 11:29:32,621 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:29:32,622 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1243, output_tokens=226, server_tool_use=None, service_tier='standard')
+2025-06-01 11:29:32,622 - root - INFO - Found valid result!
+2025-06-01 11:29:37,897 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:29:37,898 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1123, output_tokens=303, server_tool_use=None, service_tier='standard')
+2025-06-01 11:29:37,898 - root - INFO - Found valid result!
+2025-06-01 11:29:39,759 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:29:39,761 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=2033, output_tokens=162, server_tool_use=None, service_tier='standard')
+2025-06-01 11:29:39,762 - root - INFO - Found valid result!
+2025-06-01 11:29:41,861 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:29:41,884 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=979, output_tokens=171, server_tool_use=None, service_tier='standard')
+2025-06-01 11:29:41,884 - root - INFO - Found valid result!
+2025-06-01 11:29:52,296 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:29:52,298 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1015, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-06-01 11:29:52,298 - root - INFO - Found valid result!
+2025-06-01 11:29:52,902 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:29:52,905 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1115, output_tokens=273, server_tool_use=None, service_tier='standard')
+2025-06-01 11:29:52,905 - root - INFO - Found valid result!
+2025-06-01 11:29:56,833 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:29:56,835 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1834, output_tokens=249, server_tool_use=None, service_tier='standard')
+2025-06-01 11:29:56,835 - root - INFO - Found valid result!
+2025-06-01 11:29:59,482 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:29:59,484 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1501, output_tokens=227, server_tool_use=None, service_tier='standard')
+2025-06-01 11:29:59,484 - root - INFO - Found valid result!
+2025-06-01 11:30:03,822 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:30:03,823 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1594, output_tokens=153, server_tool_use=None, service_tier='standard')
+2025-06-01 11:30:03,823 - root - INFO - Found valid result!
+2025-06-01 11:30:07,401 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:30:07,403 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1463, output_tokens=192, server_tool_use=None, service_tier='standard')
+2025-06-01 11:30:07,403 - root - INFO - Found valid result!
+2025-06-01 11:30:12,856 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:30:12,858 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1628, output_tokens=274, server_tool_use=None, service_tier='standard')
+2025-06-01 11:30:12,860 - root - INFO - Found valid result!
+2025-06-01 11:30:15,568 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:30:15,569 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1923, output_tokens=280, server_tool_use=None, service_tier='standard')
+2025-06-01 11:30:15,569 - root - INFO - Found valid result!
+2025-06-01 11:30:21,854 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:30:21,855 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=733, output_tokens=178, server_tool_use=None, service_tier='standard')
+2025-06-01 11:30:21,855 - root - INFO - Found valid result!
+2025-06-01 11:30:23,024 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:30:23,026 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=983, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-06-01 11:30:23,027 - root - INFO - Found valid result!
+2025-06-01 11:30:32,888 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:30:32,890 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1216, output_tokens=186, server_tool_use=None, service_tier='standard')
+2025-06-01 11:30:32,890 - root - INFO - Found valid result!
+2025-06-01 11:30:34,530 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:30:34,533 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1398, output_tokens=245, server_tool_use=None, service_tier='standard')
+2025-06-01 11:30:34,534 - root - INFO - Found valid result!
+2025-06-01 11:30:36,446 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:30:36,450 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1302, output_tokens=174, server_tool_use=None, service_tier='standard')
+2025-06-01 11:30:36,451 - root - INFO - Found valid result!
+2025-06-01 11:30:38,533 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:30:38,535 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=267, output_tokens=118, server_tool_use=None, service_tier='standard')
+2025-06-01 11:30:38,536 - root - INFO - Found valid result!
+2025-06-01 11:30:43,869 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:30:43,872 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1862, output_tokens=214, server_tool_use=None, service_tier='standard')
+2025-06-01 11:30:43,872 - root - INFO - Found valid result!
+2025-06-01 11:30:51,712 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:30:51,714 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=538, output_tokens=124, server_tool_use=None, service_tier='standard')
+2025-06-01 11:30:51,714 - root - INFO - Found valid result!
+2025-06-01 11:30:55,929 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:30:55,931 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1370, output_tokens=356, server_tool_use=None, service_tier='standard')
+2025-06-01 11:30:55,931 - root - INFO - Found valid result!
+2025-06-01 11:31:01,592 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:31:01,594 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1450, output_tokens=272, server_tool_use=None, service_tier='standard')
+2025-06-01 11:31:01,594 - root - INFO - Found valid result!
+2025-06-01 11:31:01,790 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-06-01 11:31:01,791 - root - INFO - Got usage: Usage(cache_creation_input_tokens=0, cache_read_input_tokens=0, input_tokens=1428, output_tokens=176, server_tool_use=None, service_tier='standard')
+2025-06-01 11:31:01,791 - root - INFO - Found valid result!
+2025-06-01 11:31:03,394 - root - INFO - Saved verbose results to chainscope\data\cot_responses\instr-v0\default_sampling_params\filtered_putnambench\anthropic__claude-3.7-sonnet_20k_texts_v3_verbose_correctness.yaml
+2025-06-01 11:31:04,490 - root - INFO - Saved correct-only results to chainscope\data\cot_responses\instr-v0\default_sampling_params\filtered_putnambench\anthropic__claude-3.7-sonnet_20k_texts_v3_just_correct_responses.yaml

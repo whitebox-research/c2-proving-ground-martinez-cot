@@ -1,0 +1,312 @@
+- informal_solution: The set of such polynomials is $$\{\pm (x - 1), \pm (x + 1),
+    \pm (x^2 + x - 1), \pm (x^2 - x - 1), \pm (x^3 + x^2 - x - 1), \pm (x^3 - x^2
+    - x + 1)\}.$$
+  informal_statement: Find all polynomials of the form $\sum_{0}^{n} a_{i} x^{n-i}$
+    with $n \ge 1$ and $a_i = \pm 1$ for all $0 \le i \le n$ whose roots are all real.
+  problem_name: putnam_1968_a6
+- informal_solution: Show that the solution is $e^{2 \log(5) - 4 + 2 arctan(2)}$.
+  informal_statement: Evaluate the infinite product $\lim_{n \to \infty} \frac{1}{n^4}
+    \prod_{i = 1}^{2n} (n^2 + i^2)^{1/n}$.
+  problem_name: putnam_1970_b1
+- informal_solution: Show that the maximum possible time is $t = \frac{2s}{v}$.
+  informal_statement: 'Let $x : \mathbb{R} \to \mathbb{R}$ be a twice differentiable
+    function whose second derivative is nonstrictly decreasing. If $x(t) - x(0) =
+    s$, $x''(0) = 0$, and $x''(t) = v$ for some $t > 0$, find the maximum possible
+    value of $t$ in terms of $s$ and $v$.'
+  problem_name: putnam_1972_b2
+- informal_solution: Prove that $k = -\frac{7}{8}$.
+  informal_statement: Show that if four distinct points of the curve $y = 2x^4 + 7x^3
+    + 3x - 5$ are collinear, then their average $x$-coordinate is some constant $k$.
+    Find $k$.
+  problem_name: putnam_1977_a1
+- informal_solution: Prove that $p(x) = 4x^4 - 4x^2 + 1$.
+  informal_statement: Find the real polynomial $p(x)$ of degree $4$ with largest possible
+    coefficient of $x^4$ such that $p([-1, 1]) \subseteq [0, 1]$.
+  problem_name: putnam_1978_b5
+- informal_solution: Show that the least such $p$ is $p=4$.
+  informal_statement: 'Let $n$ be a positive integer, and let $f(n)$ denote the last
+    nonzero digit in the decimal expansion of $n!$. For instance, $f(5)=2$.
+
+    \begin{enumerate}
+
+    \item[(a)] Show that if $a_1,a_2,\dots,a_k$ are \emph{distinct} nonnegative integers,
+    then $f(5^{a_1}+5^{a_2}+\dots+5^{a_k})$ depends only on the sum $a_1+a_2+\dots+a_k$.
+
+    \item[(b)] Assuming part (a), we can define $g(s)=f(5^{a_1}+5^{a_2}+\dots+5^{a_k})$,
+    where $s=a_1+a_2+\dots+a_k$. Find the least positive integer $p$ for which $g(s)=g(s
+    + p)$, for all $s \geq 1$, or else show that no such $p$ exists.
+
+    \end{enumerate}'
+  problem_name: putnam_1984_a6
+- informal_solution: Show that $g(x) = 6x^2 + 5x + 1$ satisfies the conditions.
+  informal_statement: 'If $p(x)= a_0 + a_1 x + \cdots + a_m x^m$ is a polynomial with
+    real coefficients $a_i$, then set
+
+    \[
+
+    \Gamma(p(x)) = a_0^2 + a_1^2 + \cdots + a_m^2.
+
+    \]
+
+    Let $F(x) = 3x^2+7x+2$. Find, with proof, a polynomial $g(x)$ with real coefficients
+    such that
+
+    \begin{enumerate}
+
+    \item[(i)] $g(0)=1$, and
+
+    \item[(ii)] $\Gamma(f(x)^n) = \Gamma(g(x)^n)$
+
+    \end{enumerate}
+
+    for every integer $n \geq 1$.'
+  problem_name: putnam_1985_a6
+- informal_solution: Prove that $f(n) = 4^n + 2 \cdot 3^n - 4 \cdot 2^n + 1$.
+  informal_statement: 'A \emph{transversal} of an $n\times n$ matrix $A$ consists
+    of $n$ entries of $A$, no two in the same row or column. Let $f(n)$ be the number
+    of $n \times n$ matrices $A$ satisfying the following two conditions:
+
+    \begin{enumerate}
+
+    \item[(a)] Each entry $\alpha_{i,j}$ of $A$ is in the set
+
+    $\{-1,0,1\}$.
+
+    \item[(b)] The sum of the $n$ entries of a transversal is the same for all transversals
+    of $A$.
+
+    \end{enumerate}
+
+    An example of such a matrix $A$ is
+
+    \[
+
+    A = \left( \begin{array}{ccc} -1 & 0 & -1 \\ 0 & 1 & 0 \\ 0 & 1 & 0
+
+    \end{array}
+
+    \right).
+
+    \]
+
+    Determine with proof a formula for $f(n)$ of the form
+
+    \[
+
+    f(n) = a_1 b_1^n + a_2 b_2^n + a_3 b_3^n + a_4,
+
+    \]
+
+    where the $a_i$''s and $b_i$''s are rational numbers.'
+  problem_name: putnam_1986_a4
+- informal_solution: Prove that the integral evaluates to $1$.
+  informal_statement: 'Evaluate
+
+    \[
+
+    \int_2^4 \frac{\sqrt{\ln(9-x)}\,dx}{\sqrt{\ln(9-x)}+\sqrt{\ln(x+3)}}.
+
+    \]'
+  problem_name: putnam_1987_b1
+- informal_solution: Show that there is only one such prime.
+  informal_statement: How many primes among the positive integers, written as usual
+    in base $10$, are alternating $1$'s and $0$'s, beginning and ending with $1$?
+  problem_name: putnam_1989_a1
+- informal_solution: 'Prove that
+
+    \[
+
+    f^{(k)}(0) =
+
+    \begin{cases}
+
+    (-1)^{k/2}k! & \text{if $k$ is even;} \\
+
+    0 & \text{if $k$ is odd.} \\
+
+    \end{cases}
+
+    \]'
+  informal_statement: 'Let $f$ be an infinitely differentiable real-valued function
+    defined on the real numbers. If
+
+    \[
+
+    f\left( \frac{1}{n} \right) = \frac{n^2}{n^2 + 1}, \qquad n = 1, 2, 3, \dots,
+
+    \]
+
+    compute the values of the derivatives $f^{(k)}(0), k = 1, 2, 3, \dots$.'
+  problem_name: putnam_1992_a4
+- informal_solution: Show that the area is $4+\pi$.
+  informal_statement: 'For any pair $(x,y)$ of real numbers, a sequence $(a_n(x,y))_{n
+    \geq 0}$ is defined as follows:
+
+    \begin{align*}
+
+    a_0(x,y)&=x, \\
+
+    a_{n+1}(x,y)&=\frac{(a_n(x,y))^2+y^2}{2},\text{ for $n \geq 0$.}
+
+    \end{align*}
+
+    Find the area of the region $\{(x,y) \mid (a_n(x,y))_{n \geq 0}\text{ converges}\}$.'
+  problem_name: putnam_1992_b3
+- informal_solution: Show that the solution is $n$.
+  informal_statement: Let $\{x\}$ denote the distance between the real number $x$
+    and the nearest integer.  For each positive integer $n$, evaluate \[F_n=\sum_{m=1}^{6n-1}
+    \min(\{\frac{m}{6n}\},\{\frac{m}{3n}\}).\] (Here $\min(a,b)$ denotes the minimum
+    of $a$ and $b$.)
+  problem_name: putnam_1997_b1
+- informal_solution: Show that the functions are precisely $f(x)=cx^d$ for $c,d>0$
+    arbitrary except that we must take $c=1$ in case $d=1$.
+  informal_statement: Find all differentiable functions $f:(0,\infty) \to (0,\infty)$
+    for which there is a positive real number $a$ such that $f'(\frac{a}{x})=\frac{x}{f(x)}$
+    for all $x>0$.
+  problem_name: putnam_2005_b3
+- informal_solution: Show that the solution is $(\frac{k+1}{k})^k$.
+  informal_statement: Let $k$ be an integer greater than 1. Suppose $a_0 > 0$, and
+    define \[ a_{n+1} = a_n + \frac{1}{\sqrt[k]{a_n}} \] for $n > 0$. Evaluate \[\lim_{n
+    \to \infty} \frac{a_n^{k+1}}{n^k}.\]
+  problem_name: putnam_2006_b6
+- informal_solution: Prove that $x_{2007} = \frac{2^{2006}}{\sqrt{5}}(\alpha^{3997}-\alpha^{-3997})$,
+    where $\alpha = \frac{1+\sqrt{5}}{2}$.
+  informal_statement: Let $x_0 = 1$ and for $n \geq 0$, let $x_{n+1} = 3x_n + \lfloor
+    x_n \sqrt{5} \rfloor$. In particular, $x_1 = 5$, $x_2 = 26$, $x_3 = 136$, $x_4
+    = 712$. Find a closed-form expression for $x_{2007}$. ($\lfloor a \rfloor$ means
+    the largest integer $\leq a$.)
+  problem_name: putnam_2007_b3
+- informal_solution: 'Prove that the formula is
+
+    \[
+
+    f(x) = 2^{-1/12} \left(\frac{\sin(6x+\pi/4)}{\cos^2(6x+\pi/4)}\right)^{1/6}.
+
+    \]'
+  informal_statement: 'Functions $f,g,h$ are differentiable on some open interval
+    around $0$
+
+    and satisfy the equations and initial conditions
+
+    \begin{gather*}
+
+    f'' = 2f^2gh+\frac{1}{gh},\quad f(0)=1, \\
+
+    g''=fg^2h+\frac{4}{fh}, \quad g(0)=1, \\
+
+    h''=3fgh^2+\frac{1}{fg}, \quad h(0)=1.
+
+    \end{gather*}
+
+    Find an explicit formula for $f(x)$, valid in some open interval around $0$.'
+  problem_name: putnam_2009_a2
+- informal_solution: Show that the answer is $n = 2^k - 1$ for some integer $k$.
+  informal_statement: 'Call a subset $S$ of $\{1, 2, \dots, n\}$ \emph{mediocre} if
+    it has the following property: Whenever $a$ and $b$ are elements of $S$ whose
+    average is an integer, that average is also an element of $S$. Let $A(n)$ be the
+    number of mediocre subsets of $\{1,2,\dots,n\}$. [For instance, every subset of
+    $\{1,2,3\}$ except $\{1,3\}$ is mediocre, so $A(3) = 7$.] Find all positive integers
+    $n$ such that $A(n+2) - 2A(n+1) + A(n) = 1$.'
+  problem_name: putnam_2009_b3
+- informal_solution: Show that the largest such $k$ is $\lceil \frac{n}{2} \rceil$.
+  informal_statement: Given a positive integer $n$, what is the largest $k$ such that
+    the numbers $1,2,\dots,n$ can be put into $k$ boxes so that the sum of the numbers
+    in each box is the same? [When $n=8$, the example $\{1,2,3,6\},\{4,8\},\{5,7\}$
+    shows that the largest $k$ is \emph{at least} $3$.]
+  problem_name: putnam_2010_a1
+- informal_solution: Prove that it is possible if and only if $n \geq 1005$.
+  informal_statement: There are $2010$ boxes labeled $B_1, B_2, \dots, B_{2010}$,
+    and $2010n$ balls have been distributed among them, for some positive integer
+    $n$. You may redistribute the balls by a sequence of moves, each of which consists
+    of choosing an $i$ and moving \emph{exactly} $i$ balls from box $B_i$ into any
+    one other box. For which values of $n$ is it possible to reach the distribution
+    with exactly $n$ balls in each box, regardless of the initial distribution of
+    balls?
+  problem_name: putnam_2010_b3
+- informal_solution: Show that the desired sum is $-1$.
+  informal_statement: For positive integers $n$, let the numbers $c(n)$ be determined
+    by the rules $c(1)=1$, $c(2n)=c(n)$, and $c(2n+1)=(-1)^nc(n)$. Find the value
+    of $\sum_{n=1}^{2013} c(n)c(n+2)$.
+  problem_name: putnam_2013_b1
+- informal_solution: The answer is $17/21$.
+  informal_statement: 'Let $T$ be the set of all triples $(a,b,c)$ of positive integers
+    for which there exist triangles with side lengths $a,b,c$. Express
+
+    \[
+
+    \sum_{(a,b,c) \in T} \frac{2^a}{3^b 5^c}
+
+    \]
+
+    as a rational number in lowest terms.'
+  problem_name: putnam_2015_b4
+- informal_solution: Prove that the sum equals $(\ln 2)^2$.
+  informal_statement: Evaluate the sum \begin{gather*} \sum_{k=0}^\infty \left( 3
+    \cdot \frac{\ln(4k+2)}{4k+2} - \frac{\ln(4k+3)}{4k+3} - \frac{\ln(4k+4)}{4k+4}
+    - \frac{\ln(4k+5)}{4k+5} \right) \ = 3 \cdot \frac{\ln 2}{2} - \frac{\ln 3}{3}
+    - \frac{\ln 4}{4} - \frac{\ln 5}{5} + 3 \cdot \frac{\ln 6}{6} - \frac{\ln 7}{7}
+    \ - \frac{\ln 8}{8} - \frac{\ln 9}{9} + 3 \cdot \frac{\ln 10}{10} - \cdots . \end{gather*}
+    (As usual, $\ln x$ denotes the natural logarithm of $x$.)
+  problem_name: putnam_2017_b4
+- informal_solution: The answer is $\frac{8}{\pi^3}$.
+  informal_statement: 'For all $n \geq 1$, let
+
+    \[
+
+    a_n = \sum_{k=1}^{n-1} \frac{\sin \left( \frac{(2k-1)\pi}{2n} \right)}{\cos^2
+    \left( \frac{(k-1)\pi}{2n} \right) \cos^2 \left( \frac{k\pi}{2n} \right)}.
+
+    \]
+
+    Determine
+
+    \[
+
+    \lim_{n \to \infty} \frac{a_n}{n^3}.
+
+    \]'
+  problem_name: putnam_2019_b2
+- informal_solution: Show that $m(f)=2\ln 2-\frac{1}{2}$.
+  informal_statement: 'Let $\mathcal{F}$ be the set of functions $f(x,y)$ that are
+    twice continuously differentiable for $x \geq 1,y \geq 1$ and that satisfy the
+    following two equations (where subscripts denote partial derivatives):
+
+    \begin{gather*}
+
+    xf_x+yf_y=xy\ln(xy), \\
+
+    x^2f_{xx}+y^2f_{yy}=xy.
+
+    \end{gather*}
+
+    For each $f \in \mathcal{F}$, let $m(f)=\min_{s \geq 1} (f(s+1,s+1)-f(s+1,s)-f(s,s+1)+f(s,s))$.
+    Determine $m(f)$, and show that it is independent of the choice of $f$.'
+  problem_name: putnam_2019_b4
+- informal_solution: Show that the solution is the set of complex numbers $\{- \frac{3^{1010}
+    - 1}{2}, - \frac{3^{1010} - 1}{2} \pm \frac{\sqrt{9^{1010} - 1}}{4}i \}$
+  informal_statement: For a nonnegative integer $k$, let $f(k)$ be the number of ones
+    in the base 3 representation of $k$. Find all complex numbers $z$ such that \[
+    \sum_{k=0}^{3^{1010}-1} (-2)^{f(k)} (z+k)^{2023} = 0. \]
+  problem_name: putnam_2023_a5
+- informal_solution: Show that the minimum value of $T$ is $29$.
+  informal_statement: 'For a nonnegative integer $n$ and a strictly increasing sequence
+    of real numbers $t_0,t_1,\dots,t_n$, let $f(t)$ be the corresponding real-valued
+    function defined for $t \geq t_0$ by the following properties:
+
+    \begin{enumerate}
+
+    \item[(a)] $f(t)$ is continuous for $t \geq t_0$, and is twice differentiable
+    for all $t>t_0$ other than $t_1,\dots,t_n$;
+
+    \item[(b)] $f(t_0)=1/2$;
+
+    \item[(c)] $\lim_{t \to t_k^+} f''(t)=0$ for $0 \leq k \leq n$;
+
+    \item[(d)] For $0 \leq k \leq n-1$, we have $f''''(t)=k+1$ when $t_k<t<t_{k+1}$,
+    and $f''''(t)=n+1$ when $t>t_n$.
+
+    \end{enumerate}
+
+    Considering all choices of $n$ and $t_0,t_1,\dots,t_n$ such that $t_k \geq t_{k-1}+1$
+    for $1 \leq k \leq n$, what is the least possible value of $T$ for which $f(t_0+T)=2023$?'
+  problem_name: putnam_2023_b4
