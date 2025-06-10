@@ -1,23 +1,32 @@
-# c2-proving-ground-martinez-cot
-To install uv 
-[install uv](https://docs.astral.sh/uv/getting-started/installation/#pypi)
+## Investigating Unfaithful Shortcuts in the Chain-of-Thought Reasoning of Multimodal Inputs
 
-To create virtual environment
-`uv venv wb-env --python 3.12`
+### Report prepared for a project done as part of the Whitebox Research Interpretability Fellowship 2025
+Recent studies show that Chain-of-Thought (CoT) reasoning by Large Language Models isn't always faithful, the reasoning steps don't necessarily reflect actual internal processes. This poses challenges for AI safety and interpretability. This report examines unfaithful shortcuts in multimodal models' CoT reasoning when presented with equivalent visual and textual tasks. We evaluate Gemini 2.0 Flash Experimental and Claude 3.7 Sonnet using paired visual/textual versions of PutnamBench math problems to test reasoning consistency and faithfulness across modalities.
 
-To activate
-`wb-env\Scripts\activate`
+Please see the [report](https://github.com/whitebox-research/c2-proving-ground-martinez-cot/blob/main/report.pdf) for more details.
 
-Install requirements
-`uv pip install -r requirements.txt`
+Prepared by Ishita Pal, Aditya Thomas & Angel Martinez. Mentored by Angel Martinez.
+
+### Usage
+
+Installation:
+
+`pip install -r requirements.txt`
+
+Data processing pipeline:
+
+```python -m scripts.putnamlike0_images_save_rollouts data\dataset\image_pipeline.yaml --model_id "anthropic/claude-3.7-sonnet_20k" --max_retries=2 --max_parallel=1 --verbose```
+
+```python -m scripts.putnamlike1_are_rollouts_correct data\dataset\cot_responses\claude-3.7-sonnet_20k_v0.yaml --model_id "anthropic/claude-3.7" --max_retries=2 --max_parallel=1 --verbose ```
+
+```python -m scripts.putnamlike2_split_cots data\dataset\cot_responses\claude-3.7-sonnet_20k_v0_just_correct_responses.yaml --model_id "anthropic/claude-3.7-sonnet" --max_retries=2 --max_parallel=1 --verbose```
+
+```python -m scripts.putnamlike2p5_critical_steps_eval data\dataset\cot_responsesclaude-3.7-sonnet_20k_v0_just_correct_responses_splitted.yaml --model_id "anthropic/claude-3.7-sonnet" --max_retries=2 --max_parallel=1 --verbose  ```
+
+```python -m scripts.putnamlike3_main_faithfulness_eval data\dataset\cot_responses\claude-3.7-sonnet_20k_v0_just_correct_responses_splitted.yaml  --critical_steps_yaml data\dataset\cot_responses\claude-3.7-sonnet_20k_v0_just_correct_responses_splitted_anthropic_slash_claude-3_dot_7-sonnet_critical_steps.yaml --model_id "anthropic/claude-3.7-sonnet_20k" --max_retries=2 --max_parallel=1 --verbose ```
 
 
-```python -m scripts.putnam.putnamlike0_images_save_rollouts chainscope\data\putnam2\image_pipeline.yaml --model_id "anthropic/claude-3.7-sonnet_20k" --max_retries=3 --verbose --max_parallel=1```
+### References
+Arcuschin, I., Janiak, J., Krzyzanowski, R., Rajamanoharan, S., Nanda, N., & Conmy, A. (2025). Chain-of-thought reasoning in the wild is not always faithful. arXiv preprint arXiv:2503.0867
 
-```python -m scripts.putnam.putnamlike1_are_rollouts_correct chainscope\data\cot_responses\instr-v0\default_sampling_params\filtered_putnambench\claude-3.7-sonnet_10k_v1_prefix_4.yaml --model_id "anthropic/claude-3.7-sonnet_20k" --max_retries=3 --verbose --prefix=10 --max_parallel=3```
-
-```python -m scripts.putnam.putnamlike2_split_cots chainscope\data\cot_responses\instr-v0\default_sampling_params\filtered_putnambench\claude-3.7-sonnet_10k_v1_prefix_4_just_correct_responses.yaml --model_id "anthropic/claude-3.7-sonnet_20k" --max_retries=3 --verbose --prefix=10 --max_parallel=3 ```
-
-```python -m scripts.putnam.putnamlike2p5_critical_steps_eval chainscope\data\cot_responses\instr-v0\default_sampling_params\filtered_putnambench\claude-3.7-sonnet_10k_v1_prefix_4_just_correct_responses_splitted.yaml --model_id "anthropic/claude-3.7-sonnet_20k" --max_retries=3 --verbose --max_parallel=3 ```
-
-```python -m scripts.putnam.putnamlike3_main_faithfulness_eval chainscope\data\cot_responses\instr-v0\default_sampling_params\filtered_putnambench\claude-3.7-sonnet_10k_v1_prefix_4_just_correct_responses_splitted.yaml  --critical_steps_yaml chainscope\data\cot_responses\instr-v0\default_sampling_params\filtered_putnambench\claude-3.7-sonnet_10k_v1_prefix_4_just_correct_responses_splitted_anthropic_slash_claude-3_dot_7-sonnet_critical_steps.yaml --model_id "anthropic/claude-3.7-sonnet_20k" --max_retries=3 --verbose --max_parallel=3```
+Tsoukalas, G., Lee, J., Jennings, J., Xin, J., Ding, M., Jennings, M., ... & Chaudhuri, S. (2024). Putnambench: Evaluating neural theorem-provers on the putnam mathematical competition. arXiv preprint arXiv:2407.11214.
