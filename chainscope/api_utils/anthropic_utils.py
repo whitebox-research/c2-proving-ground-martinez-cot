@@ -22,7 +22,7 @@ from chainscope.api_utils.batch_processor import (BatchItem, BatchProcessor,
                                                   BatchResult)
 from chainscope.typing import (AnthropicBatchInfo, DatasetParams,
                                QuestionResponseId, SamplingParams)
-from scripts.view_faithfulness_dataset import Response
+# from scripts.view_faithfulness_dataset import Response
 
 load_dotenv()
 
