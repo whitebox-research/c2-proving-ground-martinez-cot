@@ -11,7 +11,7 @@ Prepared by Ishita Pal, Aditya Thomas & Angel Martinez. Mentored by Angel Martin
 
 Installation:
 
-`pip install -r requirements.txt`
+`uv pip install -r requirements.txt`
 
 Data processing pipeline:
 
