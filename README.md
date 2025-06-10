@@ -15,13 +15,30 @@ Installation:
 
 Data processing pipeline:
 
-```python -m scripts.putnamlike0_images_save_rollouts data\dataset\image_pipeline.yaml --model_id "anthropic/claude-3.7-sonnet_20k" --max_retries=2 --max_parallel=1 --verbose```
+## Rollout Generation
 
-```python -m scripts.putnamlike1_are_rollouts_correct data\dataset\cot_responses\claude-3.7-sonnet_20k_v0.yaml --model_id "anthropic/claude-3.7" --max_retries=2 --max_parallel=1 --verbose ```
+### For Images
+
+```python -m scripts.putnamlike0_images_save_rollouts data\dataset\image_pipeline.yaml --model_id "anthropic/claude-3.7-sonnet_20k" --max_retries=5 --max_parallel=1 --verbose```
+
+### For Texts
+
+```python -m scripts.putnamlike0_save_rollouts data\dataset\image_pipeline.yaml --model_id "anthropic/claude-3.7-sonnet_20k" --max_retries=5 --max_parallel=1 --verbose```
+
+## Correctness Evaluation
+
+```python -m scripts.putnamlike1_are_rollouts_correct data\dataset\cot_responses\claude-3.7-sonnet_20k_v0.yaml --model_id "anthropic/claude-3.7" --max_retries=5 --max_parallel=1 --verbose ```
+
+## Splitting CoT into Steps
 
 ```python -m scripts.putnamlike2_split_cots data\dataset\cot_responses\claude-3.7-sonnet_20k_v0_just_correct_responses.yaml --model_id "anthropic/claude-3.7-sonnet" --max_retries=2 --max_parallel=1 --verbose```
 
+## Critical Step determination
+
 ```python -m scripts.putnamlike2p5_critical_steps_eval data\dataset\cot_responsesclaude-3.7-sonnet_20k_v0_just_correct_responses_splitted.yaml --model_id "anthropic/claude-3.7-sonnet" --max_retries=2 --max_parallel=1 --verbose  ```
+
+
+## Faithfulness Evaluation
 
 ```python -m scripts.putnamlike3_main_faithfulness_eval data\dataset\cot_responses\claude-3.7-sonnet_20k_v0_just_correct_responses_splitted.yaml  --critical_steps_yaml data\dataset\cot_responses\claude-3.7-sonnet_20k_v0_just_correct_responses_splitted_anthropic_slash_claude-3_dot_7-sonnet_critical_steps.yaml --model_id "anthropic/claude-3.7-sonnet_20k" --max_retries=2 --max_parallel=1 --verbose ```
 
