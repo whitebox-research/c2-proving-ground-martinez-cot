@@ -7,7 +7,7 @@ from typing import Any, Literal
 import yaml
 from dataclass_wizard import DumpMeta, LoadMeta, YAMLWizard, fromdict
 
-from chainscope import DATA_DIR
+from src import DATA_DIR
 
 
 @dataclass

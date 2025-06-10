@@ -1,14 +1,5 @@
 #!/usr/bin/env python3
 
-"""E.g. run:
-
-python3 -m dotenv run python3 scripts/putnam/putnamlike1_are_rollouts_correct.py \
-    d/cot_responses/instr-v0/default_sampling_params/filtered_putnambench/google__gemini-exp-1206:free_v0_prefix_1.yaml \
-    --model_id "anthropic/claude-3.5-sonnet" \
-    --verbose \
-    --prefix=1
-"""
-
 import asyncio
 import dataclasses
 import logging
@@ -19,8 +10,8 @@ from typing import List, Optional
 import click
 import yaml
 
-from chainscope.api_utils.anthropic_utils import ANBatchProcessor, ANRateLimiter
-from chainscope.typing import (
+from src.api_utils.anthropic_utils import ANBatchProcessor, ANRateLimiter
+from src.typing import (
     CotResponses,
     DefaultSamplingParams,
     MathDatasetParams,

@@ -18,11 +18,10 @@ from anthropic.types.text_block import TextBlock
 from anthropic.types.thinking_block import ThinkingBlock
 from tqdm.asyncio import tqdm
 from dotenv import load_dotenv
-from chainscope.api_utils.batch_processor import (BatchItem, BatchProcessor,
+from src.api_utils.batch_processor import (BatchItem, BatchProcessor,
                                                   BatchResult)
-from chainscope.typing import (AnthropicBatchInfo, DatasetParams,
+from src.typing import (AnthropicBatchInfo, DatasetParams,
                                QuestionResponseId, SamplingParams)
-# from scripts.view_faithfulness_dataset import Response
 
 load_dotenv()
 

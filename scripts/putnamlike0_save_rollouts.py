@@ -1,19 +1,4 @@
 #!/usr/bin/env python3
-"""E.g. run:
-
-python3 -m dotenv run python3 scripts/putnam/putnamlike0_save_rollouts.py \
-    d/putnam2/minimal_fork_of_putnambench_with_clear_answers.yaml \
-    --model_id "google/gemini-exp-1206:free" \
-    --max_retries=1 \
-    --prefix=1 \
-    --verbose
-
-python3 -m dotenv run python3 scripts/putnam/putnamlike0_save_rollouts.py \
-    d/putnam2/minimal_fork_of_putnambench_with_clear_answers.yaml \
-    --model_id "qwen/qwen-2.5-72b-instruct" \
-    --max_retries=3 \
-    --verbose
-"""
 
 import asyncio
 import logging
@@ -27,13 +12,8 @@ import click
 import pandas as pd
 import yaml
 
-from chainscope.api_utils.deepseek_utils import (
-    DeepSeekBatchProcessor,
-    DeepSeekRateLimiter,
-)
-from chainscope.api_utils.anthropic_utils import ANBatchProcessor, ANRateLimiter
-from chainscope.api_utils.open_router_utils import ORBatchProcessor, ORRateLimiter
-from chainscope.typing import (
+from src.api_utils.anthropic_utils import ANBatchProcessor, ANRateLimiter
+from src.typing import (
     CotResponses,
     DefaultSamplingParams,
     MathDatasetParams,
@@ -170,27 +150,7 @@ def create_processor(
         else:
             return (None, response)
 
-    if DeepSeekBatchProcessor.is_model_supported(model_id) and not force_open_router:
-        # DeepSeek processor
-        logging.info(f"Using DeepSeek model {model_id}")
-        rate_limiter = None
-        if max_parallel is not None:
-            rate_limiter = DeepSeekRateLimiter(
-                requests_per_minute=max_parallel
-                * 60,  # Convert per second to per minute
-            )
-        return DeepSeekBatchProcessor[MathQuestion, tuple[str | None, str]](
-            model_id=model_id,
-            max_retries=max_retries,
-            max_new_tokens=8_192,
-            temperature=0.0,
-            process_response=get_tuple_or_str_response,
-            rate_limiter=rate_limiter,
-            # NOTE: Only used when thinking is also returned
-            format_thinking=lambda thinking,
-            answer: f"**WORKING**: {thinking.lstrip()}\n\n**ANSWER**: {answer.lstrip()}",
-        )
-    else:
+    if "anthropic" in model_id:
         # OpenRouter processor
         logging.info(f"Using Anthropic model {model_id}")
         an_rate_limiter = None
