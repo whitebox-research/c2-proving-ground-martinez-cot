@@ -1,4 +1,4 @@
 # ignore everything in this directory...
 *
-# ...except this file
-!.gitignore
+# ...except this folder
+logs/
