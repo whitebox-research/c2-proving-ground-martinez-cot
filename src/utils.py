@@ -51,3 +51,24 @@ def setup_logging(verbose: bool, script_name: str) -> str:
     
     logging.info(f"Logging to {log_path}")
     return str(log_path)
+
+
+def get_token_usage(model_id: str, usage) -> str:
+    """Extract token usage from the response.
+    
+    Args:
+        model_id: The model ID used for the request
+        response: The response dictionary containing token usage information
+    
+    Returns:
+        Total token usage for the request
+    """
+    if "gemini" in model_id:
+        token_total = usage.total_token_count
+        token_prompt = usage.prompt_token_count
+        if usage.thoughts_token_count is None: token_thoughts = 0
+        else: token_thoughts = usage.thoughts_token_count
+
+        return f"Total token usage: {token_total}, Prompt tokens: {token_prompt}, Thoughts tokens: {token_thoughts}"
+    else:
+        return "Unknown model type"

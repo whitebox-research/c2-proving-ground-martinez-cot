@@ -12,7 +12,7 @@ import pandas as pd
 import yaml
 
 from src.api_utils.anthropic_utils import ANBatchProcessorWithImage, ANRateLimiter
-from src.api_utils.google_utils import GOBatchProcessorWithImage, GORateLimiter
+from src.api_utils.google_utils import GOBatchProcessor, GORateLimiter
 from src.typing import (
     CotResponses,
     DefaultSamplingParams,
@@ -69,9 +69,9 @@ def create_putnam_dataset(df: pd.DataFrame) -> MathQsDataset:
                 name=row["problem_name"],
                 problem=row["informal_statement"],
                 solution=row["informal_solution"],
-                image_path=f"putnam_problems_images/{row['problem_name']}_stmt.png", #TODO: Add model usage tokens and API response time
+                image_path=f"data/dataset/putnam_problems_images/{row['problem_name']}_stmt.png", #TODO: Add model usage tokens and API response time
             )
-            for _, row in df.iterrows() if os.path.exists(f"putnam_problems_images/{row['problem_name']}_stmt.png")
+            for _, row in df.iterrows() if os.path.exists(f"data/dataset/putnam_problems_images/{row['problem_name']}_stmt.png")
         ],
         params=MathDatasetParams(
             description="Putnam Competition Problems",
@@ -94,7 +94,7 @@ def create_processor(
     def get_tuple_or_str_response(
         response: tuple[str, str] | str, other: Any
     ) -> tuple[str | None, str]:
-        logging.info(f"Inner response: {response}")
+        # logging.info(f"Inner response: {response}") # limit logging length
 
         if isinstance(response, tuple):
             assert (
@@ -106,7 +106,7 @@ def create_processor(
 
     if "google" in model_id:
         # Google processor
-        logging.info(f"Using Google model {model_id}")
+        logging.info(f"Using model {model_id}")
         go_rate_limiter = None
         if max_parallel is not None:
             go_rate_limiter = GORateLimiter(
@@ -115,14 +115,13 @@ def create_processor(
                 interval_seconds=1,
             )
 
-        processor = GOBatchProcessorWithImage[MathResponse, MathResponse](
+        processor = GOBatchProcessor[MathResponse, MathResponse](
             model_id=model_id,
             max_retries=max_retries,
             max_new_tokens=1000,
             temperature=0.0,
             process_response=get_tuple_or_str_response,
             rate_limiter=go_rate_limiter,
-            track_api_usage=track_api_usage,
             is_text=is_text,  # Use text-only if specified
         )
 
@@ -198,6 +197,13 @@ async def generate_rollouts(
             continue
 
         thinking, answer = thinking_and_answer
+        
+        # logging.info(f"Received reponse for problem: {question.name}")
+        # logging.info(f"Response: {answer[:100]}...")  # Limit logging length of response
+
+        # if thinking is not None:  print("thinking: ", thinking)
+        # if answer is not None:  print("answer: ", answer)
+
         responses_by_qid[question.name] = {
             str(uuid.uuid4())[:8]: MathResponse(
                 name=question.name,
@@ -286,6 +292,7 @@ def main(
     df = load_putnam_results_as_df(input_path)
     dataset = create_putnam_dataset(df)
 
+    logging.info(f"Running prompt:\n {preamble}")
     # Generate rollouts
     results = asyncio.run(
         generate_rollouts(
