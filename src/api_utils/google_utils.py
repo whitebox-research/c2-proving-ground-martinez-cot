@@ -2,10 +2,8 @@ import asyncio
 import logging
 import os
 import time
-import datetime
 from pathlib import Path
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
 from typing import Any, Callable, Generic, TypeVar
 from PIL import Image
 
@@ -15,11 +13,8 @@ from google.genai.types import GenerateContentConfig, ThinkingConfig
 
 from tqdm.asyncio import tqdm
 from dotenv import load_dotenv
-from src.api_utils.batch_processor import (BatchItem, BatchProcessor,
-                                                  BatchResult)
-from src.typing import (AnthropicBatchInfo, DatasetParams,
-                               QuestionResponseId, SamplingParams)
-from src.utils import setup_logging
+from src.api_utils.batch_processor import (BatchItem, BatchProcessor, BatchResult)
+from src.utils import setup_logging, get_token_usage
 
 load_dotenv()
 
@@ -27,27 +22,8 @@ load_dotenv()
 T = TypeVar('T')
 U = TypeVar('U')
 
-
-MAX_THINKING_TIMEOUT = 5 * 60  # 5 minutes
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-@dataclass
-class AnthropicLimits:
-    requests_limit: int
-    requests_remaining: int
-    requests_reset: str
-    tokens_limit: int
-    tokens_remaining: int
-    tokens_reset: str
-    input_tokens_limit: int
-    input_tokens_remaining: int
-    input_tokens_reset: str
-    output_tokens_limit: int
-    output_tokens_remaining: int
-    output_tokens_reset: str
-    retry_after: float | None = None
-    org_tpm_remaining: int = 80000  # Organization tokens per minute limit
-    org_tpm_reset: str = ""  # When the org TPM limit resets
 
 
 @dataclass
@@ -122,12 +98,11 @@ def get_budget_tokens(model_id: str) -> int:
    return 20000  # Default budget tokens google gemini
 
 
-async def generate_an_response_async_with_image(
+async def generate_response_async(
     prompt: str,
     item: BatchItem,
-    image_path: str,
     model_id: str,
-    client: genai.client, # AsyncAnthropic,
+    client: genai.client,
     temperature: float,
     max_new_tokens: int,
     max_retries: int,
@@ -146,74 +121,54 @@ async def generate_an_response_async_with_image(
         temperature: Temperature parameter for generation
         max_new_tokens: Maximum number of new tokens to generate
         max_retries: Maximum number of retry attempts for each model
-        get_result_from_response: Callback that processes the model response and returns
-            either a valid result or None if the response should be retried
+        get_result_from_response: Callback that processes the model response and returns either a valid result or None
 
     Returns:
         Processed result or None if all attempts failed
     """
-    logging.info(f"Running prompt:\n{prompt}")
 
-    is_thinking_model = True # is_anthropic_thinking_model(model_id)
+
+    is_thinking_model = True
     thinking_budget_tokens = get_budget_tokens(model_id) if is_thinking_model else None
 
     model_id = model_id.split("/")[-1]
     
-    logging.info(f"Model ID: {model_id}")
-    logging.info(f"is_thinking_model: {is_thinking_model}")
-
+    if is_thinking_model: logging.info(f"Thinking model with thinking budget of {thinking_budget_tokens} tokens")
+    if is_text:
+        logging.info(f"Processing {item.name} as text imput")
+    else:
+        logging.info(f"Processing {item.name} as image input")
+ 
     for attempt in range(max_retries):
         try:
             if attempt > 0:
-                logging.info(
-                    f"Retry attempt {attempt} of {max_retries} for generating a response"
-                )
+                logging.info(f"Retry attempt {attempt} of {max_retries} for generating a response")
 
             if rate_limiter:
                 await rate_limiter.acquire_with_backoff(prompt, model_id)
 
-            create_params = {
-                "model": model_id,
-            }
+            create_params = { "model": model_id }
 
             if is_thinking_model:
                 assert thinking_budget_tokens is not None
-
-                # Temperature can only be set to 1 for thinking models
-                # create_params["temperature"] = 1
-                # `max_tokens` must be greater than `thinking.budget_tokens`
-                # create_params["max_tokens"] = max_new_tokens + thinking_budget_tokens
-                # Set the timeout explicitly so that Anthropic doesn't complain about
-                # this request _potentially_ taking too long
-                # create_params["timeout"] = MAX_THINKING_TIMEOUT
 
                 create_params["config"] = GenerateContentConfig(
                     system_instruction=f"{prompt}",
                     temperature=temperature,
                     maxOutputTokens=max_new_tokens + thinking_budget_tokens,
-                    thinking_config=ThinkingConfig(include_thoughts=True)
+                    thinking_config=ThinkingConfig(includeThoughts=True, thinkingBudget=thinking_budget_tokens)
                 )
             
             if not is_text:
-                image = Image.open(image_path)
-                
-                create_params["contents"] = [
-                    image,
-                    # "Solve this math problem step-by-step, reasoning first and then producing an answer.\n\n",
-                ]
+                image = Image.open(item.image_path)                
+                create_params["contents"] = [ image ]
             else:
-                create_params["contents"] = [
-                    item.problem,
-                ]
+                create_params["contents"] = [ item.problem ]
                 
             # async operation
             start_time = time.perf_counter()
-            go_response = await client.aio.models.generate_content(**create_params) # client.messages.create(**create_params)
+            go_response = await client.aio.models.generate_content(**create_params)
             end_time = time.perf_counter()
-
-            if rate_limiter:
-                logging.info(f"Got usage: {go_response.usage_metadata}")
-                rate_limiter.update_token_usage(go_response.usage_metadata.total_token_count)
 
             if (
                 not go_response
@@ -223,45 +178,42 @@ async def generate_an_response_async_with_image(
                 logging.info("Invalid response content")
                 continue
 
+            logging.info(f"Got usage: {get_token_usage(model_id, go_response.usage_metadata)}")
+            
+            if rate_limiter: rate_limiter.update_token_usage(go_response.usage_metadata.total_token_count)
 
-            if len(go_response.candidates) != 0:
-                logging.info(f"Received candidate responses: True")
-
-                if len(go_response.candidates[0].content.parts) != 0 and go_response.candidates[0].content.parts[0].thought:
-                    logging.info(f"Received thought response: {go_response.candidates[0].content.parts[0].thought}")
-
-                result = get_result_from_response(
-                    (
-                        go_response.text,
-                        go_response.candidates[0].content.parts[0].text,
-                    )
+            result = get_result_from_response(
+                (
+                    None,
+                    go_response.candidates[0].content.parts[0].text,
                 )
+            )
 
             if result is not None:
-                logging.info("Found valid result!")
+                logging.info(f"Found valid result for item {item.name} on attempt {attempt + 1}")
+                logging.info(f"Response: {go_response.candidates[0].content.parts[0].text[:100]}...")  # Limiting logging length of response
+
                 return result
 
-            logging.info(
-                f"Invalid result on attempt {attempt + 1} for model {model_id}, retrying..."
-            )
+            logging.info(f"Invalid result on attempt {attempt + 1} for model {model_id}, retrying...")
+
+            attempt += 1
             continue
 
         except Exception as e:
             if attempt == max_retries:
-                logging.warning(
-                    f"Failed to process response after {max_retries} retries "
-                    f"for model {model_id}: {str(e)}"
-                )
+                logging.warning(f"Failed to process response after {max_retries} retries for problem {item.problem}")
                 return None
-            logging.warning(
-                f"Error on attempt {attempt + 1} for model {model_id}: {str(e)}, retrying..."
-            )
+            
+            logging.warning(f"Error on attempt {attempt + 1} for model {model_id}: {str(e)}, retrying...")
+            
+            attempt += 1
             continue
 
     return None
 
 
-class GOBatchProcessorWithImage(BatchProcessor[BatchItem, BatchResult]):
+class GOBatchProcessor(BatchProcessor[BatchItem, BatchResult]):
     def __init__(
         self,
         model_id: str,
@@ -272,7 +224,6 @@ class GOBatchProcessorWithImage(BatchProcessor[BatchItem, BatchResult]):
             [str | tuple[str | None, str | None], BatchItem], BatchResult | None
         ],
         max_new_tokens: int,
-        track_api_usage: str,
         is_text: bool,
     ):
         super().__init__(
@@ -285,13 +236,10 @@ class GOBatchProcessorWithImage(BatchProcessor[BatchItem, BatchResult]):
 
         self.client = genai.Client(api_key=GEMINI_API_KEY)
         self.rate_limiter = rate_limiter
-        self.log_path = setup_logging(True, track_api_usage)
         self.is_text = is_text
 
 
-    async def process_batch(
-        self, items: list[tuple[BatchItem, str]]
-    ) -> list[tuple[BatchItem, BatchResult | None]]:
+    async def process_batch(self, items: list[tuple[BatchItem, str]]) -> list[tuple[BatchItem, BatchResult | None]]:
         """Process a batch of items with their corresponding prompts.
 
         Args:
@@ -303,31 +251,23 @@ class GOBatchProcessorWithImage(BatchProcessor[BatchItem, BatchResult]):
         if len(items) == 0:
             return []
 
-        if self.rate_limiter is None:
-            self.rate_limiter = GORateLimiter(
-                requests_per_interval=10,
-                tokens_per_interval=16000,
-                interval_seconds=60,
-            )
+        if self.rate_limiter is None: self.rate_limiter = GORateLimiter(requests_per_interval=10, tokens_per_interval=16000, interval_seconds=60)
 
-        async def process_single(
-            item: BatchItem, prompt: str
-        ) -> tuple[BatchItem, BatchResult | None]:
-            result = await generate_an_response_async_with_image(
+        async def process_single(item: BatchItem, prompt: str) -> tuple[BatchItem, BatchResult | None]:
+            
+            result = await generate_response_async(
                 prompt=prompt,
                 item=item,
-                image_path=item.image_path,
                 model_id=self.model_id,
                 client=self.client,
                 temperature=self.temperature,
                 max_new_tokens=self.max_new_tokens,
                 max_retries=self.max_retries,
-                get_result_from_response=lambda response: self.process_response(
-                    response, item
-                ),
+                get_result_from_response=lambda response: self.process_response(response, item),
                 rate_limiter=self.rate_limiter,
                 is_text=self.is_text,
             )
+
             return (item, result)
 
         try:
@@ -336,7 +276,5 @@ class GOBatchProcessorWithImage(BatchProcessor[BatchItem, BatchResult]):
         except Exception as e:
             logging.error(f"Error processing batch: {str(e)}")
             raise e
-        finally:
-            # await self.client.close()
-            # all done
-            logging.info("done")
+        # finally:
+        #    logging.info("All done")
