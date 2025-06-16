@@ -13,7 +13,8 @@ from google.genai.types import GenerateContentConfig, ThinkingConfig
 
 from tqdm.asyncio import tqdm
 from dotenv import load_dotenv
-from src.api_utils.batch_processor import (BatchItem, BatchProcessor, BatchResult)
+# from src.api_utils.batch_processor import (BatchItem, BatchProcessor, BatchResult)
+from src.utils import (BatchItem, BatchProcessor, BatchResult)
 from src.utils import setup_logging, get_token_usage
 
 load_dotenv()

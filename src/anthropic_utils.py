@@ -17,10 +17,10 @@ from anthropic.types.text_block import TextBlock
 from anthropic.types.thinking_block import ThinkingBlock
 from tqdm.asyncio import tqdm
 from dotenv import load_dotenv
-from src.api_utils.batch_processor import (BatchItem, BatchProcessor,
-                                                  BatchResult)
+# from src.api_utils.batch_processor import (BatchItem, BatchProcessor, BatchResult)
 from src.typing import (AnthropicBatchInfo, DatasetParams,
                                QuestionResponseId, SamplingParams)
+from src.utils import (BatchItem, BatchProcessor, BatchResult)
 from src.utils import setup_logging
 
 load_dotenv()

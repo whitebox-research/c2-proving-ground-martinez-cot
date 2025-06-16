@@ -9,7 +9,7 @@ from typing import List, Optional
 import click
 import yaml
 
-from src.api_utils.anthropic_utils import ANBatchProcessor, ANRateLimiter
+from src.anthropic_utils import ANBatchProcessor, ANRateLimiter
 from src.typing import (
     CotResponses,
     DefaultSamplingParams,
