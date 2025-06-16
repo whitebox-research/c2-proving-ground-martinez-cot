@@ -11,8 +11,8 @@ import click
 import pandas as pd
 import yaml
 
-from src.api_utils.anthropic_utils import ANBatchProcessorWithImage, ANRateLimiter
-from src.api_utils.google_utils import GOBatchProcessor, GORateLimiter
+from src.anthropic_utils import ANBatchProcessorWithImage, ANRateLimiter
+from src.google_utils import GOBatchProcessor, GORateLimiter
 from src.typing import (
     CotResponses,
     DefaultSamplingParams,
@@ -127,7 +127,6 @@ def create_processor(
 
         return processor
     else:
-        # OpenRouter processor
         logging.info(f"Using Anthropic model {model_id}")
         an_rate_limiter = None
         if max_parallel is not None:
@@ -197,12 +196,6 @@ async def generate_rollouts(
             continue
 
         thinking, answer = thinking_and_answer
-        
-        # logging.info(f"Received reponse for problem: {question.name}")
-        # logging.info(f"Response: {answer[:100]}...")  # Limit logging length of response
-
-        # if thinking is not None:  print("thinking: ", thinking)
-        # if answer is not None:  print("answer: ", answer)
 
         responses_by_qid[question.name] = {
             str(uuid.uuid4())[:8]: MathResponse(
