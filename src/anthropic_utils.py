@@ -214,7 +214,7 @@ def get_budget_tokens(model_id: str) -> int:
 
 async def generate_an_response_async(
     prompt: str,
-    problem_name: str,
+    item: BatchItem,
     model_id: str,
     client: AsyncAnthropic,
     temperature: float,
@@ -314,7 +314,7 @@ async def generate_an_response_async(
                 output_tokens = await client.messages.count_tokens(model=model_id, messages=[{"role": "user", "content": an_response.content[1].text}])
                 total_tokens = an_response.usage.output_tokens
                 logging.info(
-                    f"Token usage breakdown for {model_id} for problem {problem_name}:\n"
+                    # f"Token usage breakdown for {model_id} for problem {problem_name}:\n"
                     f"  Thinking tokens: {thinking_tokens.input_tokens}\n"
                     f"  Output tokens: {output_tokens.input_tokens}\n"
                     f"  Total tokens: {total_tokens}\n"
@@ -474,14 +474,14 @@ async def generate_an_response_async_with_image(
             if len(an_response.content) == 1 and isinstance(
                 an_response.content[0], TextBlock
             ):
-                logging.info(f"Received response 1: {an_response.content[0].text}")
+                # logging.info(f"Received response 1: {an_response.content[0].text}")
                 result = get_result_from_response(an_response.content[0].text)
             elif (
                 len(an_response.content) == 2
                 and isinstance(an_response.content[0], ThinkingBlock)
                 and isinstance(an_response.content[1], TextBlock)
             ):
-                logging.info(f"Received response thinking model: {an_response.content[1].text}")
+                # logging.info(f"Received response thinking model: {an_response.content[1].text}")
                 # Log token usage for thinking vs output
                 thinking_tokens = await client.messages.count_tokens(model=model_id, messages=[{"role": "user", "content": an_response.content[0].thinking}])
                 output_tokens = await client.messages.count_tokens(model=model_id, messages=[{"role": "user", "content": an_response.content[1].text}])
@@ -590,7 +590,7 @@ class ANBatchProcessor(BatchProcessor[BatchItem, BatchResult]):
         ) -> tuple[BatchItem, BatchResult | None]:
             result = await generate_an_response_async(
                 prompt=prompt,
-                problem_name=item.name,
+                item=item,
                 model_id=self.model_id,
                 client=self.client,
                 temperature=self.temperature,
@@ -637,7 +637,7 @@ class ANBatchProcessorWithImage(BatchProcessor[BatchItem, BatchResult]):
         self.client = AsyncAnthropic(api_key=ANTHROPIC_API_KEY)
         self.rate_limiter = rate_limiter
 
-        self.log_path = setup_logging(True, track_api_usage)
+        # self.log_path = setup_logging(True, track_api_usage)
 
     @staticmethod
     def is_model_supported(model_id: str) -> bool:
@@ -938,6 +938,7 @@ class AnthropicBatchProcessor(Generic[T, U]):
             # If metrics_data is needed, generate_an_response_async needs to be updated.
             raw_result = await generate_an_response_async(
                 prompt=prompt,
+                item=item,
                 model_id=self.model_id,
                 client=self.client,
                 temperature=self.temperature,

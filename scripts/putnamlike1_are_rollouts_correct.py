@@ -103,7 +103,7 @@ def save_all_results(
         sampling_params=DefaultSamplingParams(),
     )
     # Make the new path the same as the old with suffox:
-    suffix = "_just_correct_responses" if correct_only else "_verbose_correctness"
+    suffix = "_responses_correct" if correct_only else "_responses"
     path = str(path)
     # change blah/blah2.txt -> blah/blah2_suffix.txt
     path_split = path.split(".")

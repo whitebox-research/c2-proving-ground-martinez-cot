@@ -1,59 +1,11 @@
 import asyncio
 import logging
-import datetime
 from pathlib import Path
 from typing import Mapping, TypeVar
 
-import chainscope.typing as ctyping
-from chainscope.api_utils.anthropic_utils import AnthropicBatchProcessor, AnthropicRateLimiter
-
-
-def setup_logging(verbose: bool = True, script_name: str = "cot_splitting") -> str:
-    """Set up logging to both console and file.
-    
-    Args:
-        verbose: Whether to log at INFO level (True) or WARNING level (False)
-        script_name: Name of the script for the log filename
-    
-    Returns:
-        Path to the log file
-    """
-    # Create logs directory if it doesn't exist
-    logs_dir = Path("logs")
-    logs_dir.mkdir(exist_ok=True)
-    
-    # Create log filename with timestamp
-    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    log_filename = f"{script_name}_{timestamp}.log"
-    log_path = logs_dir / log_filename
-    
-    # Set up logging
-    log_level = logging.INFO if verbose else logging.WARNING
-    
-    # Configure root logger
-    root_logger = logging.getLogger()
-    root_logger.setLevel(log_level)
-    
-    # Check if handlers are already configured
-    if not root_logger.handlers:
-        # Create console handler
-        console_handler = logging.StreamHandler()
-        console_handler.setLevel(log_level)
-        console_format = logging.Formatter('%(levelname)s: %(message)s')
-        console_handler.setFormatter(console_format)
-        root_logger.addHandler(console_handler)
-        
-        # Create file handler
-        file_handler = logging.FileHandler(log_path)
-        file_handler.setLevel(log_level)
-        file_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-        file_handler.setFormatter(file_format)
-        root_logger.addHandler(file_handler)
-        
-        logging.info(f"Logging to {log_path}")
-    
-    return str(log_path)
-
+import src.typing as ctyping
+from src.utils import setup_logging
+from src.anthropic_utils import AnthropicBatchProcessor, AnthropicRateLimiter
 
 ResponseType = TypeVar("ResponseType", ctyping.MathResponse, ctyping.AtCoderResponse)
 
@@ -256,7 +208,7 @@ async def split_cot_responses_async(
             anthropic_response = response[1] or ""
         else:
             anthropic_response = response
-        logging.info(f"Anthropic response:\n{anthropic_response}")
+        # logging.info(f"Anthropic response:\n{anthropic_response}")
         sections = parse_model_split_response(anthropic_response)
         return sections
 
@@ -399,7 +351,7 @@ def split_cot_responses(
 ) -> ctyping.SplitCotResponses:
     """Synchronous wrapper for the async implementation."""
     # Set up logging
-    setup_logging(verbose=True, script_name="cot_splitting")
+    # setup_logging(verbose=True, script_name="cot_splitting")
     
     return asyncio.run(
         split_cot_responses_async(
