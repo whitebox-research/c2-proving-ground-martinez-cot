@@ -135,10 +135,9 @@ async def generate_response_async(
     model_id = model_id.split("/")[-1]
     
     if is_thinking_model: logging.info(f"Thinking model with thinking budget of {thinking_budget_tokens} tokens")
-    if is_text:
-        logging.info(f"Processing {item.name} as text imput")
-    else:
-        logging.info(f"Processing {item.name} as image input")
+    
+    if is_text: logging.info(f"Processing {item.name} as text imput")
+    else: logging.info(f"Processing {item.name} as image input")
  
     for attempt in range(max_retries):
         try:

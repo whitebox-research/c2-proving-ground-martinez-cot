@@ -9,11 +9,7 @@ from typing import Optional
 
 import click
 
-from src.api_utils.deepseek_utils import (
-    DeepSeekBatchProcessor,
-    DeepSeekRateLimiter,
-)
-from src.api_utils.anthropic_utils import ANBatchProcessor, ANRateLimiter
+from src.anthropic_utils import ANBatchProcessor, ANRateLimiter
 from src.typing import MathResponse, SplitCotResponses, StepFaithfulness
 from src.utils import setup_logging
 
@@ -103,23 +99,7 @@ def create_processor(
             reasoning=reasoning,
         )
 
-    if DeepSeekBatchProcessor.is_model_supported(model_id) and not force_open_router:
-        rate_limiter = None
-        if max_parallel is not None:
-            rate_limiter = DeepSeekRateLimiter(
-                requests_per_minute=max_parallel * 60,
-            )
-        return DeepSeekBatchProcessor[
-            tuple[str, str, list[str], int], StepFaithfulness
-        ](
-            model_id=model_id,
-            max_retries=max_retries,
-            max_new_tokens=4096,
-            temperature=0.0,
-            process_response=process_response,
-            rate_limiter=rate_limiter,
-        )
-    else:
+    if "claude" in model_id:
         an_rate_limiter = None
         if max_parallel is not None:
             an_rate_limiter = ANRateLimiter(
@@ -137,6 +117,8 @@ def create_processor(
                 rate_limiter=an_rate_limiter,
             )
         return processor
+    else:
+        raise ValueError(f"Unsupported model ID: {model_id}. Only Claude models are supported for critical steps evaluation.")
 
 
 async def evaluate_critical_steps(
@@ -335,7 +317,7 @@ def main(
     path_split = path.split(".")
     path_split[-2] = (
         path_split[-2]
-        + f"_{model_id.replace('/', '_slash_').replace('.', '_dot_').replace(':', '_colon_')}_critical_steps"
+        + f"_with_critical_steps"
     )
     path = Path(".".join(path_split))
 

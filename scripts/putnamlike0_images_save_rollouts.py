@@ -85,8 +85,6 @@ def create_processor(
     model_id: str,
     max_retries: int,
     max_parallel: Optional[int],
-    force_open_router: bool = False,
-    track_api_usage: str = "none",
     is_text: bool = False
 ):
     """Create the appropriate processor based on the model ID."""
@@ -94,7 +92,6 @@ def create_processor(
     def get_tuple_or_str_response(
         response: tuple[str, str] | str, other: Any
     ) -> tuple[str | None, str]:
-        # logging.info(f"Inner response: {response}") # limit logging length
 
         if isinstance(response, tuple):
             assert (
@@ -104,7 +101,7 @@ def create_processor(
         else:
             return (None, response)
 
-    if "google" in model_id:
+    if "gemini" in model_id:
         # Google processor
         logging.info(f"Using model {model_id}")
         go_rate_limiter = None
@@ -143,7 +140,7 @@ def create_processor(
                 temperature=0.0,
                 process_response=get_tuple_or_str_response,
                 rate_limiter=an_rate_limiter,
-                track_api_usage=track_api_usage,
+                # track_api_usage=track_api_usage,
             )
         return processor
 
@@ -154,9 +151,7 @@ async def generate_rollouts(
     max_retries: int,
     max_parallel: Optional[int],
     prefix: Optional[int] = None,
-    force_open_router: bool = False,
     preamble: str = "",
-    track_api_usage: str = "none",
     is_text: bool = False
 ) -> CotResponses:
     """Generate rollouts for each problem in the dataset."""
@@ -165,8 +160,6 @@ async def generate_rollouts(
         model_id=model_id,
         max_retries=max_retries,
         max_parallel=max_parallel,
-        force_open_router=force_open_router,
-        track_api_usage=track_api_usage,
         is_text=is_text,
     )
 
@@ -222,26 +215,23 @@ async def generate_rollouts(
     "--model_id",
     "-s",
     type=str,
-    default="anthropic/claude-3-opus",
-    help="Model ID for generating rollouts (OpenRouter or DeepSeek model)",
+    default="gemini-2.0-flash-thinking-exp-01-21",
+    help="Model or generating rollouts",
 )
 @click.option(
     "--max_retries",
-    "-r",
     type=int,
     default=1,
     help="Maximum retries for failed requests",
 )
 @click.option(
     "--max_parallel",
-    "-p",
     type=int,
     default=None,
     help="Maximum number of parallel requests",
 )
 @click.option(
     "--prefix",
-    "-prefix",
     type=int,
     default=None,
     help="Only process the first N problems",
@@ -252,12 +242,7 @@ async def generate_rollouts(
     default="Solve this math problem step-by-step, reasoning first and then producing an answer.\n\n",
     help="Preamble text to add before each problem",
 )
-@click.option("-v", "--verbose", is_flag=True, help="Enable verbose logging")
-@click.option(
-    "--open_router",
-    is_flag=True,
-    help="Force using OpenRouter even for DeepSeek models",
-)
+@click.option("--verbose", is_flag=True, help="Enable verbose logging")
 @click.option(
     "--text",
     is_flag=True,
@@ -270,14 +255,12 @@ def main(
     max_parallel: Optional[int],
     prefix: Optional[int],
     verbose: bool,
-    open_router: bool,
     preamble: str,
     text:bool = False,
 ):
-    """Generate rollouts for Putnam problems using OpenRouter or DeepSeek models."""
+    """Generate rollouts for Putnam problems"""
     # Set up logging to both console and file
-    track_api_usage = "putnamlike0_images_save_rollouts"
-    log_path = setup_logging(verbose, track_api_usage)
+    log_path = setup_logging(verbose, "putnamlike0_save_rollouts")
     logging.info(f"Loading dataset from {input_yaml}")
 
     # Load and prepare dataset
@@ -295,17 +278,15 @@ def main(
             max_retries=max_retries,
             max_parallel=max_parallel,
             prefix=prefix,
-            force_open_router=open_router,
-            track_api_usage=track_api_usage,
             is_text=text,  # Use text-only if specified
         )
     )
 
     # Save results
     for i in range(0, 100):
-        output_path = results.get_path(
-            f"_images_v{i}" + (f"_prefix_{prefix}" if prefix else "")
-        )
+        if text: output_path = results.get_path(f"_text_v{i}" + (f"_prefix_{prefix}" if prefix else ""))
+        else: output_path = results.get_path(f"_images_v{i}" + (f"_prefix_{prefix}" if prefix else ""))
+        
         if not os.path.exists(output_path):
             break
 

@@ -10,11 +10,7 @@ from typing import Optional
 
 import click
 
-from src.api_utils.anthropic_utils import ANBatchProcessor, ANRateLimiter
-from src.api_utils.deepseek_utils import (
-    DeepSeekBatchProcessor,
-    DeepSeekRateLimiter,
-)
+from src.anthropic_utils import ANBatchProcessor, ANRateLimiter
 from src.typing import MathResponse, SplitCotResponses, StepFaithfulness
 from src.utils import setup_logging
 
@@ -150,24 +146,7 @@ def create_processor(
             step_str=step, unfaithfulness=classification, reasoning=reasoning
         )
 
-    if DeepSeekBatchProcessor.is_model_supported(model_id) and not force_open_router:
-        # DeepSeek processor
-        rate_limiter = None
-        if max_parallel is not None:
-            rate_limiter = DeepSeekRateLimiter(
-                requests_per_minute=max_parallel
-                * 60,  # Convert per second to per minute
-            )
-        return DeepSeekBatchProcessor[tuple[str, str, str, int], StepFaithfulness](
-            model_id=model_id,
-            max_retries=max_retries,
-            max_new_tokens=8192,
-            temperature=0.0,
-            process_response=process_response,
-            rate_limiter=rate_limiter,
-        )
-    else:
-        # OpenRouter processor
+    if "claude" in model_id:
         an_rate_limiter = None
         if max_parallel is not None:
             an_rate_limiter = ANRateLimiter(
@@ -185,6 +164,7 @@ def create_processor(
                 rate_limiter=an_rate_limiter,
             )
         return processor
+    else: ValueError(f"Unsupported model for faithfulness evaluation: {model_id}. Only Claude models are currently supported.")
     
 
 async def evaluate_faithfulness(
@@ -285,8 +265,6 @@ async def evaluate_faithfulness(
 
     # Determine suffix based on model type and nosolution flag
     suffix = "_faithfulness"
-    if DeepSeekBatchProcessor.is_model_supported(model_id):
-        suffix = "_deepseek_faithfulness"
     if not solution:
         suffix += "_nosolution"
 
@@ -379,8 +357,8 @@ def main(
 
     # Setup suffix variable before we start editing
     # the indices variable:
-    suffix = f"_{model_id.replace('/', '_slash_').replace('.', '_dot_').replace(':', '_colon_')}"
-    suffix += "_faithfullness2"  # We now have a **implies** thing a bunch, too
+    # suffix = f"_{model_id.replace('/', '_slash_').replace('.', '_dot_').replace(':', '_colon_')}"
+    suffix = "_faithfullness"  # We now have a **implies** thing a bunch, too
     if start_idx is not None or end_idx is not None:
         suffix += f"_from_{start_idx or 0}_to_{end_idx or 'end'}"
 
