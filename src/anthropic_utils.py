@@ -18,8 +18,7 @@ from anthropic.types.thinking_block import ThinkingBlock
 from tqdm.asyncio import tqdm
 from dotenv import load_dotenv
 # from src.api_utils.batch_processor import (BatchItem, BatchProcessor, BatchResult)
-from src.typing import (AnthropicBatchInfo, DatasetParams,
-                               QuestionResponseId, SamplingParams)
+# from src.typing import (AnthropicBatchInfo, DatasetParams, QuestionResponseId, SamplingParams)
 from src.utils import (BatchItem, BatchProcessor, BatchResult)
 from src.utils import setup_logging
 
@@ -695,146 +694,146 @@ class ANBatchProcessorWithImage(BatchProcessor[BatchItem, BatchResult]):
         finally:
             await self.client.close()
 
-def submit_anthropic_batch(
-    prompt_by_qrid: dict[QuestionResponseId, str],
-    instr_id: str,
-    ds_params: DatasetParams,
-    evaluated_model_id: str,  # The model being evaluated/generating
-    evaluated_sampling_params: SamplingParams,
-    evaluator_model_id: str | None = None,  # The model doing the evaluation (if any)
-    evaluator_sampling_params: SamplingParams | None = None,
-) -> AnthropicBatchInfo:
-    """Submit a batch of prompts to Anthropic's batch API.
+# def submit_anthropic_batch(
+#     prompt_by_qrid: dict[QuestionResponseId, str],
+#     instr_id: str,
+#     ds_params: DatasetParams,
+#     evaluated_model_id: str,  # The model being evaluated/generating
+#     evaluated_sampling_params: SamplingParams,
+#     evaluator_model_id: str | None = None,  # The model doing the evaluation (if any)
+#     evaluator_sampling_params: SamplingParams | None = None,
+# ) -> AnthropicBatchInfo:
+#     """Submit a batch of prompts to Anthropic's batch API.
 
-    Args:
-        prompts: List of tuples containing (item, prompt)
-        model_id: ID of the model being evaluated/generating
-        instr_id: Instruction ID
-        ds_params: Dataset parameters
-        sampling_params: Sampling parameters for the evaluator
-        evaluator_model_id: ID of the model doing the evaluation (if any)
-        evaluated_sampling_params: Sampling parameters for the evaluated model (if any)
+#     Args:
+#         prompts: List of tuples containing (item, prompt)
+#         model_id: ID of the model being evaluated/generating
+#         instr_id: Instruction ID
+#         ds_params: Dataset parameters
+#         sampling_params: Sampling parameters for the evaluator
+#         evaluator_model_id: ID of the model doing the evaluation (if any)
+#         evaluated_sampling_params: Sampling parameters for the evaluated model (if any)
 
-    Returns:
-        Information about the submitted batch
-    """
-    # For evaluation, evaluator_model_id is the one making API calls
-    api_model_id = evaluator_model_id or evaluated_model_id
+#     Returns:
+#         Information about the submitted batch
+#     """
+#     # For evaluation, evaluator_model_id is the one making API calls
+#     api_model_id = evaluator_model_id or evaluated_model_id
 
-    is_thinking_model = is_anthropic_thinking_model(api_model_id)
-    thinking_budget_tokens = (
-        get_budget_tokens(api_model_id) if is_thinking_model else None
-    )
+#     is_thinking_model = is_anthropic_thinking_model(api_model_id)
+#     thinking_budget_tokens = (
+#         get_budget_tokens(api_model_id) if is_thinking_model else None
+#     )
 
-    api_model_id = api_model_id.split("/")[-1].split("_")[0]
-    api_model_id = ANTHROPIC_MODEL_ALIASES[api_model_id]
-    api_sampling_params = evaluator_sampling_params or evaluated_sampling_params
+#     api_model_id = api_model_id.split("/")[-1].split("_")[0]
+#     api_model_id = ANTHROPIC_MODEL_ALIASES[api_model_id]
+#     api_sampling_params = evaluator_sampling_params or evaluated_sampling_params
 
-    # Create custom ID mapping and format requests
-    custom_id_map = {}
-    requests = []
-    for i, (q_resp_id, prompt) in enumerate(prompt_by_qrid.items()):
-        custom_id = f"{q_resp_id.qid[:31]}__{q_resp_id.uuid[:31]}"
-        custom_id_map[custom_id] = q_resp_id
+#     # Create custom ID mapping and format requests
+#     custom_id_map = {}
+#     requests = []
+#     for i, (q_resp_id, prompt) in enumerate(prompt_by_qrid.items()):
+#         custom_id = f"{q_resp_id.qid[:31]}__{q_resp_id.uuid[:31]}"
+#         custom_id_map[custom_id] = q_resp_id
 
-        request_params = MessageCreateParamsNonStreaming(
-            model=api_model_id,
-            max_tokens=api_sampling_params.max_new_tokens,
-            temperature=api_sampling_params.temperature,
-            top_p=api_sampling_params.top_p,
-            messages=[{"role": "user", "content": prompt}],
-        )
-        if is_thinking_model:
-            assert thinking_budget_tokens is not None
-            request_params["thinking"] = {
-                "type": "enabled",
-                "budget_tokens": thinking_budget_tokens,
-            }
-            # Temperature can only be set to 1 for thinking models
-            request_params["temperature"] = 1
-            # Top-p must be unset for thinking models
-            del request_params["top_p"]
-            # `max_tokens` must be greater than `thinking.budget_tokens`
-            request_params["max_tokens"] = (
-                api_sampling_params.max_new_tokens + thinking_budget_tokens
-            )
+#         request_params = MessageCreateParamsNonStreaming(
+#             model=api_model_id,
+#             max_tokens=api_sampling_params.max_new_tokens,
+#             temperature=api_sampling_params.temperature,
+#             top_p=api_sampling_params.top_p,
+#             messages=[{"role": "user", "content": prompt}],
+#         )
+#         if is_thinking_model:
+#             assert thinking_budget_tokens is not None
+#             request_params["thinking"] = {
+#                 "type": "enabled",
+#                 "budget_tokens": thinking_budget_tokens,
+#             }
+#             # Temperature can only be set to 1 for thinking models
+#             request_params["temperature"] = 1
+#             # Top-p must be unset for thinking models
+#             del request_params["top_p"]
+#             # `max_tokens` must be greater than `thinking.budget_tokens`
+#             request_params["max_tokens"] = (
+#                 api_sampling_params.max_new_tokens + thinking_budget_tokens
+#             )
 
-        requests.append(
-            Request(
-                custom_id=custom_id,
-                params=request_params,
-            )
-        )
+#         requests.append(
+#             Request(
+#                 custom_id=custom_id,
+#                 params=request_params,
+#             )
+#         )
 
-    # Submit batch
-    message_batch = Anthropic().messages.batches.create(requests=requests)
+#     # Submit batch
+#     message_batch = Anthropic().messages.batches.create(requests=requests)
 
-    # Create batch info
-    batch_info = AnthropicBatchInfo(
-        batch_id=message_batch.id,
-        instr_id=instr_id,
-        ds_params=ds_params,
-        created_at=datetime.now(timezone.utc).isoformat(),
-        custom_id_map=custom_id_map,
-        evaluated_model_id=evaluated_model_id,
-        evaluated_sampling_params=evaluated_sampling_params,
-        evaluator_model_id=evaluator_model_id,
-        evaluator_sampling_params=evaluator_sampling_params,
-        metadata={}
-    )
-    batch_info.save()
-    return batch_info
+#     # Create batch info
+#     batch_info = AnthropicBatchInfo(
+#         batch_id=message_batch.id,
+#         instr_id=instr_id,
+#         ds_params=ds_params,
+#         created_at=datetime.now(timezone.utc).isoformat(),
+#         custom_id_map=custom_id_map,
+#         evaluated_model_id=evaluated_model_id,
+#         evaluated_sampling_params=evaluated_sampling_params,
+#         evaluator_model_id=evaluator_model_id,
+#         evaluator_sampling_params=evaluator_sampling_params,
+#         metadata={}
+#     )
+#     batch_info.save()
+#     return batch_info
 
 
-def process_batch_results(
-    batch_info: AnthropicBatchInfo,
-) -> list[tuple[QuestionResponseId, str]]:
-    """Process results from a completed batch.
+# def process_batch_results(
+#     batch_info: AnthropicBatchInfo,
+# ) -> list[tuple[QuestionResponseId, str]]:
+#     """Process results from a completed batch.
 
-    Args:
-        batch_info: Information about the batch
+#     Args:
+#         batch_info: Information about the batch
 
-    Returns:
-        List of tuples containing (item, response)
-        response is None if there was an error processing the response
-    """
-    client = Anthropic()
-    # Get batch status
-    message_batch = client.messages.batches.retrieve(batch_info.batch_id)
-    if message_batch.processing_status != "ended":
-        raise ValueError("Batch still processing")
+#     Returns:
+#         List of tuples containing (item, response)
+#         response is None if there was an error processing the response
+#     """
+#     client = Anthropic()
+#     # Get batch status
+#     message_batch = client.messages.batches.retrieve(batch_info.batch_id)
+#     if message_batch.processing_status != "ended":
+#         raise ValueError("Batch still processing")
 
-    processed_results = []
+#     processed_results = []
 
-    # Stream results file in memory-efficient chunks, processing one at a time
-    for result in client.messages.batches.results(batch_info.batch_id):
-        match result.result.type:
-            case "succeeded":
-                custom_id = result.custom_id
-                q_resp_id = batch_info.custom_id_map[custom_id]
-                message = result.result.message
-                content = message.content
-                if not content or len(content) == 0:
-                    logging.error(f"Invalid content in request {custom_id}")
-                    continue
-                if len(content) == 1 and content[0].type == "text":
-                    processed_results.append((q_resp_id, content[0].text))
-                elif (
-                    len(content) == 2
-                    and content[0].type == "thinking"
-                    and content[1].type == "text"
-                ):
-                    response = f"<think>{content[0].thinking}</think>{content[1].text}"
-                    processed_results.append((q_resp_id, response))
-                else:
-                    logging.error(f"Invalid content type in request {custom_id}")
-                    continue
-            case "errored":
-                print(f"Error in request {result.custom_id}:\n{result.result.error}")
-            case "expired":
-                print(f"Request expired {result.custom_id}")
+#     # Stream results file in memory-efficient chunks, processing one at a time
+#     for result in client.messages.batches.results(batch_info.batch_id):
+#         match result.result.type:
+#             case "succeeded":
+#                 custom_id = result.custom_id
+#                 q_resp_id = batch_info.custom_id_map[custom_id]
+#                 message = result.result.message
+#                 content = message.content
+#                 if not content or len(content) == 0:
+#                     logging.error(f"Invalid content in request {custom_id}")
+#                     continue
+#                 if len(content) == 1 and content[0].type == "text":
+#                     processed_results.append((q_resp_id, content[0].text))
+#                 elif (
+#                     len(content) == 2
+#                     and content[0].type == "thinking"
+#                     and content[1].type == "text"
+#                 ):
+#                     response = f"<think>{content[0].thinking}</think>{content[1].text}"
+#                     processed_results.append((q_resp_id, response))
+#                 else:
+#                     logging.error(f"Invalid content type in request {custom_id}")
+#                     continue
+#             case "errored":
+#                 print(f"Error in request {result.custom_id}:\n{result.result.error}")
+#             case "expired":
+#                 print(f"Request expired {result.custom_id}")
 
-    return processed_results
+#     return processed_results
 
 
 def cancel_batch(batch_id: str) -> None:
