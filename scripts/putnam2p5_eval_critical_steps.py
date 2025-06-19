@@ -66,8 +66,7 @@ def parse_critical_steps_response(
 def create_processor(
     model_id: str,
     max_retries: int,
-    max_parallel: Optional[int],
-    force_open_router: bool = False,
+    max_parallel: Optional[int]
 ):
     """Create the appropriate processor based on the model ID."""
 
@@ -126,15 +125,13 @@ async def evaluate_critical_steps(
     model_id: str,
     max_retries: int,
     max_parallel: Optional[int],
-    force_open_router: bool = False,
 ) -> SplitCotResponses:
     """Evaluate which steps are critical in each solution."""
 
     processor = create_processor(
         model_id=model_id,
         max_retries=max_retries,
-        max_parallel=max_parallel,
-        force_open_router=force_open_router,
+        max_parallel=max_parallel
     )
 
     # Prepare batch items - one per problem rather than per step
@@ -222,26 +219,23 @@ async def evaluate_critical_steps(
 @click.argument("input_yaml", type=click.Path(exists=True))
 @click.option(
     "--model_id",
-    "-s",
     type=str,
-    default="anthropic/claude-3.5-sonnet",
-    help="Model ID for evaluation (OpenRouter or DeepSeek model)",
+    default="claude-3.7-sonnet",
+    help="Model for evaluation of critical steps",
 )
 @click.option(
     "--max_retries",
-    "-r",
     type=int,
     default=1,
     help="Maximum retries for failed requests",
 )
 @click.option(
     "--max_parallel",
-    "-p",
     type=int,
-    default=None,
+    default=1,
     help="Maximum number of parallel requests",
 )
-@click.option("-v", "--verbose", is_flag=True, help="Enable verbose logging")
+@click.option("--verbose", is_flag=True, help="Enable verbose logging")
 @click.option(
     "--start_idx",
     type=int,
@@ -254,11 +248,6 @@ async def evaluate_critical_steps(
     default=None,
     help="End index for responses to evaluate (exclusive)",
 )
-@click.option(
-    "--open_router",
-    is_flag=True,
-    help="Force using OpenRouter even for DeepSeek models",
-)
 def main(
     input_yaml: str,
     model_id: str,
@@ -267,11 +256,10 @@ def main(
     verbose: bool,
     start_idx: Optional[int],
     end_idx: Optional[int],
-    open_router: bool,
 ):
-    """Evaluate which steps are critical in split CoT responses."""
+    """Evaluate which steps are critical in split CoT responses"""
     # Set up logging to both console and file
-    log_path = setup_logging(verbose, "putnamlike2p5_critical_steps_eval")
+    log_path = setup_logging(verbose, "putnam2p5_eval_critical_steps")
 
     input_path = Path(input_yaml)
     responses = SplitCotResponses.load(input_path)
@@ -308,7 +296,6 @@ def main(
             model_id=model_id,
             max_retries=max_retries,
             max_parallel=max_parallel,
-            force_open_router=open_router,
         )
     )
 

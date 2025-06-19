@@ -10,6 +10,7 @@ from PIL import Image
 from google import genai
 from google.genai.types import GenerateContentConfig, ThinkingConfig
 
+GOOGLE_MODEL_ALIASES = { "gemini-2.0-flash-thinking": "gemini-2.0-flash-thinking-exp-01-21" }
 
 from tqdm.asyncio import tqdm
 from dotenv import load_dotenv
@@ -132,7 +133,8 @@ async def generate_response_async(
     is_thinking_model = True
     thinking_budget_tokens = get_budget_tokens(model_id) if is_thinking_model else None
 
-    model_id = model_id.split("/")[-1]
+    # model_id = model_id.split("/")[-1]
+    model_id = GOOGLE_MODEL_ALIASES[model_id]
     
     if is_thinking_model: logging.info(f"Thinking model with thinking budget of {thinking_budget_tokens} tokens")
     
