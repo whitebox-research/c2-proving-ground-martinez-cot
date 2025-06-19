@@ -13,29 +13,24 @@ from src.utils import setup_logging
 @click.argument("responses_path", type=click.Path(exists=True))
 @click.option(
     "--model_id",
-    "-s",
     type=str,
-    default="anthropic/claude-3.5-sonnet",
-    help="Model ID to use for splitting CoT responses using Anthropic API. "
-    "For Claude models, use format like 'anthropic/claude-3.5-sonnet'.",
+    default="claude-3.7-sonnet",
+    help="Model to use for splitting CoT responses",
 )
 @click.option(
     "--max_retries",
-    "-r",
     type=int,
     default=1,
     help="Maximum retries for splitting CoT responses with the each model",
 )
 @click.option(
     "--max_parallel",
-    "-p",
     type=int,
-    default=None,
+    default=1,
     help="Maximum number of parallel requests. If not set, it will use the Anthropic API limits.",
 )
 @click.option(
     "--max_new_tokens_override",
-    "-t",
     type=int,
     default=None,
     help="Override the max_new_tokens parameter for the model. If not set, will use 1.25x the original max_new_tokens.",
@@ -61,8 +56,9 @@ def main(
     max_new_tokens_override: int | None,
     prefix: int | None,
 ):
+    """Split the  CoT responses into steps"""
     # Set up logging to both console and file
-    log_path = setup_logging(verbose, "putnamlike2_split_cots")
+    log_path = setup_logging(verbose, "putnam2_split_cots")
     
     logging.warning("WARNING! This is somewhat unreliable, particularly for really long rollouts, as it does only very basic checks of the correct format by checking that the length of the steps added together is within 10% of the original response length")
     cot_responses = CotResponses.load(Path(responses_path))

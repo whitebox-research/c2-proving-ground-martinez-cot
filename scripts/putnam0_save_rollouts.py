@@ -213,10 +213,9 @@ async def generate_rollouts(
 @click.argument("input_yaml", type=click.Path(exists=True))
 @click.option(
     "--model_id",
-    "-s",
     type=str,
-    default="gemini-2.0-flash-thinking-exp-01-21",
-    help="Model or generating rollouts",
+    default="gemini-2.0-flash-thinking-",
+    help="Model for generating rollouts",
 )
 @click.option(
     "--max_retries",
@@ -227,14 +226,14 @@ async def generate_rollouts(
 @click.option(
     "--max_parallel",
     type=int,
-    default=None,
+    default=1,
     help="Maximum number of parallel requests",
 )
 @click.option(
     "--prefix",
     type=int,
     default=None,
-    help="Only process the first N problems",
+    help="Only process N problems",
 )
 @click.option(
     "--preamble",
@@ -246,7 +245,7 @@ async def generate_rollouts(
 @click.option(
     "--text",
     is_flag=True,
-    help="Use text-only, i.e. no images (default is to use images if available)",
+    help="Use text inputs (default is to use image inputs)",
 )
 def main(
     input_yaml: str,

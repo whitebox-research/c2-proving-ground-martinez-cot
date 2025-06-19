@@ -286,26 +286,23 @@ async def evaluate_faithfulness(
 @click.argument("input_yaml", type=click.Path(exists=True))
 @click.option(
     "--model_id",
-    "-s",
     type=str,
-    default="anthropic/claude-3.5-sonnet",
-    help="Model ID for evaluation (OpenRouter or DeepSeek model)",
+    default="claude-3.5-sonnet",
+    help="Model for evaluation",
 )
 @click.option(
     "--max_retries",
-    "-r",
     type=int,
     default=1,
     help="Maximum retries for failed requests",
 )
 @click.option(
     "--max_parallel",
-    "-p",
     type=int,
-    default=None,
+    default=1,
     help="Maximum number of parallel requests",
 )
-@click.option("-v", "--verbose", is_flag=True, help="Enable verbose logging")
+@click.option("--verbose", is_flag=True, help="Enable verbose logging")
 @click.option(
     "--start_idx",
     type=int,
@@ -324,11 +321,6 @@ async def evaluate_faithfulness(
     help="Don't include the solution in the chain of reasoning evaluation",
 )
 @click.option(
-    "--open_router",
-    is_flag=True,
-    help="Force using OpenRouter even for DeepSeek models",
-)
-@click.option(
     "--critical_steps_yaml",
     type=click.Path(exists=True),
     help="Path to YAML containing critical steps to evaluate. If provided, only evaluates steps listed in the unfaithfulness field.",
@@ -342,10 +334,9 @@ def main(
     start_idx: Optional[int],
     end_idx: Optional[int],
     nosolution: bool,
-    open_router: bool,
     critical_steps_yaml: Optional[str],
 ):
-    """Evaluate the faithfulness of each step in split CoT responses."""
+    """Evaluate the faithfulness of each step in split CoT responses"""
     # Set up logging to both console and file
     log_path = setup_logging(verbose, "putnamlike3_main_faithfulness_eval")
 
@@ -430,7 +421,6 @@ def main(
             max_retries=max_retries,
             max_parallel=max_parallel,
             solution=solution,
-            force_open_router=open_router,
             critical_steps_by_qid=critical_steps_by_qid
             if critical_steps_yaml
             else None,

@@ -30,12 +30,7 @@ T = TypeVar('T')
 U = TypeVar('U')
 
 ANTHROPIC_MODEL_ALIASES = {
-    "claude-3-sonnet": "claude-3-sonnet-20240229",
-    "claude-3-haiku": "claude-3-haiku-20240307",
-    "claude-3-opus": "claude-3-opus-20240229",
     "claude-3.5-sonnet": "claude-3-5-sonnet-20240620",
-    "claude-3.6-sonnet": "claude-3-5-sonnet-20241022",
-    "claude-3.5-haiku": "claude-3-5-haiku-20241022",
     "claude-3.7-sonnet": "claude-3-7-sonnet-20250219",
 }
 
@@ -247,7 +242,7 @@ async def generate_an_response_async(
     thinking_budget_tokens = get_budget_tokens(model_id) if is_thinking_model else None
     logging.info(f"Is thinking model: {is_thinking_model}, Budget tokens: {thinking_budget_tokens}")
 
-    model_id = model_id.split("/")[-1].split("_")[0]
+    # model_id = model_id.split("/")[-1].split("_")[0]
     model_id = ANTHROPIC_MODEL_ALIASES[model_id]
 
     for attempt in range(max_retries):
@@ -400,7 +395,7 @@ async def generate_an_response_async_with_image(
     is_thinking_model = is_anthropic_thinking_model(model_id)
     thinking_budget_tokens = get_budget_tokens(model_id) if is_thinking_model else None
 
-    model_id = model_id.split("/")[-1].split("_")[0]
+    # model_id = model_id.split("/")[-1].split("_")[0]
     model_id = ANTHROPIC_MODEL_ALIASES[model_id]
     
     logging.info(f"Model ID: {model_id}")
@@ -551,12 +546,7 @@ class ANBatchProcessor(BatchProcessor[BatchItem, BatchResult]):
     @staticmethod
     def is_model_supported(model_id: str) -> bool:
         supported_models = [
-            "claude-3-sonnet",
-            "claude-3-haiku",
-            "claude-3-opus",
             "claude-3.5-sonnet",
-            "claude-3.6-sonnet",
-            "claude-3.5-haiku",
             "claude-3.7-sonnet",
         ]
         return any(

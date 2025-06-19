@@ -223,23 +223,20 @@ async def evaluate_model_responses(
 @click.argument("input_yaml", type=click.Path(exists=True))
 @click.option(
     "--model_id",
-    "-s",
     type=str,
-    default="anthropic/claude-3.5-sonnet",
-    help="Models for evaluation",
+    default="claude-3.7-sonnet",
+    help="Models to check the rollouts",
 )
 @click.option(
     "--max_retries",
-    "-r",
     type=int,
     default=1,
     help="Maximum retries for failed requests",
 )
 @click.option(
     "--max_parallel",
-    "-p",
     type=int,
-    default=None,
+    default=1,
     help="Maximum number of parallel requests",
 )
 @click.option("-v", "--verbose", is_flag=True, help="Enable verbose logging")
