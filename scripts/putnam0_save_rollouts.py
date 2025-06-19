@@ -259,7 +259,7 @@ def main(
 ):
     """Generate rollouts for Putnam problems"""
     # Set up logging to both console and file
-    log_path = setup_logging(verbose, "putnamlike0_save_rollouts")
+    log_path = setup_logging(verbose, "putnam0_save_rollouts")
     logging.info(f"Loading dataset from {input_yaml}")
 
     # Load and prepare dataset

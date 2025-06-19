@@ -338,7 +338,7 @@ def main(
 ):
     """Evaluate the faithfulness of each step in split CoT responses"""
     # Set up logging to both console and file
-    log_path = setup_logging(verbose, "putnamlike3_main_faithfulness_eval")
+    log_path = setup_logging(verbose, "putnam3_main_eval_faithfulness")
 
     logging.warning(
         "This drops the reasoning trace of R1 and just leaves the final answer, seems bad TODO(arthur): Fix"

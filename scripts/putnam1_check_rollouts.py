@@ -256,7 +256,7 @@ def main(
     prefix: Optional[int],
 ):
     # Set up logging to both console and file
-    log_path = setup_logging(verbose, "putnamlike1_are_rollouts_correct")
+    log_path = setup_logging(verbose, "putnam1_check_correct")
 
     input_path = Path(input_yaml)
 
