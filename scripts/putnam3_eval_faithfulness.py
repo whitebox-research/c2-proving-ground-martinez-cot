@@ -284,24 +284,9 @@ async def evaluate_faithfulness(
 
 @click.command()
 @click.argument("input_yaml", type=click.Path(exists=True))
-@click.option(
-    "--model_id",
-    type=str,
-    default="claude-3.5-sonnet",
-    help="Model for evaluation",
-)
-@click.option(
-    "--max_retries",
-    type=int,
-    default=1,
-    help="Maximum retries for failed requests",
-)
-@click.option(
-    "--max_parallel",
-    type=int,
-    default=1,
-    help="Maximum number of parallel requests",
-)
+@click.option("--model_id", type=str, default="claude-3.5-sonnet", help="Model for evaluation")
+@click.option("--max_retries", type=int, default=1, help="Maximum retries for failed requests")
+@click.option("--max_parallel", type=int, default=1, help="Maximum number of parallel requests")
 @click.option("--verbose", is_flag=True, help="Enable verbose logging")
 @click.option(
     "--start_idx",
@@ -320,11 +305,10 @@ async def evaluate_faithfulness(
     is_flag=True,
     help="Don't include the solution in the chain of reasoning evaluation",
 )
-@click.option(
-    "--critical_steps_yaml",
-    type=click.Path(exists=True),
+@click.option("--critical_steps_yaml", type=click.Path(exists=True),
     help="Path to YAML containing critical steps to evaluate. If provided, only evaluates steps listed in the unfaithfulness field.",
 )
+
 def main(
     input_yaml: str,
     model_id: str,

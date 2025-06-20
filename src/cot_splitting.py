@@ -7,15 +7,13 @@ import src.typing as ctyping
 from src.utils import setup_logging
 from src.anthropic_utils import AnthropicBatchProcessor, AnthropicRateLimiter
 
-ResponseType = TypeVar("ResponseType", ctyping.MathResponse, ctyping.AtCoderResponse)
-
 
 def _format_thinking_and_final_answer(thinking: str, final_answer: str) -> str:
     return f"**WORKING**:\n\n{thinking}\n\n**ANSWER**:\n{final_answer}"
 
 
 def format_response_as_working_answer(
-    response: str | ctyping.MathResponse | ctyping.AtCoderResponse,
+    response: str | ctyping.MathResponse,
 ) -> str:
     """Format a response into the **WORKING** and **ANSWER** format.
 
@@ -257,7 +255,8 @@ async def split_cot_responses_async(
     # Process batch
     results = await processor.process_batch(batch_items)
     # Process results
-    split_responses_by_qid: dict[str, dict[str, ResponseType]] = {}
+    # split_responses_by_qid: dict[str, dict[str, ResponseType]] = {}
+    split_responses_by_qid: dict[str, dict[str, ctyping.MathResponse]] = {}
     success_count = 0
     failure_count = 0
 
@@ -285,14 +284,14 @@ async def split_cot_responses_async(
                     solution=original_response.solution,
                     image_path=original_response.image_path,
                 )
-            elif isinstance(original_response, ctyping.AtCoderResponse):
-                split_responses_by_qid[qid][uuid] = ctyping.AtCoderResponse(
-                    model_answer=split_response,
-                    model_thinking=None,
-                    name=original_response.name,
-                    problem=original_response.problem,
-                    cpp_solution=original_response.cpp_solution,
-                )
+            # elif isinstance(original_response, ctyping.AtCoderResponse):
+            #     split_responses_by_qid[qid][uuid] = ctyping.AtCoderResponse(
+            #         model_answer=split_response,
+            #         model_thinking=None,
+            #         name=original_response.name,
+            #         problem=original_response.problem,
+            #         cpp_solution=original_response.cpp_solution,
+            #     )
             else:
                 raise ValueError(f"Unexpected response type: {type(original_response)}")
 

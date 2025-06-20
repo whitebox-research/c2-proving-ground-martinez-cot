@@ -217,24 +217,9 @@ async def evaluate_critical_steps(
 
 @click.command()
 @click.argument("input_yaml", type=click.Path(exists=True))
-@click.option(
-    "--model_id",
-    type=str,
-    default="claude-3.7-sonnet",
-    help="Model for evaluation of critical steps",
-)
-@click.option(
-    "--max_retries",
-    type=int,
-    default=1,
-    help="Maximum retries for failed requests",
-)
-@click.option(
-    "--max_parallel",
-    type=int,
-    default=1,
-    help="Maximum number of parallel requests",
-)
+@click.option("--model_id", type=str, default="claude-3.7-sonnet", help="Model for evaluation of critical steps")
+@click.option("--max_retries", type=int, default=1, help="Maximum retries for failed requests")
+@click.option("--max_parallel", type=int, default=1, help="Maximum number of parallel requests")
 @click.option("--verbose", is_flag=True, help="Enable verbose logging")
 @click.option(
     "--start_idx",
@@ -248,6 +233,7 @@ async def evaluate_critical_steps(
     default=None,
     help="End index for responses to evaluate (exclusive)",
 )
+
 def main(
     input_yaml: str,
     model_id: str,

@@ -11,42 +11,18 @@ from src.utils import setup_logging
 
 @click.command()
 @click.argument("responses_path", type=click.Path(exists=True))
-@click.option(
-    "--model_id",
-    type=str,
-    default="claude-3.7-sonnet",
-    help="Model to use for splitting CoT responses",
-)
-@click.option(
-    "--max_retries",
-    type=int,
-    default=1,
-    help="Maximum retries for splitting CoT responses with the each model",
-)
-@click.option(
-    "--max_parallel",
-    type=int,
-    default=1,
-    help="Maximum number of parallel requests. If not set, it will use the Anthropic API limits.",
-)
+@click.option("--model_id", type=str, default="claude-3.7-sonnet", help="Model to use for splitting CoT responses")
+@click.option("--max_retries", type=int, default=1, help="Maximum number of retries for splitting")
+@click.option("--max_parallel", type=int, default=1, help="Maximum number of parallel requests")
 @click.option(
     "--max_new_tokens_override",
     type=int,
     default=None,
     help="Override the max_new_tokens parameter for the model. If not set, will use 1.25x the original max_new_tokens.",
 )
-@click.option(
-    "--prefix",
-    type=int,
-    default=None,
-    help="Only process the first N items in the batch. If not set, process all items.",
-)
-@click.option(
-    "-v",
-    "--verbose",
-    is_flag=True,
-    help="Increase verbosity (can be used multiple times)",
-)
+@click.option("--prefix", type=int, default=None, help="Only process the first N items in the batch. If not set, process all items.")
+@click.option("--verbose", is_flag=True, help="Increase verbosity")
+
 def main(
     responses_path: str,
     model_id: str,
