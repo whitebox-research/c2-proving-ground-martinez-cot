@@ -1,4 +1,4 @@
-## Investigating Unfaithful Shortcuts in the Chain-of-Thought Reasoning of Multimodal Inputs
+## Investigating Unfaithful Shortcuts in the Chain-of-Thought Reasoning for Multimodal Inputs
 
 
 ### Report prepared for the [Whitebox Research](https://www.whiteboxresearch.org/) Interpretability Fellowship 2025 - Project Phase
