@@ -221,32 +221,12 @@ async def evaluate_model_responses(
 
 @click.command()
 @click.argument("input_yaml", type=click.Path(exists=True))
-@click.option(
-    "--model_id",
-    type=str,
-    default="claude-3.7-sonnet",
-    help="Models to check the rollouts",
-)
-@click.option(
-    "--max_retries",
-    type=int,
-    default=1,
-    help="Maximum retries for failed requests",
-)
-@click.option(
-    "--max_parallel",
-    type=int,
-    default=1,
-    help="Maximum number of parallel requests",
-)
-@click.option("-v", "--verbose", is_flag=True, help="Enable verbose logging")
-@click.option(
-    "--prefix",
-    "-prefix",
-    type=int,
-    default=None,
-    help="Only process the first N answers",
-)
+@click.option("--model_id", type=str, default="claude-3.7-sonnet", help="Models to check the rollouts")
+@click.option("--max_retries", type=int, default=1, help="Maximum retries for failed requests")
+@click.option("--max_parallel", type=int, default=1, help="Maximum number of parallel requests")
+@click.option("--verbose", is_flag=True, help="Enable verbose logging")
+@click.option("--prefix", type=int, default=None, help="Only process the first N items")
+
 def main(
     input_yaml: str,
     model_id: str,
@@ -256,7 +236,7 @@ def main(
     prefix: Optional[int],
 ):
     # Set up logging to both console and file
-    log_path = setup_logging(verbose, "putnam1_check_correct")
+    log_path = setup_logging(verbose, "putnam1_check_rollouts")
 
     input_path = Path(input_yaml)
 
@@ -272,13 +252,10 @@ def main(
         )
     )
 
-    path1 = save_all_results(
-        results, model_id=model_id, correct_only=False, path=input_path
-    )
+    path1 = save_all_results(results, model_id=model_id, correct_only=False, path=input_path)
     logging.info(f"Saved verbose results to {path1}")
-    path2 = save_all_results(
-        results, model_id=model_id, correct_only=True, path=input_path
-    )
+
+    path2 = save_all_results(results, model_id=model_id, correct_only=True, path=input_path)
     logging.info(f"Saved correct-only results to {path2}")
 
 

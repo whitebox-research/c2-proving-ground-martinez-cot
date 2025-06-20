@@ -23,6 +23,8 @@ from src.typing import (
 )
 from src.utils import setup_logging
 
+PROMPT_STEP_1 = "Solve this math problem step-by-step, reasoning first and then producing an answer.\n\n"
+
 
 def load_putnam_results_as_df(yaml_path: Path) -> pd.DataFrame:
     """Load Putnam results from YAML into a pandas DataFrame."""
@@ -149,12 +151,11 @@ async def generate_rollouts(
     dataset: MathQsDataset,
     model_id: str,
     max_retries: int,
-    max_parallel: Optional[int],
-    prefix: Optional[int] = None,
-    preamble: str = "",
-    is_text: bool = False
+    max_parallel: int,
+    prefix: int,
+    is_text: bool,
 ) -> CotResponses:
-    """Generate rollouts for each problem in the dataset."""
+    """Generate rollouts for each problem in the dataset"""
 
     processor = create_processor(
         model_id=model_id,
@@ -170,7 +171,7 @@ async def generate_rollouts(
     batch_items = [
         (
             q,
-            f"{preamble}",
+            f"{PROMPT_STEP_1}",
         )
         for q in questions
     ]  # TODO(arthur): Fully verify we used this format for all
@@ -211,42 +212,13 @@ async def generate_rollouts(
 
 @click.command()
 @click.argument("input_yaml", type=click.Path(exists=True))
-@click.option(
-    "--model_id",
-    type=str,
-    default="gemini-2.0-flash-thinking-",
-    help="Model for generating rollouts",
-)
-@click.option(
-    "--max_retries",
-    type=int,
-    default=1,
-    help="Maximum retries for failed requests",
-)
-@click.option(
-    "--max_parallel",
-    type=int,
-    default=1,
-    help="Maximum number of parallel requests",
-)
-@click.option(
-    "--prefix",
-    type=int,
-    default=None,
-    help="Only process N problems",
-)
-@click.option(
-    "--preamble",
-    type=str,
-    default="Solve this math problem step-by-step, reasoning first and then producing an answer.\n\n",
-    help="Preamble text to add before each problem",
-)
+@click.option("--model_id", type=str, default="gemini-2.0-flash-thinking-", help="Model for generating rollouts")
+@click.option("--max_retries", type=int, default=1, help="Maximum retries for failed requests")
+@click.option("--max_parallel", type=int, default=1, help="Maximum number of parallel requests")
+@click.option("--prefix", type=int, default=None, help="Only process N problems")
 @click.option("--verbose", is_flag=True, help="Enable verbose logging")
-@click.option(
-    "--text",
-    is_flag=True,
-    help="Use text inputs (default is to use image inputs)",
-)
+@click.option("--text", is_flag=True, help="Use text inputs (default is to use image inputs)")
+
 def main(
     input_yaml: str,
     model_id: str,
@@ -254,7 +226,6 @@ def main(
     max_parallel: Optional[int],
     prefix: Optional[int],
     verbose: bool,
-    preamble: str,
     text:bool = False,
 ):
     """Generate rollouts for Putnam problems"""
@@ -267,17 +238,15 @@ def main(
     df = load_putnam_results_as_df(input_path)
     dataset = create_putnam_dataset(df)
 
-    logging.info(f"Running prompt:\n {preamble}")
     # Generate rollouts
     results = asyncio.run(
         generate_rollouts(
             dataset=dataset,
             model_id=model_id,
-            preamble=preamble,
             max_retries=max_retries,
             max_parallel=max_parallel,
             prefix=prefix,
-            is_text=text,  # Use text-only if specified
+            is_text=text,
         )
     )
 
