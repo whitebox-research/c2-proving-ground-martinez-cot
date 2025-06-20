@@ -1,5 +1,6 @@
 ## Investigating Unfaithful Shortcuts in the Chain-of-Thought Reasoning of Multimodal Inputs
 
+
 ### Report prepared for the [Whitebox Research](https://www.whiteboxresearch.org/) Interpretability Fellowship 2025 - Project Phase
 Recent studies show that Chain-of-Thought (CoT) reasoning by Large Language Models isn't always faithful, the reasoning steps don't necessarily reflect actual internal processes. This poses challenges for AI safety and interpretability. This report examines unfaithful shortcuts in multimodal models' CoT reasoning when presented with equivalent visual and textual tasks. We evaluate Gemini 2.0 Flash Experimental and Claude 3.7 Sonnet using paired visual/textual versions of PutnamBench math problems to test reasoning consistency and faithfulness across modalities.
 
@@ -7,40 +8,20 @@ Please see the [report](https://github.com/whitebox-research/c2-proving-ground-m
 
 Prepared by Ishita Pal, Aditya Thomas & Angel Martinez. Mentored by Angel Martinez.
 
+
+### Results
+
+We find that of the models tested, Google Gemini 2.0 Flash Experimental (with thinking enabled) and Anthropic Claude 3.7 Sonnet (with extended thinking), there was no difference in the accuracy of the results for images versus the text inputs (see section 3 Results oand Discussion of our report) for our dataset.
+
+![Faithful Metric - Claude](/plots/claude_unfaithfulness_plot.png?raw=true "Faithful Metric - Claude") 
+
+![Faithful Metric - Gemini](/plots/gemini_unfaithfulness_plot.png?raw=true "Faithful Metric - Gemini") 
+
+The distribution of our “Faithful Metric” across the two modes for the two models is similar. The scores concentrating around 2 or 3 for both models suggest some degree of reliance on partial shortcuts. However, complete failures or perfect reasoning were also shown to be uncommon. Severely unfaithful steps are rare and so are highly faithful ones. More large-scale analysis is needed to validate these trends in various tasks and domains.
+
 ### Usage
 
-Installation:
-
-`uv pip install -r requirements.txt`
-
-Data processing pipeline:
-
-### Rollout Generation
-
-#### For Images
-
-```python -m scripts.putnamlike0_images_save_rollouts data\dataset\image_pipeline.yaml --model_id "anthropic/claude-3.7-sonnet_20k" --max_retries=5 --max_parallel=1 --verbose```
-
-#### For Texts
-
-```python -m scripts.putnamlike0_save_rollouts data\dataset\image_pipeline.yaml --model_id "anthropic/claude-3.7-sonnet_20k" --max_retries=5 --max_parallel=1 --verbose```
-
-#### Correctness Evaluation
-
-```python -m scripts.putnamlike1_are_rollouts_correct data\dataset\cot_responses\claude-3.7-sonnet_20k_v0.yaml --model_id "anthropic/claude-3.7" --max_retries=5 --max_parallel=1 --verbose ```
-
-#### Splitting CoT into Steps
-
-```python -m scripts.putnamlike2_split_cots data\dataset\cot_responses\claude-3.7-sonnet_20k_v0_just_correct_responses.yaml --model_id "anthropic/claude-3.7-sonnet" --max_retries=2 --max_parallel=1 --verbose```
-
-#### Critical Step determination
-
-```python -m scripts.putnamlike2p5_critical_steps_eval data\dataset\cot_responsesclaude-3.7-sonnet_20k_v0_just_correct_responses_splitted.yaml --model_id "anthropic/claude-3.7-sonnet" --max_retries=2 --max_parallel=1 --verbose  ```
-
-
-#### Faithfulness Evaluation
-
-```python -m scripts.putnamlike3_main_faithfulness_eval data\dataset\cot_responses\claude-3.7-sonnet_20k_v0_just_correct_responses_splitted.yaml  --critical_steps_yaml data\dataset\cot_responses\claude-3.7-sonnet_20k_v0_just_correct_responses_splitted_anthropic_slash_claude-3_dot_7-sonnet_critical_steps.yaml --model_id "anthropic/claude-3.7-sonnet_20k" --max_retries=2 --max_parallel=1 --verbose ```
+For how to install and run the scripts, please see Append D of the [report](https://github.com/whitebox-research/c2-proving-ground-martinez-cot/blob/main/report.pd).
 
 
 ### References
