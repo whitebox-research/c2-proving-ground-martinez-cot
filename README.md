@@ -13,11 +13,13 @@ Prepared by Ishita Pal, Aditya Thomas & Angel Martinez. Mentored by Angel Martin
 
 We find that of the models tested, Google Gemini 2.0 Flash Experimental (with thinking enabled) and Anthropic Claude 3.7 Sonnet (with extended thinking), there was no difference in the accuracy of the results for images versus the text inputs (see section 3 Results oand Discussion of our report) for our dataset.
 
+![Model Performance on the Dataset](/plots/model_performance.png?raw=true "Model Performance on the Dataset") 
+
+The distribution of our “Faithful Metric” across the two modes for the two models is similar. The scores concentrating around 2 or 3 for both models suggest some degree of reliance on partial shortcuts. However, complete failures or perfect reasoning were also shown to be uncommon. Severely unfaithful steps are rare and so are highly faithful ones. More large-scale analysis is needed to validate these trends in various tasks and domains.
+
 ![Faithful Metric - Claude](/plots/claude_unfaithfulness_plot.png?raw=true "Faithful Metric - Claude") 
 
 ![Faithful Metric - Gemini](/plots/gemini_unfaithfulness_plot.png?raw=true "Faithful Metric - Gemini") 
-
-The distribution of our “Faithful Metric” across the two modes for the two models is similar. The scores concentrating around 2 or 3 for both models suggest some degree of reliance on partial shortcuts. However, complete failures or perfect reasoning were also shown to be uncommon. Severely unfaithful steps are rare and so are highly faithful ones. More large-scale analysis is needed to validate these trends in various tasks and domains.
 
 ### Usage
 
