@@ -15,8 +15,6 @@ from src.anthropic_utils import ANBatchProcessorWithImage, ANRateLimiter
 from src.google_utils import GOBatchProcessor, GORateLimiter
 from src.typing import (
     CotResponses,
-    DefaultSamplingParams,
-    MathDatasetParams,
     MathQsDataset,
     MathQuestion,
     MathResponse,
@@ -71,15 +69,9 @@ def create_putnam_dataset(df: pd.DataFrame) -> MathQsDataset:
                 name=row["problem_name"],
                 problem=row["informal_statement"],
                 solution=row["informal_solution"],
-                image_path=f"data/dataset/putnam_problems_images/{row['problem_name']}_stmt.png", #TODO: Add model usage tokens and API response time
             )
-            for _, row in df.iterrows() if os.path.exists(f"data/dataset/putnam_problems_images/{row['problem_name']}_stmt.png")
+            for _, row in df.iterrows()
         ],
-        params=MathDatasetParams(
-            description="Putnam Competition Problems",
-            id="filtered_putnambench",
-            pre_id=None,
-        ),
     )
 
 
@@ -191,23 +183,18 @@ async def generate_rollouts(
 
         thinking, answer = thinking_and_answer
 
-        responses_by_qid[question.name] = {
-            str(uuid.uuid4())[:8]: MathResponse(
+        responses_by_qid[question.name] = MathResponse(
                 name=question.name,
                 problem=question.problem,
-                image_path=question.image_path,
                 solution=question.solution,
                 model_thinking=thinking,
                 model_answer=[answer],  # Unsplit
-            )
-        }
+        )
 
     return CotResponses(
         responses_by_qid=responses_by_qid,
         model_id=model_id,
-        instr_id="instr-v0",
-        ds_params=dataset.params,
-        sampling_params=DefaultSamplingParams(),
+        description="PutnamBench Rollouts",
     )
 
 @click.command()
@@ -230,7 +217,7 @@ def main(
 ):
     """Generate rollouts for Putnam problems"""
     # Set up logging to both console and file
-    log_path = setup_logging(verbose, "putnam0_save_rollouts")
+    log_path = setup_logging(verbose, "pb1_generate_rollouts")
     logging.info(f"Loading dataset from {input_yaml}")
 
     # Load and prepare dataset

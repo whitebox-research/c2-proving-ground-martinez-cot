@@ -99,6 +99,12 @@ def get_token_usage(model_id: str, usage) -> str:
         if usage.thoughts_token_count is None: token_thoughts = 0
         else: token_thoughts = usage.thoughts_token_count
 
-        return f"Total token usage: {token_total}, Prompt tokens: {token_prompt}, Thoughts tokens: {token_thoughts}"
+        return f"Total tokens: {token_total}, Prompt tokens: {token_prompt}, Thoughts tokens: {token_thoughts}"
+    
+    elif "claude" in model_id:
+        token_total = usage.input_tokens + usage.output_tokens
+
+        return f"Total tokens: {token_total}"
+    
     else:
         return "Unknown model type"
