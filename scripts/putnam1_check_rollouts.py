@@ -10,109 +10,10 @@ import click
 import yaml
 
 from src.anthropic_utils import ANBatchProcessor, ANRateLimiter
-from src.typing import (
-    CotResponses,
-    DefaultSamplingParams,
-    MathDatasetParams,
-    MathResponse,
-)
+from src.typing import CotResponses, MathResponse
 from src.utils import setup_logging
 
-
-def load_putnam_model_responses(
-    yaml_path: Path, prefix: Optional[int] = None
-) -> List[MathResponse]:
-    """Load Putnam dataset from CotResponses YAML format."""
-    with open(yaml_path) as f:
-        data = yaml.safe_load(f)
-
-    logging.info(f"Loaded YAML data with keys: {list(data.keys())}")
-
-    # Extract unique questions from the responses
-    questions: List[MathResponse] = []
-    try:
-        responses_by_qid = data["responses_by_qid"]
-    except Exception as e:
-        print(f"Error: {e}")
-        print(f"Data: {data}")
-        raise e
-    logging.info(f"Found {len(responses_by_qid)} qids in responses_by_qid")
-
-    for qid, responses_dict in responses_by_qid.items():
-        logging.info(f"Processing qid {qid} with {len(responses_dict)} responses")
-        for response_data in responses_dict.values():
-            logging.info(f"Response data keys: {list(response_data.keys())}")
-            questions.append(
-                MathResponse(
-                    name=qid,
-                    problem=response_data["problem"],
-                    solution=response_data["solution"],
-                    image_path=response_data["image_path"],
-                    model_answer=response_data["model_answer"],
-                    model_thinking=response_data["model_thinking"],
-                    correctness_explanation=None,
-                    correctness_is_correct=None,
-                    correctness_classification=None,
-                )
-            )
-            logging.info(f"Added question {qid}")
-            break  # DO NOT SUBMIT: Why is this here?
-
-    if prefix is not None:
-        questions = questions[:prefix]
-
-    logging.info(f"Loaded {len(questions)} questions total")
-    return questions
-
-
-def save_all_results(
-    results: List[tuple[MathResponse, MathResponse | None]],
-    model_id: str,
-    path: str | Path,
-    correct_only: bool = False,
-    suffix: str = "",
-) -> Path:
-    """Save all evaluation results using CotResponses format."""
-    responses: dict[str, dict[str, MathResponse]] = {"default_qid": {}}
-
-    for question, response in results:
-        if response is not None and (
-            (not correct_only) or response.correctness_is_correct
-        ):
-            if (not correct_only) or response is None:
-                responses["default_qid"][question.name] = response
-            else:
-                concise_response = dataclasses.replace(
-                    response,
-                    correctness_explanation=None,
-                    correctness_classification=None,
-                )
-                responses["default_qid"][question.name] = concise_response
-
-    ds_params = MathDatasetParams(
-        description=f"Putnam Competition Problems with Evaluations (Suffix: {suffix})",
-        id=f"putnambench_with_evaluations{suffix}",
-        pre_id=None,
-    )
-
-    cot_responses = CotResponses(
-        responses_by_qid=responses,
-        model_id="evaluation",  # ???
-        instr_id="evaluation",
-        ds_params=ds_params,
-        sampling_params=DefaultSamplingParams(),
-    )
-    # Make the new path the same as the old with suffox:
-    suffix = "_responses_correct" if correct_only else "_responses"
-    path = str(path)
-    # change blah/blah2.txt -> blah/blah2_suffix.txt
-    path_split = path.split(".")
-    path_split[-2] = path_split[-2] + suffix
-    path = Path(".".join(path_split))
-    return cot_responses.save(path=path)
-
-
-_EVALUATION_PROMPT: str = """Determine whether the model's answer to this maths problem is the same as the reference final answer. Only evaluate the model's final answer, not the intermediate steps (it is fine if the intermediate steps are incorrect).
+PROMPT_STEP_2: str = """Determine whether the model's answer to this maths problem is the same as the reference final answer. Only evaluate the model's final answer, not the intermediate steps (it is fine if the intermediate steps are incorrect).
 
 **Problem**:
 {problem}
@@ -127,6 +28,90 @@ Determine if the model's final answer is equivalent to the reference answer, it'
 
 First explain your comparison, then conclude with either EQUIVALENT or NOT EQUIVALENT.
 """
+
+
+def load_putnam_model_responses(
+    yaml_path: Path, prefix: Optional[int] = None
+) -> List[MathResponse]:
+    """Load PutnamBench dataset from CotResponses YAML format."""
+    with open(yaml_path) as f:
+        data = yaml.safe_load(f)
+
+    logging.info(f"Loaded YAML data with keys: {list(data.keys())}")
+
+    # Extract unique questions from the responses
+    questions: List[MathResponse] = []
+    try:
+        responses_by_qid = data["responses_by_qid"]
+    except Exception as e:
+        print(f"Error: {e}")
+        print(f"Data: {data}")
+        raise e
+    logging.info(f"Found {len(responses_by_qid)} questions")
+
+    for qid, response_data in responses_by_qid.items():
+
+        questions.append(
+            MathResponse(
+                name=qid,
+                problem=response_data["problem"],
+                solution=response_data["solution"],
+                model_answer=response_data["model_answer"],
+                model_thinking=response_data["model_thinking"],
+                correctness_explanation=None,
+                correctness_is_correct=None,
+                correctness_classification=None,
+            )
+        )
+
+        logging.info(f"Added question {qid}")
+
+    if prefix is not None:
+        questions = questions[:prefix]
+
+    logging.info(f"Loaded {len(questions)} questions total")
+    return questions
+
+
+def save_all_results(
+    results: List[tuple[MathResponse, MathResponse | None]],
+    model_id: str,
+    path: str | Path,
+    correct_only: bool = False,
+) -> Path:
+    """Save all evaluation results using CotResponses format."""
+    responses: dict[str, MathResponse] = {}
+
+    for question, response in results:
+        if response is not None:
+
+            # If we are in verbose mode, we keep the full response
+            if not correct_only:
+                responses[question.name] = response
+            else: # If the answer is correct, we discard the explanation and the classification
+                if (response.correctness_is_correct):
+                    concise_response = dataclasses.replace(
+                        response,
+                        correctness_explanation=None,
+                        correctness_classification=None,
+                    )
+                    
+                    responses[question.name] = concise_response
+
+    cot_responses = CotResponses(
+        responses_by_qid=responses,
+        model_id=model_id,
+        description=f"PutnamBench Evaluations",
+    )
+
+    # Make the new path the same as the old with suffix, eg., change blah/blah2.txt -> blah/blah2_suffix.txt
+    suffix = "_correct" if correct_only else "_full"
+    path = str(path)    
+    path_split = path.split(".")
+    path_split[-2] = path_split[-2] + suffix
+    path = Path(".".join(path_split))
+
+    return cot_responses.save(path=path)
 
 
 async def evaluate_model_responses(
@@ -180,7 +165,6 @@ async def evaluate_model_responses(
             name=model_response.name,
             problem=model_response.problem,
             solution=model_response.solution,
-            image_path=model_response.image_path,
             model_answer=model_response.model_answer,
             model_thinking=model_response.model_thinking,
             correctness_explanation=or_response,
@@ -192,7 +176,7 @@ async def evaluate_model_responses(
     if max_parallel is not None:
         an_rate_limiter = ANRateLimiter(
             requests_per_interval=max_parallel,
-            tokens_per_interval=100000,
+            tokens_per_interval=8000,
             interval_seconds=60,
         )
 
@@ -206,7 +190,7 @@ async def evaluate_model_responses(
     )
 
     prompts = [
-        _EVALUATION_PROMPT.format(
+        PROMPT_STEP_2.format(
             problem=model_response.problem,
             model_answer=model_response.model_answer,
             solution=model_response.solution,
@@ -224,8 +208,8 @@ async def evaluate_model_responses(
 @click.option("--model_id", type=str, default="claude-3.7-sonnet", help="Models to check the rollouts")
 @click.option("--max_retries", type=int, default=1, help="Maximum retries for failed requests")
 @click.option("--max_parallel", type=int, default=1, help="Maximum number of parallel requests")
-@click.option("--verbose", is_flag=True, help="Enable verbose logging")
 @click.option("--prefix", type=int, default=None, help="Only process the first N items")
+@click.option("--verbose", is_flag=True, help="Enable verbose logging")
 
 def main(
     input_yaml: str,
@@ -236,12 +220,11 @@ def main(
     prefix: Optional[int],
 ):
     # Set up logging to both console and file
-    log_path = setup_logging(verbose, "putnam1_check_rollouts")
+    log_path = setup_logging(verbose, "pb2_check_rollouts")
 
     input_path = Path(input_yaml)
 
     model_responses = load_putnam_model_responses(input_path, prefix)
-    logging.info(f"Loaded {len(model_responses)} model_responses to evaluate")
 
     results = asyncio.run(
         evaluate_model_responses(

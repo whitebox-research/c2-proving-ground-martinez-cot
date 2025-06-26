@@ -20,7 +20,7 @@ from dotenv import load_dotenv
 # from src.api_utils.batch_processor import (BatchItem, BatchProcessor, BatchResult)
 # from src.typing import (AnthropicBatchInfo, DatasetParams, QuestionResponseId, SamplingParams)
 from src.utils import (BatchItem, BatchProcessor, BatchResult)
-from src.utils import setup_logging
+from src.utils import setup_logging, get_token_usage
 
 load_dotenv()
 
@@ -206,7 +206,7 @@ def get_budget_tokens(model_id: str) -> int:
             )
 
 
-async def generate_an_response_async(
+async def generate_a_response_async(
     prompt: str,
     item: BatchItem,
     model_id: str,
@@ -235,21 +235,17 @@ async def generate_an_response_async(
         Processed result or None if all attempts failed
     """
     logging.info(f"generate_an_response_async called with initial model_id: {model_id}")
-    logging.info(f"Prompt length: {len(prompt)}")
 
     is_thinking_model = is_anthropic_thinking_model(model_id)
     thinking_budget_tokens = get_budget_tokens(model_id) if is_thinking_model else None
     logging.info(f"Is thinking model: {is_thinking_model}, Budget tokens: {thinking_budget_tokens}")
 
-    # model_id = model_id.split("/")[-1].split("_")[0]
     model_id = ANTHROPIC_MODEL_ALIASES[model_id]
 
     for attempt in range(max_retries):
         try:
             if attempt > 0:
-                logging.info(
-                    f"Retry attempt {attempt} of {max_retries} for generating a response"
-                )
+                logging.info(f"Retry attempt {attempt} of {max_retries} for generating a response")
 
             if rate_limiter:
                 await rate_limiter.acquire_with_backoff(prompt, model_id)
@@ -282,7 +278,7 @@ async def generate_an_response_async(
             end_time = time.perf_counter()
 
             if rate_limiter:
-                logging.info(f"Got usage: {an_response.usage}")
+                logging.info(f"Token usage: {get_token_usage(model_id, an_response.usage)}")
                 rate_limiter.update_token_usage(an_response.usage.output_tokens)
 
             if (
@@ -293,9 +289,7 @@ async def generate_an_response_async(
                 logging.info("Invalid response content")
                 continue
 
-            if len(an_response.content) == 1 and isinstance(
-                an_response.content[0], TextBlock
-            ):
+            if len(an_response.content) == 1 and isinstance(an_response.content[0], TextBlock):
                 result = get_result_from_response(an_response.content[0].text)
             elif (
                 len(an_response.content) == 2
@@ -326,21 +320,15 @@ async def generate_an_response_async(
                 logging.info("Found valid result!")
                 return result
 
-            logging.info(
-                f"Invalid result on attempt {attempt + 1} for model {model_id}, retrying..."
-            )
+            logging.info(f"Invalid result on attempt {attempt + 1} for model {model_id}, retrying...")
             continue
 
         except Exception as e:
             if attempt == max_retries:
-                logging.warning(
-                    f"Failed to process response after {max_retries} retries "
-                    f"for model {model_id}: {str(e)}"
-                )
+                logging.warning(f"Failed to process response after {max_retries} retries for model {model_id}: {str(e)}")
                 return None
-            logging.warning(
-                f"Error on attempt {attempt + 1} for model {model_id}: {str(e)}, retrying..."
-            )
+            
+            logging.warning(f"Error on attempt {attempt + 1} for model {model_id}: {str(e)}, retrying...")
             continue
 
     return None
@@ -552,9 +540,7 @@ class ANBatchProcessor(BatchProcessor[BatchItem, BatchResult]):
             model_id.split("/")[-1].startswith(model) for model in supported_models
         )
 
-    async def process_batch(
-        self, items: list[tuple[BatchItem, str]]
-    ) -> list[tuple[BatchItem, BatchResult | None]]:
+    async def process_batch(self, items: list[tuple[BatchItem, str]]) -> list[tuple[BatchItem, BatchResult | None]]:
         """Process a batch of items with their corresponding prompts.
 
         Args:
@@ -563,8 +549,7 @@ class ANBatchProcessor(BatchProcessor[BatchItem, BatchResult]):
         Returns:
             List of tuples containing (item, result)
         """
-        if len(items) == 0:
-            return []
+        if len(items) == 0: return []
 
         if self.rate_limiter is None:
             limits = get_anthropic_limits()
@@ -574,10 +559,8 @@ class ANBatchProcessor(BatchProcessor[BatchItem, BatchResult]):
                 interval_seconds=60,
             )
 
-        async def process_single(
-            item: BatchItem, prompt: str
-        ) -> tuple[BatchItem, BatchResult | None]:
-            result = await generate_an_response_async(
+        async def process_single(item: BatchItem, prompt: str) -> tuple[BatchItem, BatchResult | None]:
+            result = await generate_a_response_async(
                 prompt=prompt,
                 item=item,
                 model_id=self.model_id,
@@ -585,9 +568,7 @@ class ANBatchProcessor(BatchProcessor[BatchItem, BatchResult]):
                 temperature=self.temperature,
                 max_new_tokens=self.max_new_tokens,
                 max_retries=self.max_retries,
-                get_result_from_response=lambda response: self.process_response(
-                    response, item
-                ),
+                get_result_from_response=lambda response: self.process_response(response, item),
                 rate_limiter=self.rate_limiter,
             )
             return (item, result)
@@ -925,7 +906,7 @@ class AnthropicBatchProcessor(Generic[T, U]):
             # The original code was returning result, metrics_data but generate_an_response_async only returns result
             # Assuming metrics_data is not used downstream or was an error in previous version.
             # If metrics_data is needed, generate_an_response_async needs to be updated.
-            raw_result = await generate_an_response_async(
+            raw_result = await generate_a_response_async(
                 prompt=prompt,
                 item=item,
                 model_id=self.model_id,

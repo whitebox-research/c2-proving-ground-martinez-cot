@@ -162,7 +162,13 @@ async def generate_response_async(
                 )
             
             if not is_text:
-                image = Image.open(item.image_path)                
+                image_path=f"data/dataset/putnam_problems_images/{item.name}_stmt.png"
+                if os.path.exists(image_path):
+                    image = Image.open(image_path)
+                else:
+                    logging.warning(f"Image not found for {item.name}, skipping...")
+                    return None
+                          
                 create_params["contents"] = [ image ]
             else:
                 create_params["contents"] = [ item.problem ]
@@ -180,7 +186,7 @@ async def generate_response_async(
                 logging.info("Invalid response content")
                 continue
 
-            logging.info(f"Got usage: {get_token_usage(model_id, go_response.usage_metadata)}")
+            logging.info(f"Token usage: {get_token_usage(model_id, go_response.usage_metadata)}")
             
             if rate_limiter: rate_limiter.update_token_usage(go_response.usage_metadata.total_token_count)
 
@@ -198,8 +204,7 @@ async def generate_response_async(
                 return result
 
             logging.info(f"Invalid result on attempt {attempt + 1} for model {model_id}, retrying...")
-
-            attempt += 1
+            
             continue
 
         except Exception as e:
@@ -208,8 +213,7 @@ async def generate_response_async(
                 return None
             
             logging.warning(f"Error on attempt {attempt + 1} for model {model_id}: {str(e)}, retrying...")
-            
-            attempt += 1
+
             continue
 
     return None
