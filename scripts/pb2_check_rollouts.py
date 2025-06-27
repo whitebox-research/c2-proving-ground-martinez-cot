@@ -215,9 +215,9 @@ def main(
     input_yaml: str,
     model_id: str,
     max_retries: int,
-    max_parallel: Optional[int],
-    verbose: bool,
+    max_parallel: int,
     prefix: Optional[int],
+    verbose: bool,
 ):
     # Set up logging to both console and file
     log_path = setup_logging(verbose, "pb2_check_rollouts")

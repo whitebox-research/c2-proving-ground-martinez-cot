@@ -222,7 +222,7 @@ def main(
 ):
     """Evaluate which steps are critical in the CoT response"""
     # Set up logging to both console and file
-    log_path = setup_logging(verbose, "pb4_evaluate_critical_steps")
+    log_path = setup_logging(verbose, "pb4_eval_critical_steps")
 
     input_path = Path(input_yaml)
     responses = SplitCotResponses.load(input_path)

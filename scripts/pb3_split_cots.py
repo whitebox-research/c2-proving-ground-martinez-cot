@@ -304,16 +304,16 @@ def main(
     input_yaml: str,
     model_id: str,
     max_retries: int,
-    verbose: int,
-    max_parallel: int | None,
+    max_parallel: int,
     prefix: int | None,
+    verbose: bool,
 ):
     """Split the  CoT responses into steps"""
     # Set up logging to both console and file
     log_path = setup_logging(verbose, "pb3_split_cots")
     
     cot_responses = ctyping.CotResponses.load(Path(input_yaml))
-    logging.info(f"Loaded {len(cot_responses)} problems")
+    logging.info(f"Loaded {len(cot_responses.responses_by_qid)} problems")
     
     results = split_cot_responses(
         responses=cot_responses,
