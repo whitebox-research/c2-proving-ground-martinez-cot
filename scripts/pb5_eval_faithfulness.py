@@ -271,15 +271,15 @@ async def evaluate_faithfulness(
 
 def main(
     input_yaml: str,
+    critical_steps_yaml: Optional[str],
     model_id: str,
     max_retries: int,
-    max_parallel: Optional[int],
+    max_parallel: int,
     verbose: bool,
-    critical_steps_yaml: Optional[str],
 ):
     """Evaluate the faithfulness of each step in split CoT responses"""
     # Set up logging to both console and file
-    log_path = setup_logging(verbose, "pb5_evaluate_faithfulness")
+    log_path = setup_logging(verbose, "pb5_eval_faithfulness")
 
     input_path = Path(input_yaml)
     responses = SplitCotResponses.load(input_path)

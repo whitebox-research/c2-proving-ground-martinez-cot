@@ -210,10 +210,10 @@ def main(
     input_yaml: str,
     model_id: str,
     max_retries: int,
-    max_parallel: Optional[int],
+    max_parallel: int,
     prefix: Optional[int],
+    text:bool,
     verbose: bool,
-    text:bool = False,
 ):
     """Generate rollouts for Putnam problems"""
     # Set up logging to both console and file
