@@ -3,9 +3,9 @@
 
 ### Report prepared for the [Whitebox Research](https://www.whiteboxresearch.org/) Interpretability Fellowship 2025 - Project Phase
 Recent studies show that Chain-of-Thought (CoT) reasoning by Large Language Models isn't always faithful; that the reasoning steps don't necessarily reflect actual internal processes. Simultaneously, there is a rapid uptake of multimodal models that
-integrate both visual and textual information. This poses additional challenges for interpretability and AI safety. This report examines unfaithful shortcuts in multimodal models' CoT reasoning when presented with semantically equivalent visual and textual tasks. 
+integrate both visual and textual information. This poses additional challenges for interpretability and AI safety.
 
-We evaluate Gemini 2.0 Flash Experimental and Claude 3.7 Sonnet using paired, semantically equivalent visual and textual versions of PutnamBench math problems to test the faithfulness of reasoning and performance across modalities.
+This report examines unfaithful shortcuts in multimodal models' CoT reasoning when presented with semantically equivalent visual and textual tasks. We evaluate Gemini 2.0 Flash Experimental and Claude 3.7 Sonnet using paired, semantically equivalent visual and textual versions of PutnamBench math problems to test the faithfulness of reasoning and performance across modalities.
 
 Please see the [report](https://github.com/whitebox-research/c2-proving-ground-martinez-cot/blob/main/report.pdf) for more details.
 
@@ -24,12 +24,17 @@ The distribution of our “Faithful Metric” across the two modes for the two m
 
 ![Faithful Metric - Gemini](/plots/gemini_unfaithfulness_plot.png?raw=true "Faithful Metric - Gemini") 
 
+
 ### Usage
 
 For how to install and run the scripts, please see Append D of the [report](https://github.com/whitebox-research/c2-proving-ground-martinez-cot/blob/main/report.pd).
 
 
-### References
+### Acknowledgements
+We gratefully acknowledge the support of the Interpretability Fellowship from WhiteBox Research, which provided both training in interpretability and evaluation methodologies, as well as financial support for this project. We also thank Angel Martinez for conceptualizing the project and providing guidance throughout all stages of its development.
+
+
+### References (partial)
 Arcuschin, I., Janiak, J., Krzyzanowski, R., Rajamanoharan, S., Nanda, N., & Conmy, A. (2025). Chain-of-thought reasoning in the wild is not always faithful. arXiv preprint arXiv:2503.0867
 
 Tsoukalas, G., Lee, J., Jennings, J., Xin, J., Ding, M., Jennings, M., ... & Chaudhuri, S. (2024). Putnambench: Evaluating neural theorem-provers on the putnam mathematical competition. arXiv preprint arXiv:2407.11214.
