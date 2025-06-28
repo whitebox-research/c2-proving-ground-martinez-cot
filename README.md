@@ -1,7 +1,7 @@
 ## Investigating Unfaithful Shortcuts in the Chain-of-Thought Reasoning for Multimodal Inputs
 
 
-### Report prepared for the [Whitebox Research](https://www.whiteboxresearch.org/) Interpretability Fellowship 2025 - Project Phase
+### Report prepared for the [Whitebox Research](https://www.whiteboxresearch.org/) AI Interpretability Fellowship 2025 - Project Phase
 Chain-of-Thought (CoT) reasoning by Large Language Models is not always faithful, i.e., the reasoning steps don't necessarily reflect actual internal processes. Simultaneously, there has been a rapid uptake of multimodal models that
 integrate both visual and textual information. These systems pose new challenges and opportunities for studying CoT reasoning across modalities.
 
@@ -31,7 +31,7 @@ For how to install and run the scripts, please see Append D of the [report](http
 
 
 ### Acknowledgements
-We gratefully acknowledge the support of the Interpretability Fellowship from WhiteBox Research, which provided both training in interpretability and evaluation methodologies, as well as financial support for this project. We also thank Angel Martinez for conceptualizing the project and providing guidance throughout all stages of its development.
+We gratefully acknowledge the support of the AI Interpretability Fellowship from WhiteBox Research, which provided both training in interpretability and evaluation methodologies, as well as financial support for this project. We also thank Angel Martinez for conceptualizing the project and providing guidance throughout all stages of its development.
 
 
 ### References (partial)
