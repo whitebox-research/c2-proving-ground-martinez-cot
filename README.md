@@ -14,7 +14,7 @@ Prepared by Ishita Pal, Aditya Thomas & Angel Martinez. Mentored by Angel Martin
 
 ### Results
 
-We find that of the models tested, Google Gemini 2.0 Flash Experimental (with thinking enabled) and Anthropic Claude 3.7 Sonnet (with extended thinking), there was no difference in the accuracy of the results for images versus the text inputs (see section 3 Results oand Discussion of our report) for our dataset.
+We find that for the models tested, Google Gemini 2.0 Flash Experimental (with thinking enabled) and Anthropic Claude 3.7 Sonnet (with extended thinking), there was no difference in the accuracy of the results for the text and semantically similar image inputs (see section 3 Results and Discussion of our report).
 
 ![Model Performance on the Dataset](/plots/model_performance.png?raw=true "Model Performance on the Dataset") 
 
