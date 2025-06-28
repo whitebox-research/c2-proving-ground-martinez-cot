@@ -2,7 +2,10 @@
 
 
 ### Report prepared for the [Whitebox Research](https://www.whiteboxresearch.org/) Interpretability Fellowship 2025 - Project Phase
-Recent studies show that Chain-of-Thought (CoT) reasoning by Large Language Models isn't always faithful, the reasoning steps don't necessarily reflect actual internal processes. This poses challenges for AI safety and interpretability. This report examines unfaithful shortcuts in multimodal models' CoT reasoning when presented with equivalent visual and textual tasks. We evaluate Gemini 2.0 Flash Experimental and Claude 3.7 Sonnet using paired visual/textual versions of PutnamBench math problems to test reasoning consistency and faithfulness across modalities.
+Recent studies show that Chain-of-Thought (CoT) reasoning by Large Language Models isn't always faithful; that the reasoning steps don't necessarily reflect actual internal processes. Simultaneously, there is a rapid uptake of multimodal models that
+integrate both visual and textual information. This poses additional challenges for interpretability and AI safety. This report examines unfaithful shortcuts in multimodal models' CoT reasoning when presented with semantically equivalent visual and textual tasks. 
+
+We evaluate Gemini 2.0 Flash Experimental and Claude 3.7 Sonnet using paired, semantically equivalent visual and textual versions of PutnamBench math problems to test the faithfulness of reasoning and performance across modalities.
 
 Please see the [report](https://github.com/whitebox-research/c2-proving-ground-martinez-cot/blob/main/report.pdf) for more details.
 
