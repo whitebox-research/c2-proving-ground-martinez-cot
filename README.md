@@ -43,7 +43,7 @@ The distribution of our “Faithful Metric” across the two modes for the two m
 
 ### Usage
 
-For how to install and run the scripts, please see Append D of the [report](https://github.com/whitebox-research/c2-proving-ground-martinez-cot/blob/main/report.pd).
+For how to install and run the scripts, please see Appendix D of the [report](https://github.com/whitebox-research/c2-proving-ground-martinez-cot/blob/main/report.pd).
 
 
 ### Acknowledgements
