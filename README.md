@@ -16,7 +16,23 @@ Prepared by Ishita Pal, Aditya Thomas & Angel Martinez. Mentored by Angel Martin
 
 We find that for the models tested, Google Gemini 2.0 Flash Experimental (with thinking enabled) and Anthropic Claude 3.7 Sonnet (with extended thinking), there was no difference in the accuracy of the results for the text and semantically similar image inputs (see section 3 Results and Discussion of our report).
 
-![Model Performance on the Dataset](/plots/model_performance.png?raw=true "Model Performance on the Dataset") 
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="2">Claude 2.7 Sonnet (Thinking Mode)</th>
+      <th colspan="2">Gemini 2.0 Flash Experimental (Thinking Mode)</th>
+    </tr>
+    <tr>
+      <th>Metric</th><th>Texts</th><th>Images</th><th>Texts</th><th>Images</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Problems analysed</td><td>27</td><td>27</td><td>181</td><td>181</td></tr>
+    <tr><td>Correct responses</td><td>24</td><td>26</td><td>114</td><td>110</td></tr>
+  </tbody>
+</table>
+
 
 The distribution of our “Faithful Metric” across the two modes for the two models is similar. The scores concentrating around 2 or 3 for both models suggest some degree of reliance on partial shortcuts. However, complete failures or perfect reasoning were also shown to be uncommon. Severely unfaithful steps are rare and so are highly faithful ones. More large-scale analysis is needed to validate these trends in various tasks and domains.
 
