@@ -20,7 +20,7 @@ We find that for the models tested, Google Gemini 2.0 Flash Experimental (with t
   <thead>
     <tr>
       <th></th>
-      <th colspan="2">Claude 2.7 Sonnet (Thinking Mode)</th>
+      <th colspan="2">Claude 3.7 Sonnet (Thinking Mode)</th>
       <th colspan="2">Gemini 2.0 Flash Experimental (Thinking Mode)</th>
     </tr>
     <tr>
