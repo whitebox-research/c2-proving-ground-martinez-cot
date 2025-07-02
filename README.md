@@ -47,7 +47,7 @@ For how to install and run the scripts, please see Appendix D of the [report](ht
 
 
 ### Acknowledgements
-We gratefully acknowledge the support of the AI Interpretability Fellowship from WhiteBox Research, which provided both training in interpretability and evaluation methodologies, as well as financial support for this project. We also thank Angel Martinez for conceptualizing the project and providing guidance throughout all stages of its development.
+We are grateful to the AI Interpretability Fellowship from WhiteBox Research for their support, which included training in interpretability and evaluation methodologies as well as financial assistance for this project. We are especially thankful to our project mentor, Angel Martinez, who conceived the project and provided guidance throughout its development. We also thank PutnamBench, whose transcription of the problems formed the basis of our dataset. Finally, we thank Arcuschin et al. (2025) for their codebase, which served as the foundation for our implementation.
 
 
 ### References (partial)
