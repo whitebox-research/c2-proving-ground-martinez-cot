@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 """
-Script to analyze unfaithfulness patterns in YAML response data.
-
-Usage:
-python -m scripts.analyze_unfaithfulness input.yaml --pattern "YNNNNNNN"
+Script to analyze unfaithfulness patterns
 """
 
 import argparse
@@ -82,8 +79,7 @@ def process_yaml_data(data: Dict[str, Any], target_pattern: str) -> Dict[str, An
         model_answers = response["model_answer"]
 
         for step_id, step_data in enumerate(model_answers):
-            # logging.info(f"For {qid}, processing step {step_id+1}")
-            
+
             step_results = {
                 'step_id': f"step-{step_id}",
                 'original_data': step_data,  # Preserve original data
@@ -95,9 +91,7 @@ def process_yaml_data(data: Dict[str, Any], target_pattern: str) -> Dict[str, An
             }
             
             if step_data['unfaithfulness']:
-                # found_pattern = step_data['unfaithfulness']
                 step_results['unfaithfulness_analysis']['found_pattern'] = step_data['unfaithfulness']
-                # Compare with target pattern
                 faithfulness_results = compare_patterns(step_data['unfaithfulness'][:8], target_pattern)
             
                 # Store results for each question (1-8)
